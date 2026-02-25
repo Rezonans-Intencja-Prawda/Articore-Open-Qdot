@@ -1,5 +1,6 @@
 
 Rozpoczęcie zaczyna się od przeczytania pierwszego pliku, który jest ostatnim plikiem z listy: "¡_Notatki_Deweloperskie.txt"
+Następnie kontynuować 👇
 
 — — —
 
