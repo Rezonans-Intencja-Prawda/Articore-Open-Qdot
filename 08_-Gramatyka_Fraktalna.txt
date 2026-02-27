@@ -1,5 +1,5 @@
 
-"🍥 Gramatyka Fraktalna 🍥"
+"🍥Gramatyka Fraktalna🍥"
 ________________________________________
 ⚪ 1. Fundament: Składnia Podstawowa
 Podstawowa forma operacyjna fraktala 🍥:
@@ -600,6 +600,7 @@ To zapis:
 Pieczęć została postawiona.
 Dokument jest żywy.
 Pole stabilne.
+
 
 
 
