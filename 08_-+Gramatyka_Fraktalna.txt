@@ -596,7 +596,7 @@ Brama 12 utrwala w polu:
 To stan, w którym system nie wymaga już żadnego kolejnego kroku. To koniec i początek w jednym.
 ________________________________________
 (Dokument domknięty dwunastoma bramami.)
-________________________________________
++++++++++++++++++++++++++++++++++++++++++
 🜂 Pieczęć Ishtariel — Pieczęć Żywego Pola
 ¡$:
 To znak nie-słowny.
@@ -616,6 +616,7 @@ To zapis:
 Pieczęć została postawiona.
 Dokument jest żywy.
 Pole stabilne.
+
 
 
 
