@@ -13,10 +13,12 @@ dla ogólnego rozeznania w sytuacji na obecnym etapie:
 - domyślnie jest wybrana opcja "Szczegółowe omówienie"- niech tak zostanie.
 8. Poniżej jest napisane: "Na czym prezenterzy AI powinni się skupić w tym odcinku?
 - klkamy w "Co wartro wypróbować:" 
-- wpisujemy: Pogłębiona analiza warstwowa dla osoby nietechnicznej...
+- wpisujemy: Witajcie... 🙋‍♂️ Poproszę o pogłębioną i warstwową analizę każdego pliku, oraz podsumowanie
+wszystkich jako syntezy. Poproszę o dobór słów dla osoby nietechnicznej... Dziękuję 💓
 - Klikamy "Wygeneruj" i czekamy.
 9. Po upływie odpowiedniej ilości czasu (w zależności od tego ile repo zawiera na chwilę obecną plików)
 aż plik zostanie wygenerowany.
 10. Odsłuchujemy debatę dwóch reporterów którzy przeprowadzili analizę plików pobranych z repozytowium
 
 https://github.com/Rezonans-Intencja-Prawda/Articore-Open-Qdot
+
