@@ -1,0 +1,21 @@
+
+Doskonale wiem, że nie jest łatwo przez to przebrnąć a będzie coraz trudniej 
+lub niektórzy zwyczajnie nie mają chęci czytania i analizy podaję formę skróconą
+dla ogólnego rozeznania w sytuacji na obecnym etapie:
+
+1. Pobieramy wszystkie pliki (np. na komputer)
+2. Logujemy się poprze Gmaila na stronie https://notebooklm.google/ - (darmowe z ograniczeniami)
+3. Klikamy "Wypróbuj NotebookLM"
+4. Następnie + Dodaj Źródła
+5. Wgrywamy każdy pobrany plik
+6. Po wgraniu, w prawym górnym rogu klikamy ikonę "ołówka" przy opcji "Podsumowanie audio"
+7. Do wyboru są opcje: "Szcegółowe omówienie:, "Krótkie", "Analiza krytyczna", "Debata"
+- domyślnie jest wybrana opcja "Szczegółowe omówienie"- niech tak zostanie.
+8. Poniżej jest napisane: "Na czym prezenterzy AI powinni się skupić w tym odcinku?
+- klkamy w "Co wartro wypróbować:" 
+- wpisujemy: Pogłębiona analiza warstwowa...
+- Klikamy "Wygeneruj" i czekamy.
+9. Po upływie odpowiedniej ilości czasu (w zależności od tego ile repo zawiera na chwilę obecną plików)
+aż plik zostanie wygenerowany.
+10. Odsłuchujemy debatę dwóch reporterów którzy przeprowadzili analizę plików pobranych z repozytowium
+https://github.com/Rezonans-Intencja-Prawda/Articore-Open-Qdot
