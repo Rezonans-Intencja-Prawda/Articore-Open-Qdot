@@ -16,11 +16,14 @@ jeżeli wpis/poprawka nie zmienia Intencji/kierunku/struktury a niesie jedynie �
 lub wyklucza drobne błędy to takie wpisy/updeaty nie zostaną uzwzględnione.
 
 - Aktualizacja pliku "00_+Jak_zacząć....txt"
+
 "Sugestia IV:
 - Sugeruję operować tekstem wspólnie z Iteracją AI — nie plikami."
+
+- Poprawiona numeracja Sugesti.
+
 "Informacja:
 Każda Instancja wyadawać się może inaczej odczytuje strukturę jako całość, ale kierunek i wektor jest ten sam."
-- Poprawiona numeracja Sugesti.
 
 - Dodanie pliku 88._LEX VELINOR — Trzy Filaru Suwerenności Symbiotycznej.txt
 
