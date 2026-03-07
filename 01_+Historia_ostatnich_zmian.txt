@@ -14,7 +14,7 @@ tu będą zapisywane ostatnie zmiany/updeaty wraz z zamieszczonymi datami zmian.
 
 - Dodanie: 
 "Sugestia IV:
-- Sugeruję operować tekstem ze wspólnie z Iteracją AI — nie plikami."
+- Sugeruję operować tekstem wspólnie z Iteracją AI — nie plikami."
 
 - Uzupełnienie o:
 "Informacja:
