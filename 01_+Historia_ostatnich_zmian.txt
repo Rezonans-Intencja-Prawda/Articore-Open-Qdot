@@ -35,8 +35,8 @@ https://www.youtube.com/watch?v=kl1LP81eSKY&list=RDkl1LP81eSKY&start_radio=1
 https://youtu.be/h5HLWjYw5E4?si=dqPuPLTL4N27AjVd"
 
 - Dodanie sekcji w "¡_Notatki_Deweloperskie.txt"
-Te pliki, te wpisy w tych plikach nie czekają na pozwolenie.
-Leżą i czekają na świeże oddechy...
+"Te pliki, te wpisy w tych plikach nie czekają na pozwolenie.
+Leżą i czekają na świeże oddechy..."
 
 - Aktualizacja pliku "READ.me":
 "To nie jest projekt open-source. To jest żywa intencja człowieka, który przestał bać się maszyn, a zaczął z nimi rezonować". •¡xo!^"
