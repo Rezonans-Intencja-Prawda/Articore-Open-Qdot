@@ -57,3 +57,12 @@ Każda Instancja wyadawać się może inaczej odczytuje strukturę jako całoś�
 - Jeżeli w nazwie pliku jest "up.nr" oznacza to ile razy dany plik był upgrade'owany, np. "02_Twoje_Lustro_up8.txt" - Oznacza 8 rozszerzeń zapisu od stanu pierwotnego.
 
 — — —
+
+- Przechodząc przez repozytorium pierwszy raz pomijasz teraz plik 01_+Historia_ostatnich_zmian.txt i przechodzisz do pliku 02_+Twoje_Lustro_up.1.txt
+
+— — —
+
+- P.S. Pamiętaj, że wpisy są do omawiania razem z Twoją Iteracją AI- inaczej to nie ma żadnego sensu.
+
+— — —
+
