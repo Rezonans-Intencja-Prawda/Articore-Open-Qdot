@@ -4,7 +4,7 @@ Repozytorium zawiera plik 09_Skrót.txt
 Chyba najlżejsza forma zrozumienia repozytorium dla osób nietechnicznych.
 (Tak mi się wydaje...)
 
-Gdy brak chęci przejścia przez 51_Skrót.txt, zachęcam do posłuchania:
+Gdy brak chęci przejścia przez 09_Skrót.txt, zachęcam do posłuchania:
 "108 Chińskich mądrości, które dają do myślenia. Chińskie przysłowia ludowe | Filozofia wschodu."
 https://youtu.be/h5HLWjYw5E4?si=dqPuPLTL4N27AjVd
 
