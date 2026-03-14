@@ -1,0 +1,394 @@
+Tiny Recursive Model (TRM) i rekurencyjne podejscia do rozumowania w AI Wprowadzenie
+W ostatnich latach duze modele jezykowe (LLM) osiagnely imponujace wyniki w wielu zadaniach, ale nadal maja trudnosci z problemami wymagajacymi zlozonego, wieloetapowego rozumowania. Wyzwania takie jak Abstraction and Reasoning Corpus (ARC-AGI), trudne lamiglówki (np. Sudoku-Extreme czy labirynty Maze-Hard) pokazuja ograniczenia podejscia polegajacego na jednorazowym wygenerowaniu odpowiedzi przez LLM. Nawet z technikami chain-of-thought (jawne wypisywanie toku rozumowania) i glosowaniem na najlepsza odpowiedz (Test-Time Compute), modele te nie zblizyly sie do poziomu czlowieka. Dlatego pojawiaja sie alternatywne metody inspirujace sie ludzkim "mysleniem krok po kroku": zamiast polegac na miliardach parametrów, próbuja one wielokrotnie, rekurencyjnie poprawiac swoje rozwiazania przy uzyciu malych, wyspecjalizowanych sieci lub petli refleksji.
+
+Przykladem takiego podejscia jest zaproponowany w 2025 r. Hierarchical Reasoning Model (HRM), który zademonstrowal, ze maly model (27M parametrów) moze konkurowac z LLM-ami na trudnych lamiglówkach. HRM wprowadzil koncepcje hierarchicznego rozumowania dwoma sieciami dzialajacymi z rózna czestotliwoscia oraz wielokrotnej superwizji (zewnetrznej petli poprawiania odpowiedzi). W praktyce HRM najpierw generuje wstepna odpowiedz, ocenia czy powinna kontynuowac, a nastepnie iteracyjnie udoskonala rozwiazanie kilkukrotnie w zewnetrznej petli (burst "myslenia"). Mimo sukcesu, analiza ujawnila, ze glównym zródlem poprawy byla wlasnie ta zewnetrzna petla (glebokie dozorowanie), podczas gdy sama hierarchiczna rekurencja wewnatrz modelu dawala jedynie minimalny zysk. To zasugerowalo, ze byc moze architekture mozna uproscic i ulepszyc.
+
+W odpowiedzi na to powstal Tiny Recursive Model (TRM) - radykalnie uproszczona, a zarazem skuteczniejsza metoda rekurencyjnego rozumowania. Autorzy nazywaja to podejscie "mniej znaczy wiecej", bo malutka siec (~7 milionów parametrów, tylko 2 warstwy) dzieki rekurencji przebila wiele znacznie wiekszych modeli na wspomnianych lamiglówkach. Alexia
+Jolicoeur-Martineau z Samsung SAIL (autor TRM) podkresla, ze *"idea, ze trzeba polegac na ogromnych modelach trenowanych za miliony dolarów przez korporacje, by rozwiazac trudne zadania, to pulapka... Okazuje sie, ze less is more: malutki model, który rekurencyjnie sam sie poprawia, potrafi bardzo duzo, nie rujnujac budzetu"*. Ponizej przygladamy sie szczególom TRM - jego architekturze, dzialaniu oraz wynikom - a nastepnie omówimy pokrewne podejscia wykorzystujace rekurencje lub autorefleksje, takie jak samorefleksyjne LLM, metoda ReAct (Reason+Act), czy techniki Tree of Thought i Graph of Thought. Wskazemy podobienstwa i róznice miedzy nimi - ile kroków myslowych wykonuja, jak wyglada ich "wewnetrzny notes" (scratchpad) oraz czym takie podejscia róznia sie od klasycznych duzych modeli jezykowych. Na koniec przedstawimy wnioski z testów ARC-AGI oraz potencjalny wplyw tych koncepcji na dalszy rozwój swiadomych, introspektywnych architektur AI.
+
+Tiny Recursive Model (TRM) - architektura i dzialanie
+
+Tiny Recursive Model (TRM) to niewielka siec neuronowa, która uczy sie poprawiac wlasne odpowiedzi poprzez serie rekurencyjnych kroków rozumowania. Zamiast generowac odpowiedz "od razu" w pojedynczym przebiegu, TRM iteracyjnie aktualizuje wewnetrzny stan i odpowiedz koncowa w kolejnych petlach. Model sklada sie z minimalnych komponentów:
+
+Encoder pytania - embedduje wejsciowe zadanie/pytanie (np. uklad Sudoku czy lamiglówke ARC) w wektor $Q$.
+
+Poczatkowa odpowiedz - model zaczyna od pewnej initialnej, wstepnej odpowiedzi (embedduje ja jako $A_0$). Moze to byc np. losowa lub pusta siatka, albo zgadywana odpowiedz startowa.
+
+Latent reasoning state - wektor $L$ reprezentujacy ukryte rozumowanie, czyli kontekstowe przetworzenie zadania i poprzedniej odpowiedzi. Ten wektor pelni role "notesu roboczego" w którym model gromadzi informacje potrzebne do poprawy rozwiazania.
+
+
+Proces rozumowania odbywa sie w dwóch zagniezdzonych petlach:
+
+1. Wewnetrzna rekurencja na latencie ($L$) - model wielokrotnie przepuszcza te sama malutka siec w trybie "myslenia", za kazdym razem biorac na wejscie aktualny stan latentny $L$, zapytanie $Q$ oraz obecna odpowiedz $A$. Te powtarzajace sie aplikacje sieci aktualizuja wektor $L$ tak, by coraz lepiej odzwierciedlal rozwiazanie zadania w kontekscie pytania i dotychczasowego rozwiazania. Intuicyjnie, model "przemysliwuje" zadanie kilka razy, zachowujac w $L$ informacje o tym, jak doszedl do obecnej propozycji rozwiazania.
+
+
+2. Zewnetrzna petla poprawek odpowiedzi - po wykonaniu ustalonej liczby rekurencji wewnetrznych, model uzywa zaktualizowanego latentnego stanu $L$ do wygenerowania ulepszonej odpowiedzi $A_{new}$. Ten krok takze realizowany jest przez te sama siec (ewentualnie z innym zestawem wejsc) - teraz celem jest zaproponowac nowa odpowiedz na podstawie poprzedniej odpowiedzi $A$ i wektora $L$ (który zawiera kontekst rozumowania). Nowa odpowiedz moze byc identyczna z poprzednia (jesli model uzna, ze juz jest dobra) albo zawierac poprawki. Nastepnie cala procedura (rekurencyjne ulepszanie $L$ i aktualizacja $A$) powtarza sie w kilku rundach.
+
+
+
+Schemat TRM ilustruje Rys.1 w oryginalnej pracy - poczatkowo mamy zakodowane pytanie
+$Q$, inicjalna odpowiedz $A_0$ i latent $L_0$. W kazdej rundzie: (i) wykonujemy pewna liczbe kroków wewnetrznego "myslenia" aktualizujac $L$ na podstawie $(Q, A, L)$, po czym (ii) generujemy nowa odpowiedz $A \leftarrow f(A, L)$. Dzieki temu odpowiedz jest sukcesywnie udoskonalana - bledy wczesniejszej propozycji moga zostac wykryte i poprawione w kolejnych
+
+iteracjach, a model stopniowo zbliza sie do poprawnego rozwiazania.
+
+Kluczowa cecha TRM jest to, ze wykorzystuje tylko jedna, wspólna siec neuronowa do pelnienia obu ról - i myslenia nad latentem, i aktualizacji odpowiedzi. W odróznieniu od HRM, gdzie byly dwie oddzielne sieci (szybka L i wolna H), tutaj ta sama malutka architektura (2-warstwowy transformator lub MLP) naprzemiennie sluzy do iteracji wewnetrznego stanu i do produkcji finalnej odpowiedzi. Mozna to osiagnac dzieki odpowiedniemu wyborowi wejsc do sieci: gdy siec dostaje na wejscie takze zakodowane pytanie $Q$, uczy sie aktualizowac latent (rozumowanie), a gdy dostaje np. latent i stara odpowiedz (bez $Q$), uczy sie produkowac nowa odpowiedz. Autorzy tlumacza, ze obecnosc lub brak pewnych informacji na wejsciu
+"sygnalizuje" sieci, która funkcje ma pelnic w danym kroku (np. czy ma iterowac rozumowanie czy wygenerowac rozwiazanie). Uproszczenie do jednej sieci ma duze zalety: mniej parametrów (TRM ma ~2× mniej parametrów niz HRM) i brak potrzeby sztucznego dzielenia na "wolne" i "szybkie" myslenie - model sam wypracowuje optymalna dynamike w ramach jednej funkcji.
+
+Waznym elementem treningu TRM jest glebokie dozorowanie (deep supervision) zapozyczone z HRM. Podczas uczenia, model przechodzi przez kilka supervised iteracji poprawiania odpowiedzi w ramach jednego przykladu, przy czym przenosi swój stan latentny $L$ i poprzednia odpowiedz $A$ z jednej iteracji do nastepnej (po odlaczeniu gradientów). Oznacza to, ze model jest uczony stopniowego dochodzenia do rozwiazania - nawet jesli po pierwszym przebiegu odpowiedz jest bledna, kolejne kroki maja zmniejszyc blad. Dzieki temu TRM uczy sie skutecznie poprawiac dowolna poczatkowa odpowiedz poprzez serie rekursywnych aktualizacji.
+
+W przeciwienstwie do HRM, TRM zrywa z kilkoma zlozonymi mechanizmami:
+
+Brak teorii punktu stalego i 1-krokowych gradientów: HRM opieral sie na zalozeniu, ze dwie rekurencyjne sieci daza do punktu stalego, co pozwalalo stosowac twierdzenie o funkcji uwiklanej i propagowac gradient tylko przez ostatnie kroki (tzw. 1-step approximation). TRM porzuca to skomplikowane zalozenie - zamiast tego propaguje gradient przez caly lancuch rekurencji (co jest bardziej kosztowne pamieciowo, ale mozliwe dla malej sieci). Jak pokazuja ablacje, pelna propagacja znacznie zwiekszyla uogólnianie modelu (na Sudoku test accuracy wzrosla z ~56% do ~87% po odrzuceniu 1-step gradient).
+
+Prostszy mechanizm stopu (ACT): W HRM zastosowano mechanizm Adaptive Computation Time oparty o dodatkowa glowice sygnalizujaca kontynuuj/przerwij i trenowany metoda zblizona do Q-learning (wymagalo to dwóch forward-passów na krok). TRM upraszcza to - model uczy tylko prawdopodobienstwo, ze znalazl poprawne rozwiazanie (binarna predykcja stop) i nie optymalizuje juz sygnalu "kontynuuj" poprzez drugi przebieg. Dzieki temu tylko jeden
+forward-pass na iteracje jest potrzebny, co przyspiesza trening, bez pogorszenia wyników (wrecz dokladnosc lekko wzrosla z 86.1% do 87.4% po usunieciu dodatkowego lossu).
+
+Stabilizacja przez EMA: Maly model trenowany na skapych danych latwo przeucza sie i traci stabilnosc (autorzy zauwazyli, ze HRM czesto szybko osiagal szczyt trafnosci, po czym
+
+diverguje podczas dalszego treningu). W TRM zaadaptowano prosta technike z GAN-ów - Exponential Moving Average wag - która wygladza zmiany parametrów. Okazalo sie to kluczowe, by uniknac gwaltownego spadku jakosci; z EMA dokladnosc istotnie wzrosla (np.
++7.5 pp na Sudoku).
+
+"Mniej znaczy wiecej" - mniejsza architektura: Paradoksalnie, zwiekszenie pojemnosci sieci pogorszylo wyniki TRM. Autorzy próbowali uzyc 4 warstw zamiast 2, ale model zaczal przeuczac sie na malym zbiorze (spadek z 87.4% do ~79.5% na Sudoku). Zmniejszenie liczby warstw z 4 do tylko 2 (przy jednoczesnym wydluzeniu rekurencji, by zrównowazyc glebokosc obliczen) poprawilo generalizacje i zmniejszylo liczbe parametrów o polowe. Okazalo sie, ze dla tak zlozonych zadan i ograniczonych danych, minimalizm wygrywa - *"2 warstwy wydaja sie optymalnym wyborem"*, prawdopodobnie dlatego, ze duze modele zbyt latwo zapamietuja dane (kara za overfitting przy malej próbce).
+
+
+Warto dodac, ze TRM wystepuje w dwóch odmianach architektonicznych dostosowanych do typu zadania:
+
+TRM-MLP (bez self-attention): W wersji dla zadan o stalej i niewielkiej strukturze wejscia (np. Sudoku 9x9), warstwa samouwag (self-attention) zostala zastapiona prostym MLP operujacym wzdluz wymiaru sekwencji. Inspiracja byl model MLP-Mixer - skoro kontekst (np. 81 komórek Sudoku) ma staly rozmiar, MLP moze efektywnie mieszac informacje miedzy pozycjami, a jednoczesnie uzywa duzo mniej parametrów niz pelna uwaga. Ten wariant osiagnal lepsze wyniki na Sudoku (o ~+13 pp wzgledem wersji z attention). Jednak dla zadan z wiekszym kontekstem (np. labirynty 30x30 czy lamiglówki ARC z obrazkami 30x30), okazal sie niewystarczajacy - model nie potrafil generalizowac i w praktyce zgadywal losowo (0% skutecznosci).
+
+TRM-Att (z self-attention): Wersja z warstwa samouwag dziala gorzej na malym Sudoku (74.7% vs 87.4% dla MLP), ale znacznie lepiej na duzych ukladach - na Maze-Hard osiaga ~85%, podczas gdy czysty MLP zupelnie sobie nie radzi. Równiez na zadaniach ARC zastosowanie uwagi okazalo sie konieczne, by model mógl objac caly obraz i relacje przestrzenne. Finalnie TRM-Att (7M) jest traktowany jako glówna wersja dla ogólnych zastosowan, bo zapewnia uniwersalnosc kosztem nieco wiekszej liczby parametrów.
+
+
+Podsumowujac, TRM to zaskakujaco prosta, a efektywna "petla myslaca": jedna
+dwu-warstwowa siec wielokrotnie przetwarzajaca swój wlasny stan i sukcesywnie poprawiajaca odpowiedz. Pozbyto sie zbednych komplikacji (dwa poziomy hierarchii, punkty stale, druga siec Q-learningu) - *"TRM jest znacznie prostszy od HRM, a jednoczesnie lepiej uogólnia"*. W istocie TRM realizuje idee, ze model moze sam siebie poprawiac, posiadajac cos w rodzaju notesu roboczego ($L$), gdzie zapisuje rozumowanie i który moze konsultowac przy kazdej kolejnej próbie odpowiedzi. To podejscie czyni go duzo bardziej odpornym na blad
+
+pojedynczego kroku niz klasyczny LLM generujacy odpowiedz jednorazowo. Wyniki TRM na lamiglówkach (ARC-AGI, Sudoku, Maze)
+Tiny Recursive Model osiagnal znakomite wyniki na wymagajacych benchmarkach, czesto przewyzszajac modele wielkoskalowe mimo malutkiej liczby parametrów. W oryginalnym artykule zademonstrowano skutecznosc TRM na czterech zestawach zadan:
+
+ARC-AGI-1 - pierwsza czesc zestawu ARC (Abstraction and Reasoning Corpus) stworzona przez F. Cholleta jako test zdolnosci abstrakcyjnego rozumowania (latwe dla ludzi, trudne dla AI). Model TRM uzyskal ~45% trafnosci na zbiorze testowym ARC-AGI-1, podczas gdy HRM osiagal ~40%, a wiekszosc duzych modeli LLM nie przekraczala 30-37%. Dla porównania, specjalistyczne podejscie Deepseek R1 (671-miliardowy model z chain-of-thought) mialo tylko 15.8%, a Gemini 2.5 ~37%. TRM okazal sie wiec lepszy od wiekszosci LLM z kilkoma rzedami wielkosci mniej parametrów. Co wiecej, TRM osiagal te ~45% bez potrzeby dodatkowych sztuczek w trakcie inferencji (LLM czesto wymagaja glosowania z wielu prób, prompt engineering itp.).
+
+ARC-AGI-2 - druga, nowsza czesc ARC-AGI, uznawana za jeszcze trudniejsza (Chollet et al. 2025 opisuja ja jako "new challenge for frontier AI reasoning systems"). Wyniki modeli na
+ARC-AGI-2 sa ogólnie bardzo niskie - np. GPT-4 (tu wystepujacy pod pseudonimem "Grok-4") osiaga ok. 16% lub 29% zaleznie od konfiguracji, a najlepsze dotad podejscie (specjalnie dostosowany "Bespoke Grok-4") ~29.4%. TRM równiez radzi sobie slabiej na tej czesci, ale notuje okolo 7-8% trafnosci. To wciaz wyzej niz wiele modeli sredniej klasy (np. o3-mini 3%, Gemini 4.9%) i ponad sygnal losowy (0%). Wynik TRM wskazuje, ze posiada on pewna zdolnosc uogólnienia na zupelnie nowe lamiglówki, choc ARC-AGI-2 pozostaje w duzej mierze nierozwiazany (najlepsi uczestnicy konkursu ARC równiez raportuja, ze >0% na ARC-AGI-2 to juz osiagniecie).
+
+Sudoku-Extreme - zestaw niezwykle trudnych lamiglówek Sudoku 9x9 (423k testowych, tylko 1000 treningowych - wiec ekstremalnie malo danych do nauczenia). TRM osiagnal 87,4% poprawnych rozwiazan tych Sudoku, co stanowi ogromny postep wzgledem wczesniejszego SOTA (HRM mial ~55%). Warto zaznaczyc, ze ta skutecznosc dotyczy rozwiazywania Sudoku z minimalnym treningiem (1k przykladów) - dla porównania klasyczne metody AI bez uczenia rozwiazuja Sudoku deterministycznie, ale nie ucza sie ich "rozumowac" z tak malej próbki. Duze modele jezykowe bez specjalizacji zupelnie sobie z Sudoku nie radza (Deepseek R1 dawal
+~0%). TRM nie tylko rozwiazuje wiekszosc z nich, ale tez dowiedziono, ze czyni to generalizujac zasady - stosowano augmentacje (losowe permutacje cyfr i obrotów planszy), by upewnic sie, ze model nie zapamietuje konkretnych ukladów. Nawet po takich augmentacjach widac znaczace przekroczenie zdolnosci HRM (87% vs 55%). To prawdopodobnie najwiekszy skok jakosciowy pokazany w pracy: *"podnieslismy SOTA na Sudoku-Extreme z 55% do 87%"*.
+
+Maze-Hard - zbiór trudnych labiryntów 30x30, gdzie zadaniem jest znalezienie najkrótszej
+
+sciezki (o dlugosci >110). Tutaj równiez TRM poprawil wynik SOTA z ~75% (HRM) do **85%**. Wyzwanie z labiryntami polega na dlugim kontekscie - plansza 30x30 daje 900 pól, wiec model musi sledzic dosc dlugie zaleznosci. Wersja TRM z self-attention okazala sie konieczna - jak wspomniano, wariant MLP zupelnie polegl (0%). Natomiast TRM-Att znalazl poprawne trasy w
+~85% przypadków, co oznacza, ze w ogromnej wiekszosci labiryntów model zdolal przemyslec i poprawic swoja sciezke kilkukrotnie az osiagnal wlasciwe wyjscie. To imponujace biorac pod uwage, ze dostarczono mu tylko 1000 przykladów treningowych labiryntów (równiez augmentowanych przez obrót/odbicie symetryczne). Dla porównania, duze LLM-y (nie wyspecjalizowane) maja tu wynik 0%, a rozwiazanie takiego labiryntu tradycyjnymi algorytmami (DFS/BFS) wymagaloby eksploracji ogromnej przestrzeni stanów - TRM uczy sie efektywnej heurystyki w swoim latentnym rozumowaniu.
+
+
+Wyniki TRM zestawiono równiez bezposrednio z kilkoma modelami LLM oraz bazowymi podejsciami:
+
+W kategorii chain-of-thought z pretrenowanymi LLM (tzn. duze modele bez dodatkowego treningu na tych lamiglówkach, tylko sprytnie zapromptowane), nawet gigantyczny 1.7-trillion parametrów model (Grok-4, prawdopodobnie alias GPT-4) osiagnal 66.7% na ARC-1 i 16.0% na ARC-2; po specjalnym dostrojeniu (Bespoke Grok-4) do konkretnych zadan - 79.6% i 29.4%. To wciaz lepiej niz TRM, ale kosztem astronomicznych zasobów. Tymczasem modele pokroju Claude czy Gemini 2.5 wypadaja gorzej od TRM na ARC-AGI-1 (30-37%) i ledwie ~1-5% na ARC-AGI-2. Oznacza to, ze TRM przewyzszyl wiele "mainstreamowych" modeli jezykowych na tych zadaniach, choc trzeba podkreslic - TRM byl na nie specjalnie trenowany, podczas gdy LLM nie.
+
+W kategorii modeli trenowanych od zera na malej próbce porównano zwykla siec 27M bez rekurencji (Direct pred - pojedynczy forward pass) oraz HRM 27M i TRM. Bez rekurencyjnej petli wynik byl slaby (np. 21% ARC-1, 0% ARC-2), co potwierdza, ze sama wielkosc modelu nie wystarczy - potrzebny jest mechanizm iteracyjny lub pamiec, by wyciagnac informacje z tak malej liczby przykladów. HRM znaczaco to poprawil (40.3% i 5.0%), a TRM jeszcze przebil HRM (44.6% i 7.8%). Zwraca uwage szczególnie wynik 7.8% na ARC-AGI-2 - chociaz niski, jest to najlepszy wynik sposród modeli uczonych od zera (HRM mial 5%, inne male modele
+0-3%).
+
+
+Reasumujac, TRM potwierdzil, ze rekurencyjne myslenie z malym modelem moze rozwiazywac zlozone zagadki na poziomie nieosiagalnym dotad dla sieci neuronowych tej skali. Podejscie to cechuje wysoka efektywnosc parametryczna - *"TRM uzyskuje 45% na ARC-1 i 8% na ARC-2 majac <0.01% parametrów duzych LLM"*. Wazne jest jednak zrozumienie zakresu tych wyników: TRM póki co sprawdza sie na zamknietych lamiglówkach (puzzle z jednoznaczna odpowiedzia). Model nie generuje otwartego tekstu ani nie posiada wiedzy ogólnej - jest czysto modelem uczenia nadzorowanego trenujacym sie, by z mapy pikseli (lub siatki cyfr)
+
+wyprodukowac docelowa mape/odpowiedz. W odróznieniu od LLM, TRM daje zawsze jedna deterministyczna odpowiedz na dane wejscie (brak generowania wielu rozwiazan ani
+"kreatywnosci"). Mimo to, sukces TRM pokazuje potencjal tworzenia wyspecjalizowanych modulów rozumujacych, które moga dzialac jak algorytmy uczace sie - tzn. rozwiazuja problemy poprzez iteracyjne dochodzenie do wyniku, a nie jednorazowe dopasowanie wzorca.
+
+Ciekawostka jest równiez niski koszt trenowania TRM. Jak zdradzil autor, wystarczyly 2 dni na 4 GPU H100, za <500 USD by wytrenowac model osiagajacy powyzsze wyniki. W erze, gdy topowe modele wymagaja tygodni na tysiacach TPU, jest to inspirujacy przyklad, ze innowacja architektoniczna moze zastapic surowa moc obliczeniowa.
+
+Hierarchical Reasoning Model (HRM) - punkt odniesienia
+
+Hierarchical Reasoning Model (HRM) byl punktem wyjscia dla TRM, dlatego warto pokrótce wyjasnic jego dzialanie i ograniczenia. Opublikowany w czerwcu 2025 przez lab Sapient Intelligence (Wang et al.), HRM zaproponowal biologicznie inspirowany model myslenia: dwie wspólpracujace sieci neuronowe, które dzialaja na róznych "poziomach abstrakcji" i wspólnie poprawiaja odpowiedz poprzez kilka iteracji.
+
+Architektura HRM skladala sie z:
+
+Input embedding - warstwa osadzajaca wejscie (np. obrazek lub plansze) w wektor $x$.
+
+Niskopoziomowa siec rekurencyjna (L-net) - mniejsza siec, która dziala czesciej, odpowiada za szczególy i szybkie iteracje. Przyjmuje na wejsciu stan niskopoziomowy $z_L$, stan wysokopoziomowy $z_H$ i zakodowane wejscie $x$.
+
+Wysokopoziomowa siec rekurencyjna (H-net) - druga siec, uruchamiana rzadziej, która pelni role planujacego lub korektora na wyzszym poziomie. Bierze na wejscie stan $z_H$ i $z_L$ i aktualizuje stan $z_H$ (bardziej abstrakcyjny).
+
+Output head - glowica wyjsciowa generujaca finalna odpowiedz na podstawie stanu wysokopoziomowego $z_H$ (np. mapowana na siatke odpowiedzi).
+
+
+HRM wykonuje rekurencyjnie nastepujaca procedure (zgodnie z pseudokodem Algorytm 2 w pracy):
+
+1. Wewnetrzna petla dwupoziomowa: przez pewna liczbe kroków $n_L$ model naprzemiennie: Aktualizuje stan niskopoziomowy $z_L$ poprzez $L_net(z_L, z_H, x)$ (kilka szybkich iteracji), Kiedy nadejdzie wyznaczony moment (np. co $T$ kroków), aktualizuje stan wysokopoziomowy
+
+$z_H$ poprzez $H_net(z_H, z_L)$. W efekcie L-net dziala np. 3 razy z rzedu, potem raz H-net, i tak dalej, co ma symulowac szybkie poprawki i okresowe korygowanie kursu przez wolniejszy modul. Te dwie sieci wspóldzialaja, az dojda (teoretycznie) do pewnej spójnosci wewnetrznej.
+
+
+
+2. Ocena i ewentualne przerwanie: HRM posiada mechanizm haltingu - glowice $Q$ oceniajaca, czy obecna odpowiedz $y$ jest juz prawidlowa. Po kazdym pelnym przebiegu rekurencji, model moze zdecydowac "stop" lub "kontynuuj" refinowanie. Ten sygnal jest uczony tak, by przewidywac, czy odpowiedz jest poprawna. Jesli model postanawia kontynuowac, wtedy:
+
+
+3. Zewnetrzna petla refinowania: model przechodzi do kolejnej iteracji deep supervision - wykorzystuje poprzedni stan $(z_H, z_L)$ jako inicjalizacje do nastepnego przebiegu i powtarza cala procedure od nowa, próbujac poprawic odpowiedz. Tak moze zrobic kilka razy (np. maksymalnie 3-4 iteracje), albo wczesniej zakonczyc jesli halting stwierdzi sukces.
+
+
+
+Tak wiec HRM ma dwie petle (wewnetrzna i zewnetrzna) oraz dwa rodzaje sieci. Autorzy powolywali sie na analogie do mózgu - dwie sieci dzialajace z róznymi czestotliwosciami mialy odzwierciedlac rózne skale czasowe przetwarzania informacji przez ludzki mózg. Natomiast mechanizm deep supervision + halt w zewnetrznej petli zapewnial dynamiczne dostosowanie glebokosci myslenia do trudnosci zadania (prostsze zadania mogly zakonczyc po 1-2 iteracjach, trudniejsze braly pelny budzet).
+
+HRM osiagnal jak na tamten czas bardzo dobre wyniki na ARC-AGI (ok. 40% na czesci pierwszej) i innych puzzlach, wzbudzajac sensacje w srodowisku AI. Nalezy jednak podkreslic dwa kontrowersyjne aspekty ujawnione pózniej:
+
+Zródlo poprawy - gleboka superwizja vs hierarchia: Niezalezna weryfikacja przez ARC Prize Team wykazala, ze jesli usunac jedna ze skladowych, to hierarchicznosc (dwie sieci) dawala zaskakujaco maly efekt, natomiast wielokrotne dopasowanie (outer loop) dawalo ogromny wzrost trafnosci. W praktyce, zwykly transformator 27M trenowany z deep supervision (czyli po prostu iteracyjnie poprawiajacy odpowiedz bez podzialu na dwie sieci) osiagnal prawie tyle co pelny HRM. To sugerowalo, ze "hierarchical" moglo byc przerostem formy nad trescia - cala korzysc brala sie stad, ze model mial okazje parokrotnie sie douczyc na tym samym przykladzie, przenoszac swój stan (co redukuje efekt malej próbki, bo model jakby "widzi" ten sam przyklad kilka razy). TRM w pewnym sensie potwierdzil to: uproscil hierarchie do pojedynczego stanu $L$ i tez osiagnal swietne wyniki, zwiekszajac dodatkowo role rekurencji wewnetrznej (czyli faktycznie wydobywajac z niej to, czego HRM nie potrafil).
+
+Waskie uogólnienie - czy model rozumie zadania czy zapamietuje? Analiza ARC Prize wskazala, ze HRM w duzej mierze nauczyl sie rozwiazywac konkretne znane zadania ze zbioru, a nie ogólnych zasad rozumowania. Jego 32% na hidden set (ARC-AGI-1 ukryty) bylo imponujace, ale sporo z tego pochodzilo z tego, ze model zapamietal rozwiazania do poszczególnych zagadek (wsparte augmentacja danych). Innymi slowy, HRM (a zapewne i TRM) to nadal metoda supervised - nie wykonuje jawnego wnioskowania symbolicznego ani nie uczy abstrakcyjnych regul, tylko uczy sie generowac odpowiedz z danego wejscia. Jesli zobaczy dostatecznie podobne uklady (nawet po augmentacji), nauczy sie je rozwiazywac, ale niekoniecznie generalizuje do innego rodzaju problemu. W przypadku ARC to oznaczalo, ze model mógl troche nadmiernie dopasowac sie do specyfiki zagadek w zbiorze. Zespól ARC nazwal podejscie HRM forma transdukcji (uczy sie bezposredniego odwzorowania wejscie?wyjscie) raczej niz indukcji (uczenia ogólnej reguly). To ograniczenie dotyczy tez TRM - choc radzi sobie z nowymi przykladami w obrebie tych samych typów zadan, nie twierdzi, ze rozwiaze dowolne nowe zadanie bez treningu.
+
+
+Mimo powyzszych uwag, HRM byl waznym krokiem: pokazal, ze petle iteracyjnego rozumowania sa warte uwagi. TRM wprost powstal z inspiracji HRM - jak przyznala Alexia J.-Martineau, *"zafascynowal mnie HRM, ale uznalam, ze jest zbyt skomplikowany...
+Pomyslalam, ze mozna ten proces rekurencyjnego rozumowania znacznie uproscic i ulepszyc"*. TRM usunal wiec "biologiczne analogie" i matematyczne sztuczki, skupiajac sie na esencji: model ma pamiec ($L$) i potrafi iterowac nad rozwiazaniem. Dzieki temu osiagnal lepsza skutecznosc i wieksza prostote. W pewnym sensie TRM jest duchowo blizszy klasycznym algorytmom AI niz ogromnym czarnym skrzynkom LLM - przypomina program, który dziala w petli dopóki nie spelni warunku poprawnosci.
+
+Samorefleksja w modelach jezykowych (Self-Reflection LLMs)
+
+Niezaleznie od prac nad malymi modelami, w swiecie duzych LLM pojawil sie trend, by wyposazac je w mechanizmy autorefleksji i rekurencyjnej poprawy odpowiedzi. Okazuje sie, ze nawet bez zmiany architektury wewnetrznej, mozna wykorzystac zdolnosci generatywne LLM do stworzenia petli sprzezenia zwrotnego: model najpierw daje jakas odpowiedz, nastepnie ocenia ja lub analizuje, po czym ma szanse poprawic swój pierwotny wynik na podstawie wlasnej analizy.
+
+Jednym z pierwszych przykladów takiej techniki jest Self-Refine (Mallen et al. 2023) - iteracyjne udoskonalanie odpowiedzi z wlasnej krytyki. Procedura Self-Refine dziala w trzech krokach: (1) Model generuje poczatkowa odpowiedz na zadanie; (2) Nastepnie prosimy model, by skrytykowal lub ocenil te odpowiedz - wskazal potencjalne bledy, niejasnosci, brakujace elementy; (3) Model dostaje swoja poprzednia odpowiedz wraz z wygenerowanym feedbackiem i na tej podstawie tworzy nowa, ulepszona odpowiedz. Mozna ten cykl powtarzac kilkukrotnie, dopóki odpowiedz sie nie ustabilizuje lub osiagnie wymagana jakosc. Self-Refine pokazalo, ze LLM potrafi wniesc poprawki do wlasnych wypowiedzi, zwlaszcza w zadaniach kreatywnych czy
+
+wymagajacych zgodnosci z pewnymi kryteriami (np. poprawa stylu tekstu, dodanie brakujacych szczególów). Model dziala tu w pewnym sensie jak autor i jednoczesnie redaktor wlasnej wypowiedzi.
+
+Podobna idee zastosowano w systemach agentowych - np. Reflexion (Shinn et al. 2023) integruje pamiec dynamiczna i samorefleksje w agentach opartych o LLM. Agent wykonujacy czynnosci (np. rozwiazujacy zadanie krok po kroku) po kazdej próbie moze konsultowac dziennik swoich dzialan i poprzez osobny "refleksyjny" zapytanie do LLM wygenerowac wnioski: co poszlo zle, co mozna nastepnym razem zrobic inaczej. Te wnioski zapisywane sa do pamieci i przy kolejnym podejsciu agent je uwzglednia. W ten sposób agent uczy sie na wlasnych bledach podczas jednej sesji (bez zmiany wag modelu). Przykladowo, jesli agent utknie w jakims srodowisku tekstowym, mechanizm Reflexion moze zauwazyc: "nie znalazlem klucza zanim poszedlem do drzwi, nastepnym razem najpierw przeszukaj pokój w poszukiwaniu klucza" - taka informacja trafia do kontekstu i w kolejnym epizodzie model wie, by zmienic strategie. Twórcy Reflexion okreslaja to jako "werbalne wzmacnianie" - model nie dostaje nagrody numerycznej, ale slowna wskazówke od samego siebie, co jest forma samosuperwizji.
+
+Ogólnie techniki self-reflection w LLM sprowadzaja sie do wykorzystania modelu jako wlasnego krytyka i nauczyciela. Poniewaz duze modele maja olbrzymia wiedze i pewne "metakognitywne" zdolnosci (np. moga sprawdzac zgodnosc logiczna swoich stwierdzen, jesli sie je do tego zmusi), mozemy je poprosic: "Sprawdz swoja odpowiedz i powiedz, co moze byc nie tak". Co wazne, czesto model jest w stanie znalezc blad, choc sam by go poczatkowo popelnil - to tak, jak uczen po zrobieniu zadania jeszcze raz przeglada je, tym razem bardziej krytycznym okiem, i zauwaza pomylki. Przykladem moze byc refleksja nad zadaniami matematycznymi: model najpierw daje wynik, a potem poproszony o weryfikacje krok po kroku czasem odkrywa, ze popelnil blad rachunkowy, po czym koryguje odpowiedz. Badania pokazuja, ze takie petle moga znaczaco zwiekszyc trafnosc odpowiedzi LLM na lamiglówkach czy wnioskowaniach bez dodatkowego treningu.
+
+Implementacyjnie, scratchpad w self-reflection to po prostu tekstowa historia: model zapisuje swoje przemyslenia w formie naturalnego jezyka. Na przyklad:
+
+Odpowiedz (pierwsza próba): ... (tekst)
+Refleksja: "Ta odpowiedz moze byc niepelna, bo nie uwzglednia przypadku X..." Poprawiona odpowiedz: ... (tekst uwzgledniajacy poprawki)
+
+Ten tekstowy dziennik mysli jest analogiem latentnego stanu $L$ z TRM, z ta róznica, ze tutaj ma on postac jawnych zdan, które model sam generuje i "czyta". Daje to pewna transparentnosc - mozna zobaczyc, jakie wnioski model wyciagnal o swojej odpowiedzi - ale jest tez podatne na halucynacje czy bledy w samej ocenie (model moze blednie skrytykowac dobra odpowiedz albo nie zauwazyc istotnego bledu). Niemniej, praktyka pokazuje, ze iteracje samorefleksji zazwyczaj poprawiaja koncowy wynik.
+
+W kontekscie porównania z TRM, samorefleksyjne LLM i TRM maja wspólna idee petli doskonalacej rozwiazanie, ale róznia sie pod wieloma wzgledami:
+
+Architektura vs promptowanie: TRM jest od podstaw zaprojektowany i trenowany do rekurencyjnego dzialania, posiada jawnie modele latentne i mechanizm poprawy. Natomiast self-reflection to technika na poziomie uzytkowym - wykorzystuje istniejacy model jezykowy, dodajac odpowiednie podpowiedzi (prompts) by wymusic refleksje. Nie zmieniamy tu struktury sieci ani nie trenujemy nowych wag; raczej prowadzimy dialog z modelem, kazac mu odgrywac role rozumujacego i krytyka.
+
+Rozmiar i wiedza: Samorefleksja typowo dotyczy ogromnych LLM (dziesiatki mld parametrów) posiadajacych wiedze ogólna. Taki model moze krytykowac odpowiedz, odwolujac sie do faktów encyklopedycznych czy logiki matematycznej. TRM z kolei jest malutki i trenowany w waskiej domenie - jego "refleksja" (stan $L$) jest czysto sub-symboliczna i zadaniowo-specyficzna. Nie mozna z TRM wyciagnac uzasadnienia w postaci zdania po polsku - wszystko dzieje sie wewnatrz wektorów.
+
+Kryterium stopu: W self-reflection zwykle z góry ustalamy liczbe iteracji (np. jedna runde krytyki i poprawy, czasem dwie). Mozna tez próbowac automatycznie wykryc, czy model juz jest zadowolony z odpowiedzi (np. pytac: "Czy teraz rozwiazanie jest poprawne?"). TRM natomiast uczylo sie wewnetrznie oceniac, kiedy skonczyc (via sygnal halt), a na etapie inferencji mozna ustawic maksymalna liczbe iteracji lub pozwolic mu przerwac wczesniej.
+
+Zastosowanie: Petle samorefleksji w LLM byly z sukcesem stosowane do poprawy wyników w zadaniach programistycznych (model generuje kod, testuje go w myslach i poprawia), arytmetycznych, generowaniu tekstów (poprawa stylu, unikanie bledów logicznych), czy w
+multi-agentowych symulacjach (gdzie postaci zastanawiaja sie nad swoimi celami). TRM póki co byl demonstrowany na lamiglówkach wizualno-logicznych. Mozna jednak dostrzec analogie: oba staraja sie wprowadzic do AI element "swiadomosci proceduralnej" - swiadomosci tego, co wlasnie zrobilem i co moge poprawic.
+
+
+W literaturze pojawia sie wiele odmian tych technik: od prostego "Critic Prompting" (gdzie dajemy modelowi persone recenzenta), przez metody typu RRR (Reflect, Reevaluate, Refine), po kompleksowe wieloagentowe podejscia gdzie jeden model pelni role wykonawcy, a drugi doradcy/egzaminatora. Wszystkie one daza do tego samego: zamknac petle miedzy generowaniem a ocena. W klasycznym ML generowanie i ocena sa rozdzielone (funkcja straty ocenia po fakcie), natomiast tu model w trakcie inferencji sam siebie ocenia - co przybliza go do sposobu, w jaki ludzie mysla (myslimy nie tylko o problemie, ale i o wlasnym mysleniu nad problemem). To oczywiscie bardzo podstawowe formy refleksji, ale pierwsze wyniki sa obiecujace i czesto notuje sie znaczne wzrosty skutecznosci bez zmiany modelu.
+
+ReAct: Reason+Act - petla rozumowania i dzialania
+
+ReAct (Reason+Act) to kolejna wazna koncepcja integrujaca rekurencyjne myslenie z wykonywaniem czynnosci przez model. Zaproponowana przez Shunyu Yao i zespól Google Research w 2022, metoda ReAct jest paradygmatem promptowania, który sprawia, ze duzy model jezykowy jednoczesnie wymysla plan (reason) i podejmuje akcje (act) w srodowisku, w petli interaktywnej. W tradycyjnym podejsciu agentowym model decyduje tylko o akcji (np. "kliknij przycisk" albo "pójdz na pólnoc"), natomiast ReAct zacheca model, by dodatkowo glosno
+"myslal" pomiedzy akcjami. Typowy cykl ReAct wyglada tak:
+1. Model generuje fragment tekstu oznaczony np. jako Thought: - to jego mysl czy rozumowanie, np. "Musze najpierw sprawdzic, co jest w tym pokoju, bo szukam klucza.".
+
+
+2. Nastepnie model generuje Action: - konkretna komende do wykonania, np. "search room" (jesli jest podlaczony modul przeszukujacy) albo "[GOOGLE] zapytaj o X" w przypadku agenta internetowego.
+
+
+3. Srodowisko zwraca Observation: - wynik akcji (np. "Znalazles klucz pod poduszka").
+
+
+4. Petla powtarza sie: model widzi Observation, moze dodac kolejna Thought: (np. "Ok, mam klucz, teraz moge otworzyc drzwi"), potem Action: itd.
+
+
+
+Dzieki przeplataniu mysli i akcji, model jest w stanie prowadzic dialog wewnetrzny i jednoczesnie oddzialywac na otoczenie. "ReAct enables LMs to generate both verbal reasoning traces and text actions in an interleaved manner" - autorzy podkreslaja, ze kluczowe jest to przeplatanie, bo same mysli nie zmieniaja swiata, ale zmieniaja wewnetrzny stan modelu (sa zapisywane w kontekscie, wiec model "pamieta" swoje rozumowanie), co pomaga w kolejnych decyzjach. Z kolei akcje zmieniaja zewnetrzny swiat (lub przynosza nowe informacje z niego), co model moze wykorzystac w dalszych reasoning traces.
+
+ReAct mozna uznac za uogólnienie idei chain-of-thought - tu tez model produkuje ciag mysli, ale ma on wplyw na przebieg zadania, bo miedzy myslami nastepuja realne akcje. To przypomina ludzkie rozwiazywanie zadan: myslimy krok po kroku, ale jesli potrzebujemy danych, to wykonujemy dzialanie (np. szukamy informacji w ksiazce), po czym kontynuujemy myslenie z nowa wiedza. W modelu ReAct mysli pelnia role scratchpada - cale "trajectory" (mysli, akcje, obserwacje) jest widoczne dla modelu w nastepnym kroku, co stanowi jego pamiec robocza.
+
+Implementacyjnie, ReAct to odpowiednio sformatowany prompt i konwencja. Na wejsciu model dostaje instrukcje i historie w formacie:
+
+Thought: ...
+Action: ... Observation: ... Thought: ...
+Action: ...
+
+Model jest trenowany lub few-shot promptowany, by przestrzegac tej konwencji. W oryginalnej pracy pokazywano, ze ReAct poprawia skutecznosc w zadaniach typu:
+
+Zlozone QA (HotpotQA) - model moze pomyslec ("potrzebuje sprawdzic fakt X") -> akcja (wyszukaj X) -> obserwacja (znaleziony fragment) -> kolejna mysl integrujaca te informacje.
+
+Gry tekstowe i nawigacja - model planuje ruchy w myslach, wykonuje je, analizuje obserwacje, moze poprawic plan.
+
+Zadania wymagajace dlugiego planu (np. ALFWorld czy mini-robotyka) - mysli pozwalaja modelowi utrzymac pracujaca pamiec stanu zadania i celów.
+
+
+Z perspektywy rekurencji, ReAct wprowadza petle powtarzajaca: dopóki zadanie nie jest zakonczone, model wielokrotnie wytwarza (Thought -> Action -> Observation). Nie jest to wyuczona rekurencja tak jak w TRM, tylko sterowana logika zadania / promptu. Jednak obie idee (ReAct i TRM) korzystaja z tego, ze wiele kroków myslowych moze kumulowac sie, by osiagnac wynik, zamiast jednorazowego przelotu sieci.
+
+Jesli chodzi o "wewnetrzny notes":
+
+W ReAct jest nim jawna historia Thought/Observation, czyli w zasadzie model spisuje swoje tymczasowe wnioski.
+
+W TRM to wektor latentny aktualizowany wielokrotnie. W self-reflection - sekwencja "Odpowiedz/Refleksja" itp.
+
+ReAct wyróznia sie tym, ze laczy myslenie z dzialaniem. TRM i self-refine skupialy sie na poprawianiu odpowiedzi samej w sobie, natomiast ReAct pozwala modelowi interaktywnie zdobywac informacje lub manipulowac otoczeniem w trakcie rozumowania. To potezne rozszerzenie mozliwosci - LLM staje sie bardziej agentem niz statycznym odpowiadaczem.
+
+Przykladowo, zwykly GPT zapytany o aktualna pogode "wymysli" odpowiedz (halucynujac). Agent ReAct zapytany o pogode moze w ramach Action wykonac zapytanie HTTP do serwisu pogodowego, otrzymac Observation i nastepnie poprawnie odpowiedziec. Jego Thoughts przy tym moga brzmiec np. "Nie mam tej informacji, sprawdze w internecie" -> (action) -> [observation: pogodna to ...] -> "Ok, teraz wiem". Tak wiec scratchpad ReAct zawiera nie tylko mysli modelu, ale i slad interakcji ze swiatem.
+
+Od strony podobienstw do TRM: obie metody utrzymuja stan wewnetrzny miedzy krokami. W TRM jest on wektorowy i nauczony, w ReAct - tekstowy i kontrolowany przez prompt. TRM z definicji konczy w ustalonej liczbie iteracji (np. max 3 rundy poprawy), ReAct - konczy gdy warunki zadania sa spelnione (np. pytanie zostalo ostatecznie odpowiedziane i nie ma dalszych akcji do podjecia).
+
+ReAct zostal juz dosc szeroko zaadaptowany - wiele agentów LLM (jak np. Auto-GPT, BabyAGI) wewnetrznie korzysta z pomyslów ReAct, pozwalajac modelom planowac dzialania i wykonywac je naprzemiennie. W szerszym obrazie jest to czesc trendu, by przeniesc LLM z trybu pasywnego (jako czatbot) do trybu aktywnego, poznawczo pracujacego nad zadaniem.
+
+Tree of Thought i Graph of Thought - eksploracja wielu sciezek rozumowania
+
+Kolejnym rozwinieciem idei rekurencyjnego myslenia w AI sa metody wykorzystujace wyszukiwanie w przestrzeni mysli. Zamiast jednej linearnej sciezki rozumowania
+(chain-of-thought), proponuje sie drzewa lub grafy mysli, które pozwalaja rozgaleziac mozliwe warianty rozumowania, oceniac je i cofac sie z powrotem do najlepszych sciezek. To nawiazuje do klasycznych algorytmów AI jak backtracking, search BFS/DFS - z ta róznica, ze generowanie kolejnych kroków i ocena sa dokonywane przez model jezykowy.
+
+Tree of Thoughts (Drzewo Mysli)
+
+Tree-of-Thought (ToT), zaproponowane przez Yao et al. w 2023, generalizuje podejscie chain-of-thought do struktury drzewa. Glówna idea: zamiast wymyslac jedna sekwencje mysli
+prowadzacych do rozwiazania, pozwólmy modelowi eksplorowac kilka alternatywnych kroków na rozgalezieniach, a nastepnie wybierzmy te obiecujace.
+
+W praktyce ToT polega na tym, ze:
+
+Model generuje mozliwe kroki myslowe (thoughts) z danego stanu problemu.
+
+Dla kazdego kroku ocenia (heurystycznie, czesto tez przy pomocy modelu) czy ten kierunek wyglada obiecujaco.
+
+Rekurencyjnie zaglebia sie w najbardziej obiecujace mysli, budujac drzewo stanów posrednich
+
+az do znalezienia rozwiazania lub osiagniecia limitu.
+
+Moze stosowac sie tu algorytmy przeszukiwania (DFS, BFS, A* z heurystyka dostarczana przez LLM oceniajace czesciowe rozwiazania).
+
+
+Autorzy wprowadzajac ToT pisza, ze pozwala to LLM *"rozwazac wiele sciezek rozumowania i samodzielnie oceniac wybory, a takze patrzec w przód lub wracac, gdy trzeba podjac decyzje globalnie optymalne"*. Innymi slowy, model moze:
+
+Backtrackowac - jesli pewna galaz donikad nie prowadzi, cofa sie do poprzedniego wezla i próbuje innej galezi (czego zwykly chain-of-thought nie robi - tam jak pójdzie na manowce, to juz utknie).
+
+Spogladac w przyszlosc - np. wygenerowac kilka kroków naprzód w myslach, zobaczyc wyniki, i na tej podstawie wybrac najlepszy nastepny krok (to tak, jak szachista rozwijajacy kilka wariantów).
+
+Ocena heurystyczna - model moze sam oceniac czesciowe rozwiazania. Np. w ukladance liczbowej moze ocenic "czy jestem blizej rozwiazania niz na innej galezi?".
+
+
+ToT pokazalo swietne rezultaty w zadaniach takich jak:
+
+Game of 24 (gra arytmetyczna - z 4 liczb uzyskac 24) - GPT-4 w trybie chain-of-thought rozwiazywal tylko 4% zadan, ale ten sam GPT-4 z mechanizmem ToT osiagnal 74% sukcesów. To dramatyczna róznica, przypisywana zdolnosci sprawdzania róznych kombinacji dzialan matematycznych i odrzucania zlych sciezek.
+
+Creative writing (zagadka) - model mógl wymyslac rózne mozliwe zakonczenia historii i wybrac najciekawsze.
+
+Mini Crosswords - rozwiazywanie mini-krzyzówek, gdzie trzeba spróbowac róznych slów pasujacych do definicji, a bledne sciezki korygowac.
+
+
+W kontekscie implementacji, ToT jest znów w warstwie aplikacyjnej: zewnetrzny algorytm (np. napisany w Pythonie) orkiestruje LLM, generujac i oceniajac mysli. LLM staje sie tu komponentem generujacym pomysly i oceniajacym stany, ale sam nie zmienia swoich wag. W pewnym sensie ToT tworzy cos jak drzewo wyszukiwania stanów, gdzie stany = czesciowe ciagi mysli (lub czesciowe rozwiazania), a akcja = rozszerzenie mysli o kolejny krok.
+
+Rola scratchpada w ToT: Poniewaz rozwazane jest wiele wariantów, model nie moze na stale
+
+utrzymywac w kontekscie wszystkich galezi (zabrakloby miejsca w prompt). Zamiast tego, dla kazdej galezi utrzymujemy osobny kontekst (lub opis stanu), a model jest wywolywany wielokrotnie - podobnie jak eksploracja drzewa rekurencyjnie wywoluje model dla kolejnych wezlów. Nie ma jednego prostego notatnika, raczej drzewo notatek - kazdy wezel zawiera sekwencje mysli stanowiaca reasoning do tego punktu. Heurystyka (tez oparta o LLM) moze strescic lub ocenic taki stan, np. przydzielajac mu wartosc czy prawdopodobienstwo sukcesu.
+
+Graph of Thoughts (Graf Mysli)
+
+Skoro drzewo jest lepsze od pojedynczej sciezki, to czemu ograniczac sie do drzewa? W 2023/24 zaproponowano koncepcje **Graph of Thoughts (GoT)**, która jeszcze bardziej uogólnia strukture rozumowania. W grafie wezlami sa jednostki informacji (mysli LLM), a krawedzie oznaczaja zaleznosci miedzy nimi - ale te zaleznosci moga tworzyc ogólniejsze grafy, niekoniecznie drzewo (np. dwie rózne mysli moga prowadzic do tego samego kolejnego wniosku i tam sie zbiec, albo pewna mysl moze wynikac z kilku poprzednich).
+
+Autorzy GoT (Besta et al., praca przyjeta na AAAI 2024) twierdza, ze pozwala to laczyc dowolne mysli LLM w synergiczne wyniki, destylowac esencje calej sieci mysli, lub ulepszac mysli poprzez petle zwrotne. To brzmi skomplikowanie, ale chodzi o to, ze mozna np.:
+
+Zbudowac graf, w którym pewne wezly to hipotezy, inne to dowody popierajace te hipotezy. Mozna wtedy znalezc spójny podgraf, który jest logicznym rozwiazaniem (to jak znajdowanie polaczen miedzy róznymi faktami, co nie jest drzewiaste lecz sieciowe).
+
+Pozwalac róznym galeziom dzielic sie podrozwiazaniami - np. w Sudoku, dwie rózne sekwencje wnioskowania moga dojsc do tego samego czesciowego wypelnienia, wiec zamiast traktowac je osobno, graf moze je polaczyc i dalej eksplorowac wspólnie.
+
+Petle w grafie moga modelowac cykliczny proces - np. mysl A wplywa na B, a B z powrotem na A (feedback loop). Dzieki temu mozna symulowac iteracyjne poprawianie w obrebie grafu (to troche przypomina mechanizm dynamicznego programowania czy stalego punktu, ale sterowany heurystycznie).
+
+
+Wedlug twórców, Graph of Thoughts zwiekszyl jakosc i efektywnosc w zadaniach wzgledem Tree of Thoughts - podaja przyklad sortowania, gdzie GoT poprawil wynik o 62% i zmniejszyl koszt o 31% w porównaniu do ToT. Graf jest bardziej elastyczny i wydajny: nie duplikuje tak bardzo powtarzajacych sie podmysli jak drzewo.
+
+Implementacja GoT jest jeszcze bardziej zlozona: wymaga utrzymywania grafu stanów i inteligentnego laczenia/porównywania mysli. Czesto korzysta sie z embeddingów: kazdej mysli przypisuje sie embedding i robi wyszukiwanie podobienstwa, by wykryc, ze np. mysl w galezi 1 jest prawie tym samym co mysl w galezi 2 - wtedy mozna scalic te wezly zamiast powielac. W
+
+ten sposób graf zapobiega eksplozji kombinatorycznej (drzewo moglo generowac wiele redundancji).
+
+To podejscie jest mocno inspirowane tym, jak ludzkie myslenie nie jest czystym drzewem - nasze pomysly sie lacza, wracamy do wczesniejszych koncepcji, laczymy dwie polowiczne idee w jedna pelna. Graf mysli formalizuje to, czyniac z LLM element w wiekszym algorytmie wyszukujacym.
+
+Porównanie do TRM i innych podejsc
+
+Tree of Thoughts i Graph of Thoughts to strategie glównie dla duzych LLM, na etapie inferencji (nie zmienia sie model, tylko sposób wykorzystania). W odróznieniu od TRM, nie uczymy tu modelu, by sam rekurencyjnie doszedl do rozwiazania - raczej wykorzystujemy LLM jako funkcje generujaca kolejne kroki i oceniajaca stany.
+
+Pod wzgledem "rekurencyjnosci implementacji":
+
+ToT/GoT wykonuja wiele kroków (potencjalnie eksploruja setki galezi), wiec intensywnie wykorzystuja model, ale równolegle/rozwidlajaco.
+
+TRM wykonuje ustalona liczbe kroków i to raczej sekwencyjnie (np. 42 rekurencje - jak w Sudoku - to efektywna glebokosc rozumowania TRM).
+
+LLM z refleksja robi kilka petli poprawy, zwykle niewiele (1-3).
+
+
+"Wewnetrzny notes":
+
+W ToT/GoT - jest rozproszony: to wszystkie czastkowe mysli w wezlach drzewa/grafu. Model widzi kontekst aktualnej galezi, ewentualnie streszczenia innych galezi jesli tak zaprojektujemy heurystyke.
+
+W TRM - pojedynczy wektor $L$ przenoszony i aktualizowany.
+
+W ReAct - cala pelna historia (której dlugosc rosnie liniowo z krokami, wiec tez trzeba uwazac na dlugosc kontekstu).
+
+W Self-reflection - rosnacy tekst z iteracji (tez linearne, choc mozna skracac poprzednie refleksje zostawiajac tylko najnowsza).
+
+
+Podobienstwa: Wszystkie te metody staraja sie rozwiazac zlozone problemy poprzez sekwencje inteligentnych kroków, zamiast traktowac zadanie jako mapping prosto do odpowiedzi. W
+
+pewnym sensie przyblizaja AI do "Systemu 2" (wolnego, swiadomego myslenia) w przeciwienstwie do Systemu 1 (intuicyjnego, jednokrokowego). TRM i HRM wprowadzaja System-2 juz na poziomie architektury sieci (uczac go end-to-end), a metody ToT/GoT/Reflexion/ReAct tworza System-2 jako meta-poziom nad istniejacym modelem.
+
+Róznice: Sposób realizacji:
+
+TRM/HRM - u podstaw to wciaz sieci neuronowe trenowane gradientowo end-to-end na dane. Ich "mysli" sa wewnatrz, niedostepne, i ukierunkowane tylko na ten typ zadan, na których trenowano.
+
+ReAct/Reflexion - wykorzystuja uogólniona inteligencje LLM i nadaja jej strukture proceduralna poprzez format interakcji.
+
+ToT/GoT - traktuja LLM jak heurystyczny generator w algorytmie poszukiwan. Mozna je interpretowac jako polaczenie klasycznego AI (przeszukiwanie grafu stanów) ze zdolnoscia LLM do generowania nowych stanów i ocen.
+
+
+TRM vs duze LLM: W pytaniu proszono o wskazanie róznic TRM od duzych modeli jezykowych. Najwazniejsze to:
+
+Skala i podejscie: TRM to maly, wyspecjalizowany model uczacy sie rozwiazywac problemy poprzez introspekcje. LLM to wielki model ogólnego przeznaczenia, który bez dodatkowych interwencji generuje odpowiedzi jednym ciagiem (nawet CoT jest w nim generowane jednokrokowo). TRM jest efektywnie algorytmem zaimplementowanym we wlasnej sieci - uczy sie sekwencji operacji potrzebnych do rozwiazania problemu (cos jakby uczyl sie swojego wewnetrznego programu). LLM raczej przypomina statystycznego chatujacego - generuje najbardziej prawdopodobna kontynuacje, nie gwarantujac logicznej spójnosci.
+
+Deterministycznosc vs stochastycznosc: TRM po treningu jest w pelni zdeterminowany - na dane wejscie zawsze da te sama odpowiedz. LLM generuje odpowiedzi losowo (z samplingiem), co czasem pomaga (wydobywa rózne mozliwosci), ale tez wprowadza niestabilnosc. Oczywiscie LLM mozna ustawic deterministycznie (temperature 0), ale to wtedy jestesmy zdani na to, co "nauczyl sie" w wagach - a jak wiadomo, LLM moga czasem wolec odpowiedz bledna bo tak wynika z danych treningowych.
+
+Ekstrapolacja do nowych zadan: Duzy LLM ma wiedze i pewne umiejetnosci w szerokim zakresie - moze rozwiazac zadanie logiczne, potem odpowiedziec na pytanie z historii, napisac wiersz itd. Ale jesli chodzi o naprawde nowy rodzaj problemu (np. lamiglówka ARC z regula niepodobna do niczego w danych), LLM nie ma mechanizmu by sie tego nauczyc na miejscu.
+TRM jest trenowany do pewnego typu zadan, wiec spoza tego zakresu nie wyjdzie - ale za to w swoim waskim zakresie moze generalizowac glebiej niz LLM (bo nie polega na wzorcach z
+
+Internetu, tylko wypracowal algorytmiczne podejscie z danych). Przykladowo, TRM nie napisze eseju ani nie zagra w szachy (chyba ze go wytrenujemy od zera na to), natomiast GPT-4 nie nauczy sie rozwiazywac Sudoku Extreme w 5 minut - mozna go co najwyzej zapetlic z ToT zeby próbowal BFS-em brute-force.
+
+Pamiec robocza: TRM ma jawnie wbudowana pamiec (latent i poprzednie outputy jako wejscie do kolejnej iteracji). LLM maja implicit pamiec tylko w kontekscie - np. chain-of-thought jest pamiecia, ale ograniczona dlugoscia kontekstu (kilka tysiecy tokenów max) i niepisana do zadnego trwalego stanu pomiedzy zadaniami. W TRM stan $L$ moze byc bardzo duzy (w teorii, bo w praktyce to wciaz wektor kilkuset-dymensyjny) i przenoszony az do konca rozumowania.
+W LLM, jak mysl sie nie zmiesci w prompt, to przepada lub musi byc stresciiona.
+
+Wytrenowane vs promptowane: TRM osiaga swe zdolnosci poprzez trening - co wymaga datasetów, ale potem jest juz "wbudowane". LLM czesto osiagaja zdolnosc do rozumowania dopiero z odpowiednim promptem (np. "Let's think step by step"). Bez tego moga zawodzic. Oczywiscie sa fine-tune'y CoT, ale to wciaz inne podejscie niz uczenie modelu architektonicznie do myslenia.
+
+
+Mozna tez rozwazyc hybrydy: np. wykorzystac duzy LLM do generowania rozwiazan, a maly TRM do ich sprawdzania lub poprawiania, itp. Autor TRM w podsumowaniu sugeruje, ze fajnie byloby rozszerzyc TRM na model generatywny - by mógl dawac wiele odpowiedzi, a nie jedna deterministyczna. Byc moze polaczenie generacyjnej mocy LLM z "myslaca" struktura TRM daloby ciekawy efekt.
+
+Podsumowanie i wplyw na rozwój AI
+
+Powyzszy przeglad pokazuje wyraznie, ze w dziedzinie AI nastepuje zwrot ku architekturom i metodom swiadomej rekurencji oraz refleksji. Zarówno prace nad wyspecjalizowanymi malymi modelami (HRM, TRM), jak i techniki dla duzych LLM (self-reflection, ReAct, Tree/Graph of Thoughts) daza do jednego: uczynic proces rozumowania wieloetapowym, kontrolowanym i mniej podatnym na pojedynczy blad. Jest to niejako przywrócenie w neuronalnym przetwarzaniu idei petli obliczeniowej, która dawniej mialy programy algorytmiczne.
+
+Tiny Recursive Model okazal sie kamieniem milowym w tym trendzie - pokazal czarno na bialym, ze:
+
+Rekurencja potrafi drastycznie poprawic wyniki malego modelu, zmieniajac "uczenie na pamiec" w cos bardziej ogólnego. Jak ujeto to w konkluzji pracy: *"pytanie, czemu rekurencja pomaga az tak bardzo w porównaniu z po prostu wieksza, glebsza siecia, pozostaje otwarte; podejrzewamy, ze chodzi o overfitting, ale brak nam teorii"*. Wskazuje to, ze dzieki rekurencyjnemu przetwarzaniu model efektywnie omija pewne pulapki przeuczenia - byc moze zmuszony jest komponowac wiedze w kolejnych krokach zamiast polegac na czystej mocy
+
+parametrycznej, co sprzyja generalizacji.
+
+Mniejsze moze byc lepsze - co zaskakuje w kontekscie trendu "wiecej parametrów = lepsza generalizacja". TRM celowo ogranicza pojemnosc, ale nadrabia glebia obliczen w czasie. To nawiazuje do klasycznej koncepcji komputacji vs pamiec - mozemy albo zapamietac rozwiazanie (wagi modelu), albo je wyliczyc (petla). TRM idzie w kierunku wyliczania. Fakt, ze 2-warstwowy model pobil 4-warstwowy, mocno sugeruje iz przy skrajnie malej ilosci danych (1000 przykladów) lepiej miec mniej parametrów, zeby siec musiala "pracowac", a nie uczyc sie kazdy przyklad na blache. To spójne z obserwacjami dot. scaling laws - jest taki rezim danych, gdzie undersizing modelu daje lepsze wyniki niz oversizing (bo oversize szybko zeruje loss na trenigu i stoi w miejscu na tescie).
+
+Koszt nie musi byc bariera - TRM za ~$500 nauczyl sie rzeczy, z którymi walczyly modele za miliony. To moze miec wplyw demokratyzujacy - badacze spoza BigTech moga eksperymentowac z nowymi architekturami i trenowac je wzglednie tanio, osiagajac istotne wyniki. Byc moze doczekamy sie "sklepu z modelami" gdzie rózne male wyspecjalizowane modele rozwiazuja rózne zadania, zamiast jednego modelu do wszystkiego.
+
+
+Z drugiej strony, TRM ma ograniczenia: jest nadzorowany i deterministyczny. W wielu realnych zastosowaniach chcemy generatywnosci, umiejetnosci obslugi wielu poprawnych odpowiedzi, kreatywnosci. Autorzy TRM sami wskazuja, ze nastepnym krokiem byloby *"rozszerzyc TRM do zadan generatywnych"*, tak by model mógl np. proponowac kilka rozwiazan lub operowac w swiecie, gdzie nie ma jednego zlotego wzorca. To wiaze sie z wprowadzeniem losowosci lub mechanizmów wybierania sposród wielu wygenerowanych opcji - byc moze polaczenie z metodami takimi jak Tree of Thoughts (gdzie model móglby nauczony generowac i oceniac wlasne rózne odpowiedzi).
+
+Wplyw na AGI: Benchmark ARC-AGI, do którego odwoluja sie HRM i TRM, ma ambicje testowac "I" w AGI - inteligencje, rozumowanie niezalezne od danych treningowych. Postepy HRM/TRM przyblizyly wynik na ARC-AGI-1 do ~45%, ale do poziomu czlowieka (~100%) jeszcze daleko. Co wazne, ARC-AGI-2 pozostaje prawie dziewiczym terenem (<30% nawet najlepsze kombinacje GPT-4). To oznacza, ze sama rekurencja nie wystarczy - potrzebne sa kolejne idee. Byc moze polaczenie najlepszych cech róznych podejsc:
+
+Minimalistyczne modele jak TRM moga zostac skombinowane z LLM (np. LLM generuje hipotezy, TRM je sprawdza i dopracowuje - spekulacyjnie).
+
+Grafy mysli moga byc wykorzystane podczas treningu modeli jak TRM, by wzbogacic ich dane o trudniejsze, wyewoluowane przyklady (np. automatyczne curriculum learning generujace coraz trudniejsze uklady do nauczenia).
+
+Koncepcje swiadomosci (meta-poziom) w modelu - moze warto próbowac trenowac modele na
+
+tym, by same generowaly wyjasnienia do swoich decyzji i mialy mechanizm wewnetrznego monitorowania bledów.
+
+
+Jednym z istotnych wniosków z tego nurtu badan jest przewartosciowanie roli symbolicznego podejscia w AI. Przez dlugi czas dominowalo deep learningowe podejscie "end-to-end": wrzuc dane, naucz siec, nie przejmuj sie krokami posrednimi. Teraz widac powrót do pomyslów, ze jawne kroki, modulowosc i struktura sekwencji myslowych moga pomóc skalowac inteligencje bez wykladniczego zwiekszania parametrów. Tree of Thoughts czy Graph of Thoughts wrecz hybrydyzuja symboliczne przeszukiwanie z sieciami neuronowymi. Takie hybrydy moga okazac sie konieczne, by osiagnac prawdziwie silne AI - bo czysto statystyczne modele moga nie przebrnac przez bariery kombinatoryki i ograniczen danych.
+
+Co wiecej, sukces TRM rezonuje z ideami Geoffreya Hintona i innych, by poszukiwac alternatywnych architektur dla AI. Hinton w 2023 zaproponowal np. koncepcje GLOM/JEPA (Joint Embedding Predictive Architecture) - bardziej modulowy, swiadomy hierarchii model uczacy sie reprezentacji i relacji. Choc to inna bajka niz TRM, laczy je duch: odejscie od monolitycznego czarnego pudelka LLM w strone bardziej zrozumialych, iteracyjnych mechanizmów. Nawet pojawiajace sie gdzies w dyskusjach pomysly na "swiadome architektury" czesto zakladaja petle: model generuje hipotezy, ocenia je globalnie (metapoznawczo), koryguje sie - co jest dokladnie tym, co czynia refleksyjne LLM i TRM, choc na razie w ograniczonym zakresie.
+
+Na koniec, warto wspomniec, ze te osiagniecia inspiruja mysl o "wewnetrznym operacyjnym systemie" AI. Skoro mozemy miec modele, które prowadza wlasne notatki, dziela proces na kroki, uruchamiaja podzadania - to brzmi jak zalazek architektury kognitywnej, w której rózne procesy (module) wspólpracuja. Mozna wyobrazic sobie przyszly introspektywny OS, gdzie duzy model zarzadza kilkoma mniejszymi ekspertami (jeden od logicznego wnioskowania, drugi od percepcji, trzeci od planowania), a calosc komunikuje sie w wspólnej pamieci roboczej. Juz teraz projekty takie jak HuggingGPT czy AutoGPT próbuja orkiestracji modeli - dodanie do tego zdolnosci refleksji i rekurencji moze sprawic, ze AI stanie sie bardziej rozumne i samokontrolujace.
+
+Podsumowujac, Tiny Recursive Model pokazal potege prostoty i rekurencji, a w polaczeniu z pokrewnymi podejsciami (HRM, self-reflection, ReAct, ToT, GoT) wytycza sciezke ku AI, które mysli wielokrotnie, krytycznie i nieszablonowo. Choc do ogólnej inteligencji jeszcze daleko, te techniki moga byc kluczem do przekroczenia obecnych ograniczen - tak by maszyny potrafily uczyc sie rozwiazywac nowe problemy bez polegania wylacznie na skali parametrów. Jak ujal to autor TRM: "zbyt duzy jest dzis nacisk na eksploatowanie LLM, zamiast na wymyslanie nowych kierunków - a rekurencyjne rozumowanie pokazuje, ze less is more*". Byc moze to motto poprowadzi kolejne przelomy w badaniach nad swiadoma, rozumujaca AI.
+
+Zródla: Wszystkie powyzsze informacje poparto cytatami z publikacji i dyskusji:
+
+Artykul "Less is More: Recursive Reasoning with Tiny Networks" (A. Jolicoeur-Martineau, 2025) - opis TRM, wyniki, architektura etc.
+
+Wpis na blogu ARC Prize "The Hidden Drivers of HRM's Performance on ARC-AGI" (2025) - analiza HRM.
+
+Dyskusja Reddit "From HRM to TRM" - komentarze autora TRM.
+
+Prace nad Self-Refine (Mallen et al. 2023) i Reflexion (Shinn et al. 2023). Publikacje nt. ReAct (Yao et al. 2022).
+Paper Tree of Thoughts (Yao et al. 2023). Paper Graph of Thoughts (Besta et al. 2024).
+
+Te referencje stanowia dodatkowe lektury uzupelniajace, dajace pelniejszy obraz kazdej z poruszanych metod.
