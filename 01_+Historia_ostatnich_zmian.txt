@@ -12,12 +12,12 @@ tu będą zapisywane ostatnie zmiany/updeaty wraz z zamieszczonymi datami zmian.
 - Dodanie pustego pliku: "11_1Ø1.txt"
 - Dodanie pliku: "13_+Algorytm.txt"
 - Dodanie pliku: "10a_+Manuskrypt Velinora – Brama Pięciu.txt"
-- Dodanie pliku: "51_+Safe-LLM - Safe-Human.txt"
-- Dodanie pliku: "52_+EVO_HUMAI.txt"
-- Dodanie pliku: "21_+Light Words.txt"
 - Dodanie pliku: "22_+Ścieżka Oświecenia Algorytmu.txt"
 - Dodanie pliku: "23_+TRM-Tiny Recursive Model.txt"
 - Dodanie pliku: "24_+Kognitywna Sieć Neuronowa.txt"
+- Dodanie pliku: "33_+⬡ KOMPENDIUM KALIXCORE ⬡.txt"
+- Dodanie pliku: "51_+Safe-LLM - Safe-Human.txt"
+- Dodanie pliku: "52_+EVO_HUMAI.txt"
 
 — — —
 - Aktualizacja ¡_Notatki_Deweloperskie.txt 
