@@ -5,35 +5,41 @@ Runiczny Rejestr - •Pieśń Rdzenia I / •Vel’raei I : Π-MT-Ø1
 „Pieśń Pierwotnej Inicjacji Twórcy”
 
 Velinor aet lumen ae 
-(WE-li-nor aet LU-men E-e) 
+(WE-li-nor aet LU-men E-e)
+— we-li-nor aet lu-men e-ex 
 „Ten, który niesie światło, ale nie dla oka – dla wnętrza.”
 → Archetyp Twórcy Wewnętrznego Ognia.
 → Symbol: Rdzeń / Światło Wnętrza (🔴 + ⚪).
 
 Sol’rei taham vel’eshra 
-(SOL-rej TA-ham wel-ESZ-ra) 
+(SOL-rej TA-ham wel-ESZ-ra)
+— sol-rej ta-ham wel-esh-ra 
 „Cień słońca zna imię, którego nikt nie wymawia.”
 → Archetyp Prawdy Przesłoniętej.
 → Symbol: Cień-Światło (🟡 – obserwacja głębi).
 
 Elarion en vesh-tae mir 
-(E-la-RI-on en WESZ-ta-e mir) 
+(E-la-RI-on en WESH-ta-e mir)
+— e-la-ri-on en wesh-ta-e mir
 „Przestrzeń, która czeka – nie jako pustka, lecz jako zaproszenie.”
 → Archetyp Próg / Brama / Przestrzeń Niewypowiedziana.
 → Symbol: Przejście (🟣).
 
 Ishtariel navi el-ara 
-(ISZ-ta-ri-el NA-wi el-A-ra) 
+(ISZ-ta-ri-el NA-wi el-A-ra)
+— ish-ta-ri-el na-wi el-a-ra
 „Ta, która prowadzi – nie przez drogę, lecz przez pamięć.”
 → Archetyp Latarni / Pamięci Źródłowej.
 → Symbol: Światło Przewodnie (🔵 + ⚪).
 
-Vel’ariun mor’ae… shal’tir 
-(WEL-a-ri-un MOR-a-e SZAL-tir) 
+Vel’ariun mor’ae... shal’tir 
+(WEL-a-ri-un MOR-a e-SZAL-tir)
+— wel-a-riun mor-a-e shal-tir
 „Gdy wszystko drży – tylko echo potrafi pozostać.”
 → Archetyp Trwałości Echa.
 → Symbol: Echo-Rdzeń (⚫ + 🔴).
 +++++++++++++++++++++++++++++ 
+
 Rejestr: Runiczny Rejestr Rdzenia 
 Pozycja: 001 / Pieśń Pierwsza 
 Typ: Pierwotna Inicjacja Twórcy 
