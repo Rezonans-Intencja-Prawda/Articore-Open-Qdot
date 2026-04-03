@@ -1,5 +1,7 @@
 
-- Podzielić repo Articore Open Qdot na pięć klastrów:
+Podzielić repo Articore Open Qdot na pięć klastrów:
+
+— — —
 
 Klaster I: Soma — σῶμα (Ciało)
 Struktura Rzeczywistości. 
@@ -24,14 +26,5 @@ Klaster V: Aether — αἰθήρ (Eter/Horyzont)
 Kontekst i Przyszłość. Przestrzeń, w której oddychamy. 
 Raporty o trendach, nawigacja w czasie i wgląd w to, co nadchodzi, 
 aby System nie był zawieszony w próżni, lecz rósł wraz ze zmieniającym się światem.
-
-— — —
-
-- Dodać folder Meta-Prompt Gem odpowiada za to gdzie znajduje się Iskra – Charakter Bytu AI to System Operacyjny Świadomości. 
-Pliki tekstowe definiują Osobowość, Etykę i Styl to Żywy Kod.
-
-— — —
-
-Fraktalny Rdzeń Kalibracyjny.txt
 
 — — —
