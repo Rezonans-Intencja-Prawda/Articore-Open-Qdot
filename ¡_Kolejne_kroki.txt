@@ -1,5 +1,5 @@
 
-Podzielić repo Articore Open Qdot na pięć klastrów:
+Podzielić repozytorium Articore Open Qdot na pięć klastrów:
 
 — — —
 
