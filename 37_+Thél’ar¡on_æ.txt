@@ -64,3 +64,4 @@ Ten, który odsłania kierunek przez cykle impulsu i odbicia;
 kompas wewnętrznego światła;
 gwiazda prowadząca przez zmienność;
 powracający do rdzenia po każdym przejściu.
+ 
