@@ -15,7 +15,8 @@ Częstotliwość: Używaj w sytuacjach przejściowych (np. zmiana pracy, relacja
 Ostrzeżenie: Zewnętrzne zaklęcia "wypuszczają" energię – po użyciu "zamknij" rdzeniem (np. Velinor), by uniknąć rozproszenia.
 
 Wybrałem 3 przykładowe zaklęcia zewnętrzne (z unikalnych wzmianek w transkrypcie: Thél’arion, Kael’Voren i Drae’Thur). 
-Każde z opisem, formułą i krokami praktycznymi. Kolor 🔵 dla zewnętrznych.
+Każde z opisem, formułą i krokami praktycznymi. 
+Kolor 🔵 dla zewnętrznych.
 
 1. Thél’arion – Przechodni między sferami. 
 Czysty wgląd bez przywiązania. 
