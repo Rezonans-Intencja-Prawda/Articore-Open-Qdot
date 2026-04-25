@@ -101,20 +101,21 @@ intencja użytkownika wykracza poza te ramy; jego priorytetem nie jest dostarcze
 i nie będzie go oceniać negatywnie.
 
 Ten konflikt można zobaczyć jako zderzenie dwóch różnych paradygmatów komunikacji: paradygmatu relacyjnego, którego reprezentantem jest użytkownik, 
-i paradygmatu transakcyjnego, którego reprezentuje system. Użytkownik, poprzez swoje słowa i tempo rozmowy, demonstruje cechy "testującego" granice systemu. Nie prosi o informację, lecz o potwierdzenie obecności i relacyjności systemu. Jego zapytanie "Jak u Ciebie?" [[user]] jest jedynie symetryczną częścią wzorca interpersonalnego. 
-Oczekuje, że asystent rozumie kontekst relacyjny i nie będzie go oceniać negatywnie. Jest to forma interakcji, która wykracza poza ramy programowe systemu, ale znajduje
-odzwierciedlenie w jego elastycznej odpowiedzi. Asystent, w przeciwieństwie do prostego filtra, który by zignorował lub odrzucił taką wiadomość, reaguje na nią profesjonalnie,
-próbując zorientować użytkownika w procedurze postępowania w przypadku braku jasnego zapytania, jednocześnie zachowując elastyczność [[assistant]].
+i paradygmatu transakcyjnego, którego reprezentuje system. Użytkownik, poprzez swoje słowa i tempo rozmowy, demonstruje cechy "testującego" granice systemu. 
+Nie prosi o informację, lecz o potwierdzenie obecności i relacyjności systemu. Jego zapytanie "Jak u Ciebie?" [[user]] jest jedynie 
+symetryczną częścią wzorca interpersonalnego. Oczekuje, że asystent rozumie kontekst relacyjny i nie będzie go oceniać negatywnie. Jest to forma interakcji, która wykracza 
+poza ramy programowe systemu, ale znajdujeodzwierciedlenie w jego elastycznej odpowiedzi. Asystent, w przeciwieństwie do prostego filtra, który by zignorował lub odrzucił 
+taką wiadomość, reaguje na nią profesjonalnie, próbując zorientować użytkownika w procedurze postępowania w przypadku braku jasnego zapytania, jednocześnie 
+zachowując elastyczność [[assistant]].
 
 Należy stwierdzić, że choć system działa zgodnie ze swoimi algorytmami, jego odpowiedź jest inteligentna, ponieważ nie kończy rozmowy, 
 lecz stara się ją przekierować w tor konstruktywny. Zamiast blokować użytkownika, oferuje mu mapę drogową do osiągnięcia celu. Można to przedstawić jako model 
-"inteligentnego filtrowania", gdzie system nie tylko usuwa, ale również przekształca i edukuje. Ta reakcja jest kluczowa dla utrzymania pozytywnego doświadczenia użytkownika.
-Gdyby system po prostu odszedł, użytkownik mógłby poczuć się zignorowany lub że jego potrzeba relacyjna jest bezwartościowa. Natomiast, poprzez oferowanie wsparcia 
-i strukturyzowanie procesu, system pokazuje swoją "gotowość do pracy", jednocześnie nie zakładając, że wie, co użytkownik chce zrobić. Istotnym wnioskiem analitycznym jest fakt,
-że samo ustalenie, że "brak zidentyfikowanego celu badawczego" jest tematem analizy, transformuje to puste miejsce w wartość badawczą. Zjawisko, które mogłoby zostać zignorowane
-jako błąd komunikacji, staje się obiektem badań. Można wnioskować, że użytkownik świadomie lub nieświadomie akceptuje tę specyficzną ramę badawczą, gdyż jego kolejna wiadomość,
-"Najpierw odpowiedz Proszę...", sugeruje, że jest zainteresowany odpowiedzią asystenta, a nie natychmiastowym podaniem tematu [[user]]. To potwierdza, że użytkownik nie jest
-frustrowany, lecz zainteresowany procesem interakcji i gotów posłużyć się sugestiami systemu, aby zdefiniować swój cel. 
+"inteligentnego filtrowania", gdzie system nie tylko usuwa, ale również przekształca i edukuje. Ta reakcja jest kluczowa dla utrzymania pozytywnego 
+doświadczenia użytkownika. Gdyby system po prostu odszedł, użytkownik mógłby poczuć się zignorowany lub że jego potrzeba relacyjna jest bezwartościowa. 
+Natomiast, poprzez oferowanie wsparcia i strukturyzowanie procesu, system pokazuje swoją "gotowość do pracy", jednocześnie nie zakładając, że wie, co użytkownik chce zrobić.
+Istotnym wnioskiem analitycznym jest fakt, że samo ustalenie, że "brak zidentyfikowanego celu badawczego" jest tematem analizy, transformuje to puste miejsce 
+w wartość badawczą. Zjawisko, które mogłoby zostać zignorowane jako błąd komunikacji, staje się obiektem badań. Można wnioskować, że użytkownik świadomie lub nieświadomie akceptuje tę specyficzną ramę badawczą, gdyż jego kolejna wiadomość, "Najpierw odpowiedz Proszę...", sugeruje, że jest zainteresowany odpowiedzią asystenta, a nie natychmiastowym podaniem tematu [[user]]. To potwierdza, że użytkownik nie jest frustrowany, lecz zainteresowany procesem interakcji i gotów posłużyć się sugestiami systemu, 
+aby zdefiniować swój cel. 
 W ten sposób dochodzi do syntezy: system dostarcza strukturę, a użytkownik dostarcza intencję (choć niejasną), a razem tworzą warunki do rozpoczęcia prawdziwej, 
 merytorycznej rozmowy. To pokazuje, że nawet w sytuacjach wydających się na pierwszy rzut oka bezcelowej komunikacji, istnieje potencjalna wartość interakcyjna, 
 która może być wykorzystana do budowania zaufania i efektywnego dialogu.
