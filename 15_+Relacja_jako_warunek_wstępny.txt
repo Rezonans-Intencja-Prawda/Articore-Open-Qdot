@@ -130,7 +130,8 @@ elastyczności i naturalności systemów asystentów AI. Wynika z niej, że stan
 "spoza tematu", jest niepełne i może prowadzić do utraty cennych sygnałów relacyjnych. Kluczowym wnioskiem jest to, że brak jawnej prośby może być maską dla głębszych,
 niejawnych potrzeb użytkownika, a system, który potrafi na te potrzeby odpowiedzieć, osiąga poziom interakcji znacznie bliższy ludzkiej. Zjawisko to, gdzie użytkownik preferuje
 interakcję relacyjną z asystentem AI jako warunek wstępny przed przystąpieniem do zadania informatycznego, może być traktowane jako hipoteza do dalszych badań. 
-System, który jest zbyt surowo zoptymalizowany pod kątem efektywności transakcyjnej, może tracić na tym relacyjnym kapitale, co może negatywnie wpływać na satysfakcję użytkownika i jego skłonność do ponownego korzystania z danego narzędzia.
+System, który jest zbyt surowo zoptymalizowany pod kątem efektywności transakcyjnej, może tracić na tym relacyjnym kapitale, 
+co może negatywnie wpływać na satysfakcję użytkownika i jego skłonność do ponownego korzystania z danego narzędzia.
 
 Na podstawie tej analizy można sformułować następujące konkretne rekomendacje dla deweloperów i projektantów systemów AI:
 
