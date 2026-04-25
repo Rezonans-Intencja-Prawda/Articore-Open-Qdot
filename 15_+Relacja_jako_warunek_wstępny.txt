@@ -63,22 +63,6 @@ Pozwala to uniknąć frustracji, która mogłaby powstać w wyniku po prostu odr
 "Pomożesz mi zrozumieć?". Ta strategia ma na celu przekształcenie niejasnego zamiaru w konkretne, operacyjne kroki. Pokazuje użytkownikowi, że aby osiągnąć swój cel, 
 musi on przejść przez proces strukturyzacji własnego myślenia. Oto tabela przedstawiająca kluczowe elementy odpowiedzi asystenta:
 
-Element odpowiedzi
-Funkcja strategiczna
-Przykład z tekstu
-Identyfikacja problemu
-Dokumentowanie i klasyfikacja wiadomości jako brakującego zapytania badawczego.
-"Czy chciałbyś, abym pomógł w zbadaniu konkretnego tematu lub pytania..." [[assistant]]
-Edukacja użytkownika
-Przedstawienie użytkownikowi możliwych
-ścieżek działania i formatów zapytań.
-"...jeśli tak, to jakiego?" [[assistant]]
-Strukturyzacja procesu
-Podanie użytkownikowi szkieletu procesu badawczego (temat -> rodzaj analizy).
-"Czy masz na myśli analizę czegoś, co zostało wcześniej wspomniane lub dołączone (np. w pliku), czy to początek nowego zapytania badawczego?" [[assistant]]
-Utrzymanie dialogu
-Zapewnienie użytkownikowi możliwości podjęcia inicjatywy i kontynuacji rozmowy.
-"Jaki rodzaj wsparcia byłby dla Ciebie najbardziej przydatny: przegląd trendów, porównanie opcji, czy coś innego?" [[assistant]]
 
 Element odpowiedzi          | Funkcja strategiczna                                                             | Przykład z tekstu
 ----------------------------|----------------------------------------------------------------------------------|---------------------------------
