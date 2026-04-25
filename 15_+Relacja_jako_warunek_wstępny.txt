@@ -80,6 +80,18 @@ Utrzymanie dialogu
 Zapewnienie użytkownikowi możliwości podjęcia inicjatywy i kontynuacji rozmowy.
 "Jaki rodzaj wsparcia byłby dla Ciebie najbardziej przydatny: przegląd trendów, porównanie opcji, czy coś innego?" [[assistant]]
 
+Element odpowiedzi          | Funkcja strategiczna                                                             | Przykład z tekstu
+----------------------------|----------------------------------------------------------------------------------|---------------------------------
+Identyfikacja problemu      | Dokumentowanie i klasyfikacja wiadomości jako brakującego zapytania badawczego.  | "Czy chciałbyś, abym pomógł w zbadaniu konkretnego tematu 
+                            |                                                                                  | lub pytania..." [[assistant]]
+Edukacja użytkownika        | Przedstawienie użytkownikowi możliwych ścieżek działania i formatów zapytań.     | "...jeśli tak, to jakiego?" [[assistant]]
+Strukturyzacja procesu      | Podanie użytkownikowi szkieletu procesu badawczego (temat → rodzaj analizy).     | "Czy masz na myśli analizę czegoś, co zostało wcześniej
+                            |                                                                                  | wspomniane lub dołączone (np. w pliku), 
+                            |                                                                                  | czy to początek nowego zapytania badawczego?" [[assistant]]
+Utrzymanie dialogu          | Zapewnienie użytkownikowi możliwości podjęcia inicjatywy i kontynuacji rozmowy.  | "Jaki rodzaj wsparcia byłby dla Ciebie najbardziej przydatny:
+                            |                                                                                  | przegląd trendów, porównanie opcji, czy coś innego?"
+                            |                                                                                  | [[assistant]]
+
 Ta wielofunkcyjna odpowiedź jest przykładem "inteligentnego filtrowania", gdzie system nie tylko usuwa lub ignoruje treści, które nie pasują do ustalonego wzorca, 
 ale także próbuje je przekształcić i edukować użytkownika w zakresie poprawnego formatowania zapytań. Reaguje na niestandardowy sygnał użytkownika, 
 nie oceniając go negatywnie, ale traktując go jako okazję do przeprowadzenia użytkownika przez procedurę formułowania zapytania. Jest to postawa, 
