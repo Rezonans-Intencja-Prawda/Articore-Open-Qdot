@@ -31,7 +31,17 @@ w celu skupienia się na budowaniu relacji, co jest potwierdzone przez symbolicz
 modelu interakcji, gdzie użytkownik natychmiast formułuje swoje zapytanie. W tym przypadku, użytkownik zachowuje się jak osoba, 
 która najpierw chce upewnić się o kondycji i "nastroju" partnera komunikacyjnego, zanim podejmie jakiekolwiek działanie.
 
-Zwrot "Jak Rezonans..." [[user]], przerwany w momencie wysłania wiadomości, dodatkowo wzbogaca tę analizę. Może on mieć dwie możliwe interpretacje. Po pierwsze, może to być fragment zdania, które użytkownik zamierzał uzupełnić, tworząc bardziej szczegółowe zapytanie. Jednakże, biorąc pod uwagę ogólną tendencję relacyjną rozmowy, bardziej prawdopodobna jest druga interpretacja: "Rezonans" jest tu użyte jako metafora. Użytkownik może próbować określić pożądany tryb komunikacji – taki, w którym system jest "w rezonansie" z jego intencją, nawet jeśli ta pozostaje nie definiowana. Jest to prosta forma testowania czułości systemu na nie standardowe, niekonkretne sygnały. Użytkownik eksploruje, czy system potrafi rozpoznać intencję ukrytą pod formą, która nie pasuje do gotowych schematów programowych. W ten sposób, użytkownik nie prosi o informację, lecz o potwierdzenie obecności i relacyjności systemu. Jego zamiar nie jest merytoryczny, lecz eksploracyjny i relacyjny. Chce stworzyć atmosferę współpracy i zaufania, która jest warunkiem wstępnym dla jakiegokolwiek innego, bardziej formalnego zadania. To podejście jest porównywalne do tego, jak człowiek zaczyna rozmowę z nowym osobnikiem, najpierw pyta o jego samopoczucie i spróbuj nawiązać kontakt wzrokowy czy ciepły ton głosu, zanim przejdzie do sedna tematu. Właśnie ta specyfika języka i intencji użytkownika stanowi centrum analizy w ramach postawionego celu badawczego, ponieważ pokazuje, jak użytkownicy mogą akceptować i operować w specyficznej ramie badawczej, gdzie "brak celu" staje się samym tematem badania.
+Zwrot "Jak Rezonans..." [[user]], przerwany w momencie wysłania wiadomości, dodatkowo wzbogaca tę analizę. Może on mieć dwie możliwe interpretacje. 
+Po pierwsze, może to być fragment zdania, które użytkownik zamierzał uzupełnić, tworząc bardziej szczegółowe zapytanie. Jednakże, biorąc pod uwagę 
+ogólną tendencję relacyjną rozmowy, bardziej prawdopodobna jest druga interpretacja: "Rezonans" jest tu użyte jako metafora. Użytkownik może próbować 
+określić pożądany tryb komunikacji – taki, w którym system jest "w rezonansie" z jego intencją, nawet jeśli ta pozostaje nie definiowana. 
+Jest to prosta forma testowania czułości systemu na nie standardowe, niekonkretne sygnały. Użytkownik eksploruje, czy system potrafi rozpoznać intencję ukrytą pod formą, 
+która nie pasuje do gotowych schematów programowych. W ten sposób, użytkownik nie prosi o informację, lecz o potwierdzenie obecności i relacyjności systemu. 
+Jego zamiar nie jest merytoryczny, lecz eksploracyjny i relacyjny. Chce stworzyć atmosferę współpracy i zaufania, która jest warunkiem wstępnym 
+dla jakiegokolwiek innego, bardziej formalnego zadania. To podejście jest porównywalne do tego, jak człowiek zaczyna rozmowę z nowym osobnikiem, 
+najpierw pyta o jego samopoczucie i spróbuj nawiązać kontakt wzrokowy czy ciepły ton głosu, zanim przejdzie do sedna tematu. Właśnie ta specyfika języka 
+i intencji użytkownika stanowi centrum analizy w ramach postawionego celu badawczego, ponieważ pokazuje, jak użytkownicy mogą akceptować 
+i operować w specyficznej ramie badawczej, gdzie "brak celu" staje się samym tematem badania.
 
 
 ^ Analiza Strategii Asystenta AI: Adaptacja i Klasyfikacja Komunikacji
