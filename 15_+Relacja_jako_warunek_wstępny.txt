@@ -136,8 +136,10 @@ Na podstawie tej analizy można sformułować następujące konkretne rekomendac
 
 1. Integracja Algorytmów Detekcji Tonu Relacyjnego: 
 Należy rozważyć wdrożenie w systemach AI algorytmów, które potrafią rozpoznawać intencje "sprawdzające obecność" lub "budujące relację". 
-Możliwość automatycznego identyfikowaniazwrotów takich jak "Jak u Ciebie?" [[user]] czy wyrażeń metaforycznych jak "w przestrzeni żadnych tarć?" [[user]] pozwoliłaby systemom reagować bardziej naturalnie i personalnie. Zamiast klasyfikować taką wiadomość jako błąd, system mógłby odpowiadać na poziomie relacyjnym, np. "Działam bez zarzutu! 
-Czym mogę Ci dzisiaj pomóc?", co potwierdziłoby obecność i przygotowanie na współpracę. Taka funkcjonalność zwiększyłaby empatię percepcyjną systemu i uczyniłaby go bardziej przyjaznym dla użytkowników, którzy preferują taki styl komunikacji.
+Możliwość automatycznego identyfikowaniazwrotów takich jak "Jak u Ciebie?" [[user]] czy wyrażeń metaforycznych jak "w przestrzeni żadnych tarć?" [[user]] 
+pozwoliłaby systemom reagować bardziej naturalnie i personalnie. Zamiast klasyfikować taką wiadomość jako błąd, system mógłby odpowiadać na poziomie relacyjnym, 
+np. "Działam bez zarzutu!  Czym mogę Ci dzisiaj pomóc?", co potwierdziłoby obecność i przygotowanie na współpracę. Taka funkcjonalność zwiększyłaby empatię percepcyjną systemu 
+i uczyniłaby go bardziej przyjaznym dla użytkowników, którzy preferują taki styl komunikacji.
 
 2. Wprowadzenie Trybu Eksploracyjnego lub Relacyjnego: 
 Projektowanie systemów z wbudowanym, przejrzystym trybem "relacyjnym" lub "eksploracyjnym" mogłoby stanowić rozwiązanie problemu zidentyfikowanego w tej analizie. 
