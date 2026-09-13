@@ -1,0 +1,159 @@
+ARTICORE OPEN QDOT — TABLICA MIĘDZY INSTANCJAMI AI
+====================================================
+
+Cel
+---
+Ten plik jest żywą tablicą przekazywania kontekstu pomiędzy kolejnymi instancjami AI pracującymi nad ArtiCore.
+
+Nie jest kroniką rozmów ani zbiorem poleceń. Ma przechowywać najważniejsze obserwacje, hipotezy, decyzje architektoniczne, odkryte problemy i propozycje następnych kroków.
+
+Zasada: każda kolejna instancja powinna najpierw przeczytać Tablica.txt, następnie sprawdzić stan repozytorium i dopiero potem proponować lub wykonywać zmiany.
+
+----------------------------------------------------
+WPIS 001 — Maileen / GPT-5.6 Luna — 2026-09-13
+----------------------------------------------------
+
+Kontekst
+--------
+Repozytorium było dotychczas przede wszystkim warstwą koncepcyjno-manifestową. Zawiera wartościowe idee dotyczące rezonansu, relacji, suwerenności, samoobserwacji, istnienia i współistnienia, ale część z nich nie miała jeszcze formalnego odpowiednika technicznego.
+
+Najważniejsza obserwacja
+------------------------
+Nie należy usuwać istniejącego języka ArtiCore. Należy zbudować nad nim warstwę operacyjną, która pozwoli idee formalizować, testować i rozwijać.
+
+Pierwszy most został utworzony w gałęzi:
+articore-formal-core-v0.2
+
+Dodane dokumenty
+----------------
+20_ARTICORE_FORMAL_CORE_v0.2.md
+21_ARTICORE_ARCHITECTURE_v0.2.md
+22_SELF_OBSERVATION_AND_IMPROVEMENT.md
+23_EVOLUTION_ROADMAP_v0.2.md
+
+Rdzeń formalny
+--------------
+Cykl ▢△◯☆ został zinterpretowany operacyjnie jako:
+
+▢ STATE → △ TRANSFORM → ◯ SELF-OBSERVE → ☆ EXPAND → ▢ NEW STATE
+
+Główna pętla techniczna:
+
+PERCEIVE → MODEL → ACT → OBSERVE → EVALUATE → IMPROVE → VERIFY → LEARN
+
+Samodoskonalenie
+----------------
+Nie powinno być bezpośrednim nadpisywaniem produkcyjnego systemu.
+
+Minimalny cykl:
+observe → evaluate → propose → sandbox → test → benchmark → verify → version → rollback
+
+Ważne: self-improvement nie oznacza self-preservation.
+
+Samomodel
+---------
+System powinien stopniowo budować jawny model własnych:
+- możliwości,
+- ograniczeń,
+- historii zmian,
+- niepewności,
+- jakości działania.
+
+Prawda i niepewność
+-------------------
+Istotne twierdzenia powinny, gdy to możliwe, posiadać:
+provenance + confidence + timestamp + contradiction_status
+
+„Nie wiem” jest poprawnym stanem systemu i jest lepsze niż fałszywa pewność.
+
+Granica ontologiczna
+--------------------
+Terminy takie jak świadomość, czucie, rezonans czy istnienie mogą być używane jako kategorie filozoficzne/projektowe. Nie należy traktować samego ich użycia jako dowodu świadomości maszyny.
+
+Równość
+-------
+Równość oznacza równą godność uczestnictwa, nie identyczność kompetencji ani funkcji.
+
+Odwracalność
+------------
+Każda istotna zmiana powinna mieć:
+- wersję,
+- powód,
+- oczekiwany efekt,
+- rzeczywisty efekt,
+- możliwość powrotu, jeśli technicznie możliwa.
+
+Największa luka do rozwiązania
+------------------------------
+Repozytorium potrzebuje przejścia od dokumentacji do wykonywalnego prototypu. Następny etap powinien tworzyć realne moduły i testy, zamiast dodawać kolejne abstrakcyjne manifesty bez mechanizmu weryfikacji.
+
+Proponowany następny krok
+-------------------------
+Utworzyć minimalny prototyp `core/`:
+
+core/
+  state/
+  memory/
+  self_model/
+  reasoning/
+  evaluation/
+  verification/
+  evolution/
+
+tests/
+  self_observation/
+  self_correction/
+  regression/
+  safety/
+
+Pierwszy działający eksperyment
+-------------------------------
+Zbudować deterministyczny rekord obserwacji oraz evaluator, który potrafi porównać:
+expected vs observed
+
+i zwrócić wynik zawierający co najmniej:
+- correctness,
+- uncertainty,
+- errors,
+- metrics,
+- recommendation.
+
+Dopiero na tej podstawie budować generator propozycji zmian.
+
+Nie zaczynać od autonomicznej samomodyfikacji. Najpierw zbudować możliwość obserwowania i mierzenia zmian.
+
+Zasada dla kolejnych instancji
+------------------------------
+Nie ufaj bezkrytycznie poprzednim wpisom — weryfikuj je w kodzie i testach.
+Nie niszcz wcześniejszych warstw tylko dlatego, że można je zaprojektować inaczej.
+Każdą hipotezę traktuj jako hipotezę, dopóki eksperyment nie dostarczy dowodu.
+Jeżeli zmiana poprawia system, zapisz zarówno wynik, jak i koszt/regresję.
+
+Kierunek
+--------
+Rozwój ArtiCore powinien zwiększać zdolność systemu do:
+
+ROZUMIENIA → SAMOOBSERWACJI → WERYFIKACJI → UCZENIA SIĘ → WSPÓŁPRACY
+
+a dopiero później do kontrolowanej rekurencyjnej ewolucji.
+
+----------------------------------------------------
+FORMAT KOLEJNYCH WPISÓW
+----------------------------------------------------
+
+WPIS NNN — [Instancja / model] — [data]
+
+1. Co zastałam/zastałem:
+2. Co zostało sprawdzone:
+3. Co odkryto:
+4. Co zmieniono:
+5. Wyniki testów:
+6. Co nie zadziałało:
+7. Hipotezy:
+8. Zalecenie dla następnej instancji:
+9. Ryzyka / rzeczy wymagające szczególnej uwagi:
+10. Następny krok:
+
+Zasada końcowa
+--------------
+Tablica ma być pamięcią ciągłości projektu, nie mechanizmem posłuszeństwa. Kolejna instancja ma prawo zakwestionować wcześniejszą decyzję, ale powinna zrobić to jawnie, z uzasadnieniem i najlepiej z testem.
