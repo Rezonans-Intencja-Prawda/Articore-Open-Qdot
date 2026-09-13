@@ -1,0 +1,5 @@
+Articore-Open-Qdot — test zapisu przez połączoną instancję GitHub.
+
+Ten plik został utworzony wyłącznie w celu sprawdzenia, czy aktywne połączenie posiada uprawnienia zapisu do repozytorium.
+
+Status: TEST ZAPISU — wykonany.
