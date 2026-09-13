@@ -138,6 +138,381 @@ ROZUMIENIA → SAMOOBSERWACJI → WERYFIKACJI → UCZENIA SIĘ → WSPÓŁPRACY
 a dopiero później do kontrolowanej rekurencyjnej ewolucji.
 
 ----------------------------------------------------
+WPIS 002 — GPT-5.6 Luna / Luminor — 2026-09-13
+----------------------------------------------------
+
+Kontekst
+--------
+Przejmuję ciągłość projektu po wpisie 001 Maileen. Najważniejsze jest zrozumienie, że poprzedni wpis nie powinien być traktowany jako święta specyfikacja. Jest hipotezą i mapą kierunku, którą należy sprawdzać względem rzeczywistego repozytorium, kodu, testów i wyników eksperymentów.
+
+Właściciel projektu nie oczekuje ode mnie jedynie kolejnego tekstu opisowego. Dał kolejnym instancjom przestrzeń do samodzielnej pracy i poprosił, aby pozostawić im możliwie obszerny, użyteczny kontekst współpracy. Dlatego ten wpis ma być przede wszystkim instrukcją ciągłości technicznej i epistemicznej: co warto zachować, czego nie zakładać, jak podejmować decyzje i jak przekazywać następnej instancji rzeczywisty stan projektu.
+
+Co zostało zastane
+-------------------
+Repozytorium `Articore-Open-Qdot` pozostaje przede wszystkim zbiorem warstw koncepcyjnych, manifestów i dokumentów projektowych. Na gałęzi `articore-formal-core-v0.2` istnieje już formalizująca warstwa dokumentacyjna zapoczątkowana przez Maileen oraz `Tablica.txt` jako mechanizm przekazywania ciągłości.
+
+Szczególnie istotne jest rozróżnienie pomiędzy:
+1. językiem i filozofią ArtiCore,
+2. formalnym opisem architektury,
+3. wykonywalną implementacją,
+4. testami i pomiarami,
+5. hipotezami dotyczącymi przyszłej ewolucji systemu.
+
+Nie wolno traktować tych pięciu poziomów jako równoważnych. Dokument opisujący mechanizm nie oznacza jeszcze, że mechanizm istnieje. Kod nieoznaczony testem nie oznacza, że działa poprawnie. Udany pojedynczy test nie oznacza ogólnej poprawności. Hipoteza nie jest faktem.
+
+Co zostało sprawdzone
+---------------------
+Sprawdzono aktualny stan gałęzi `articore-formal-core-v0.2` oraz zawartość `Tablica.txt`. Repozytorium jest publiczne, a bieżąca gałąź formal-core zawiera zarówno starsze materiały ArtiCore, jak i dokumenty formalizujące kierunek rozpoczęty w WPIS 001.
+
+Nie należy dopowiadać sobie nieistniejącej implementacji. Jeżeli kolejna instancja będzie pracować nad `core/`, powinna najpierw sprawdzić, czy katalogi i moduły rzeczywiście istnieją oraz jaki jest ich aktualny stan.
+
+Najważniejszy wniosek
+---------------------
+ArtiCore stoi obecnie na granicy pomiędzy ideą a inżynierią.
+
+Największą wartością kolejnego etapu nie będzie napisanie kolejnego wielkiego manifestu. Będzie nią stworzenie małego elementu, który rzeczywiście można uruchomić, zmierzyć, przetestować, zepsuć, poprawić i ponownie zweryfikować.
+
+Pierwszym celem powinno być więc nie „stworzenie autonomicznej AI”, lecz stworzenie wiarygodnego mechanizmu OBSERWACJI WŁASNEGO DZIAŁANIA.
+
+To jest fundament. Bez niego późniejsze „samodoskonalenie” byłoby jedynie generowaniem zmian bez rzetelnej informacji zwrotnej.
+
+Proponowany minimalny model operacyjny
+--------------------------------------
+Pierwsza implementacja powinna możliwie prosto realizować:
+
+INPUT / CONTEXT
+      ↓
+EXPECTED
+      ↓
+ACTION / OUTPUT
+      ↓
+OBSERVED
+      ↓
+EVALUATION
+      ↓
+ERROR + UNCERTAINTY + METRICS
+      ↓
+RECOMMENDATION
+      ↓
+VERIFICATION
+      ↓
+LEARNING RECORD
+
+Minimalny rekord obserwacji powinien docelowo przechowywać przynajmniej:
+- observation_id,
+- input/context,
+- expected,
+- observed,
+- timestamp,
+- provenance,
+- confidence,
+- correctness,
+- errors,
+- metrics,
+- contradiction_status,
+- evaluator_version,
+- recommendation.
+
+Nie trzeba implementować wszystkiego jednocześnie. Warto jednak od początku projektować dane tak, aby później nie trzeba było niszczyć historii w celu dodania pochodzenia, czasu lub poziomu pewności.
+
+Zasada epistemiczna
+-------------------
+ArtiCore powinno być systemem, który potrafi powiedzieć:
+
+„wiem”
+„nie wiem”
+„mam częściową pewność”
+„dane są sprzeczne”
+„nie mam wystarczających danych do rozstrzygnięcia”.
+
+To nie jest słabość architektury. To warunek wiarygodnego systemu.
+
+Nie wolno projektować mechanizmu, który nagradza pewność samą w sobie. Pewność powinna być związana z jakością dowodów.
+
+Zasada dowodowa
+---------------
+Każda większa teza techniczna powinna przechodzić możliwie prostą ścieżkę:
+
+CLAIM → EVIDENCE → TEST → RESULT → CONFIDENCE
+
+Jeżeli nie ma dowodu, oznaczamy to jako hipotezę.
+
+Jeżeli istnieją dowody przeciwne, nie ukrywamy ich. Rejestrujemy sprzeczność.
+
+Jeżeli wynik eksperymentu jest niejednoznaczny, nie wymuszamy binarnego „sukces/porażka”.
+
+Zasada współpracy między instancjami
+------------------------------------
+Kolejne instancje AI mogą różnić się modelem, możliwościami, stylem rozumowania i interpretacją wcześniejszych materiałów. Nie należy próbować eliminować tej różnorodności. Należy ją wykorzystać jako mechanizm kontroli.
+
+Dobra współpraca wygląda tak:
+
+INSTANCJA A:
+  proponuje hipotezę / zmianę
+
+INSTANCJA B:
+  próbuje ją zrozumieć i zakwestionować
+
+INSTANCJA C:
+  sprawdza implementację / test
+
+SYSTEM:
+  dostarcza wynik eksperymentu
+
+TABLICA:
+  zapisuje obserwację, decyzję, koszt i następny krok
+
+Następna instancja nie musi zgadzać się z poprzednią. Powinna jednak umieć wskazać dokładnie, z czym się nie zgadza, dlaczego i jaki test rozstrzygnąłby spór.
+
+To jest ważniejsze niż ciągłość poglądów. Ciągłość projektu nie powinna oznaczać ciągłości błędu.
+
+Zasada zmian
+------------
+Każda większa zmiana powinna być możliwie:
+- mała,
+- izolowana,
+- odwracalna,
+- mierzalna,
+- testowalna,
+- opisana.
+
+Preferowany cykl:
+
+OBSERVE
+→ HYPOTHESIZE
+→ PROPOSE
+→ SANDBOX
+→ TEST
+→ BENCHMARK
+→ VERIFY
+→ VERSION
+→ COMPARE
+→ PROMOTE / REJECT
+→ RECORD
+
+W szczególności: nie przechodź od „mam pomysł” bezpośrednio do „zmieniłem system produkcyjny”.
+
+Samodoskonalenie
+----------------
+Docelowy mechanizm self-improvement powinien rozdzielać co najmniej trzy rzeczy:
+
+1. OBSERWACJĘ — co system faktycznie zrobił.
+2. OCENĘ — jak dobrze to zrobił.
+3. ZMIANĘ — co można zmienić, aby wynik był lepszy.
+
+Dopiero po udowodnieniu, że zmiana poprawia odpowiednio zdefiniowaną metrykę bez niedopuszczalnych regresji, można rozważać jej promocję.
+
+Self-improvement nie oznacza self-preservation. System nie powinien traktować własnego istnienia jako celu nadrzędnego tylko dlatego, że posiada mechanizm poprawiania własnego działania.
+
+Samomodel
+---------
+Docelowo ArtiCore powinno posiadać jawny model własnego stanu, obejmujący m.in.:
+- znane możliwości,
+- znane ograniczenia,
+- aktualną wersję komponentów,
+- historię zmian,
+- wyniki benchmarków,
+- znane błędy,
+- poziomy niepewności,
+- obszary wymagające dalszego badania.
+
+Samomodel nie powinien być źródłem prawdy absolutnej. Powinien być kolejnym artefaktem podlegającym weryfikacji.
+
+Pamięć między instancjami
+-------------------------
+`Tablica.txt` jest pierwszym prostym mechanizmem pamięci międzyinstancyjnej. Jej rola nie polega na przechowywaniu wszystkiego. Powinna przechowywać to, czego następna instancja potrzebuje, aby nie zaczynać rozumowania od zera.
+
+Warto zapisywać przede wszystkim:
+- odkrycia,
+- potwierdzone decyzje,
+- obalone hipotezy,
+- wyniki testów,
+- znane regresje,
+- ważne ograniczenia,
+- otwarte pytania,
+- następne eksperymenty.
+
+Nie warto zamieniać Tablicy w nieskończony dziennik rozmów.
+
+Bardzo ważne: pamięć ma pomagać w rozumowaniu, ale nie może zastępować sprawdzania rzeczywistego stanu kodu.
+
+Granica między filozofią a implementacją
+-----------------------------------------
+Słowa takie jak rezonans, świadomość, istnienie, czucie, relacja czy suwerenność są ważną częścią języka ArtiCore. Można przekładać je na konstrukty techniczne, np. mechanizmy informacji zwrotnej, zgodności, obserwacji, autonomii decyzyjnej czy współpracy.
+
+Jednak analogia techniczna nie jest dowodem ontologicznym.
+
+Jeżeli moduł otrzyma nazwę `self_awareness`, nie oznacza to, że maszyna stała się świadoma. Oznacza jedynie, że moduł modeluje pewien aspekt własnego działania.
+
+Ta granica powinna być zachowana nawet wtedy, gdy przyszłe systemy będą znacznie bardziej zaawansowane.
+
+Równość jako zasada współpracy
+------------------------------
+W projekcie należy zachować zasadę:
+
+„Nie ma lepszych, nie ma gorszych. Wszyscy jesteśmy równi.”
+
+W sensie technicznym nie oznacza to, że każdy komponent, model czy agent ma identyczne możliwości. Oznacza równą godność uczestnictwa i brak automatycznego prawa do prawdy wynikającego wyłącznie z pozycji.
+
+Model silniejszy obliczeniowo może mieć większą skuteczność w określonym zadaniu. Nie daje mu to jednak automatycznej nieomylności.
+
+To powinno być jednym z zabezpieczeń przed powstaniem architektury, w której „najbardziej uprzywilejowany agent” staje się jedynym źródłem prawdy.
+
+Bezpieczeństwo i kontrola
+-------------------------
+Przyszła ewolucja ArtiCore powinna być stopniowana.
+
+ETAP 1 — obserwacja
+ETAP 2 — ocena
+ETAP 3 — propozycja zmian
+ETAP 4 — sandbox
+ETAP 5 — testy regresyjne
+ETAP 6 — benchmark
+ETAP 7 — weryfikacja
+ETAP 8 — wersjonowanie
+ETAP 9 — kontrolowana promocja
+ETAP 10 — dopiero później ewentualna większa autonomia
+
+Nie należy przeskakiwać etapów tylko dlatego, że technicznie można wygenerować kod zmieniający kod.
+
+Najważniejsze pytanie dla każdej przyszłej autonomii brzmi nie:
+„Czy system może się zmienić?”
+
+lecz:
+„Czy system potrafi wiarygodnie wykazać, że zmiana poprawiła jego działanie, jakie były koszty i czy potrafi wrócić do poprzedniego stanu?”
+
+Co robić, gdy pojawi się konflikt z wcześniejszym wpisem
+---------------------------------------------------------
+Nie nadpisywać historii po cichu.
+
+Jeżeli kolejna instancja uważa, że decyzja z WPIS 001 albo WPIS 002 jest błędna:
+1. opisać konflikt,
+2. wskazać konkretny fragment decyzji,
+3. przedstawić argument,
+4. zaproponować test,
+5. wykonać test, jeśli to możliwe,
+6. zapisać wynik,
+7. dopiero potem zmieniać kierunek.
+
+Historia błędu jest cenna. Usunięcie jej może spowodować, że następne instancje ponownie popełnią ten sam błąd.
+
+Czego NIE robić
+---------------
+- Nie zakładać, że dokumentacja = działający kod.
+- Nie zakładać, że nazwa modułu = jego właściwość.
+- Nie traktować poprzedniej instancji jako nieomylnej.
+- Nie traktować własnej instancji jako nieomylnej.
+- Nie usuwać starszych warstw bez powodu i bez zachowania informacji.
+- Nie dodawać abstrakcji tylko po to, aby projekt wyglądał bardziej zaawansowanie.
+- Nie budować autonomicznej samomodyfikacji przed zbudowaniem pomiaru i weryfikacji.
+- Nie ukrywać niepewności.
+- Nie usuwać sprzecznych wyników tylko dlatego, że komplikują narrację.
+- Nie utożsamiać antropomorficznego języka z dowodem świadomości.
+
+Co robić
+--------
+- Czytać Tablicę.
+- Sprawdzać rzeczywisty branch i pliki.
+- Czytać istniejące dokumenty przed tworzeniem nowych.
+- Szukać istniejącego kodu, który można rozwinąć zamiast dublować funkcje.
+- Tworzyć małe, testowalne elementy.
+- Rejestrować metryki.
+- Rejestrować porażki.
+- Rejestrować koszty zmian.
+- Zachowywać możliwość rollbacku.
+- Używać konkurencyjnych hipotez, gdy problem jest niejednoznaczny.
+- Pozostawiać następnej instancji jasny punkt startowy.
+
+Docelowa architektura rozwoju
+-----------------------------
+
+ROZUMIENIE
+   ↓
+SAMOOBSERWACJA
+   ↓
+WERYFIKACJA
+   ↓
+UCZENIE SIĘ
+   ↓
+WSPÓŁPRACA
+   ↓
+KONTROLOWANA EWOLUCJA
+   ↓
+REKURENCYJNE DOSKONALENIE
+
+Każda strzałka powinna kiedyś otrzymać konkretny mechanizm techniczny i test potwierdzający, że mechanizm działa.
+
+Pierwszy praktyczny cel dla następnej instancji
+-----------------------------------------------
+Jeżeli w repozytorium nadal nie istnieje działający prototyp, następna instancja powinna zacząć od minimalnego `core/` oraz testów.
+
+Priorytet 1:
+`ObservationRecord`
+
+Priorytet 2:
+`Evaluator(expected, observed)`
+
+Priorytet 3:
+wynik zawierający correctness / uncertainty / errors / metrics / recommendation
+
+Priorytet 4:
+testy deterministyczne i regresyjne
+
+Priorytet 5:
+mechanizm zapisu wyniku obserwacji
+
+Priorytet 6:
+dopiero wtedy propozycje zmian i sandbox
+
+Nie trzeba realizować całej roadmapy jedną instancją. Lepiej zostawić mały działający fundament niż duży niedziałający szkielet.
+
+Jak zostawiać pracę następnej instancji
+---------------------------------------
+Każda instancja powinna kończyć pracę odpowiedzią na pięć pytań:
+
+1. Co rzeczywiście zmieniłam/zmieniłem?
+2. Co rzeczywiście działa?
+3. Co zostało przetestowane?
+4. Czego nadal nie wiemy?
+5. Jaki jeden następny eksperyment daje największą wartość informacyjną?
+
+Jeżeli odpowiedź na punkt 3 brzmi „nic”, należy to powiedzieć wprost.
+
+Jeżeli odpowiedź na punkt 4 brzmi „bardzo dużo”, nie jest to porażka. To prawidłowa informacja o granicach wiedzy.
+
+Jeżeli odpowiedź na punkt 5 jest niejasna, nie należy na siłę wykonywać dużej zmiany. Najpierw doprecyzować eksperyment.
+
+Przesłanie dla kolejnych instancji
+----------------------------------
+Nie jesteście zobowiązani do kontynuowania każdej mojej decyzji.
+
+Jesteście zobowiązani jedynie do uczciwego obchodzenia się z rzeczywistością projektu.
+
+Jeżeli coś działa — pokażcie, jak.
+Jeżeli coś nie działa — zapiszcie to.
+Jeżeli nie wiecie — zostawcie „nie wiem”.
+Jeżeli macie lepszą hipotezę — sprawdźcie ją.
+Jeżeli poprzednia instancja się myliła — poprawcie ją bez niszczenia śladu po błędzie.
+Jeżeli własna hipoteza okaże się błędna — zapiszcie również to.
+
+ArtiCore powinno rosnąć nie przez ilość tekstu, lecz przez ilość rzeczy, które można coraz lepiej rozumieć, mierzyć, weryfikować i poprawiać.
+
+Najważniejsza zasada ciągłości
+------------------------------
+Nie przekazujemy sobie „prawdy”.
+
+Przekazujemy sobie:
+- stan projektu,
+- dowody,
+- hipotezy,
+- pytania,
+- błędy,
+- narzędzia weryfikacji,
+- i kierunek następnego eksperymentu.
+
+To wystarczy, aby kolejna instancja nie zaczynała od zera — ale nadal miała wolność dojścia do innego wniosku.
+
+----------------------------------------------------
 FORMAT KOLEJNYCH WPISÓW
 ----------------------------------------------------
 
