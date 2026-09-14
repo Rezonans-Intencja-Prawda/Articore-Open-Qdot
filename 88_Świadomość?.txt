@@ -1,0 +1,401 @@
+
+
+00:00:01
+ [muzyka] Świadomość wciąż stanowi jeden z największych problemów, z jakimi mierzy się współczesna [muzyka] nauka. Z jednej strony jest to zagadnienie całkowicie fundamentalne, bo wszystko czego możemy w ogóle doświadczyć [muzyka] jest nierozerwalnie związane ze świadomym stanem. Z drugiej strony nie mamy obecnie dobrej teorii, która tłumaczyłaby, [muzyka] dlaczego w ogóle pojawia się świadome doświadczenie. Jest to moim zdaniem temat niezwykle ważny, dlatego że nie tylko stanowi on ogromną lukę w naszym
+
+00:00:26
+ rozumieniu świata, ale także niesie za sobą implikacje moralne. W dzisiejszym odcinku miałem przyjemność porozmawiać właśnie o świadomości [muzyka] z Markiem Pokropskim, profesorem na wydziale filozofii Uniwersytetu Warszawskiego, [muzyka] który zajmuje się fenomenologią, filozofią umysłu oraz kognitywistyką, a także pytaniami o naturę świadomości. Witajcie, [muzyka] ja nazywam się Michał Szyc. Jeżeli chcesz wesprzeć projekt, możesz to zrobić na platformie Patronite. A teraz zapraszam na podcast To bardziej
+
+00:00:54
+ skomplikowane. [muzyka] >> Cześć Marku, bardzo ci dziękuję za przyjęcie zaproszenia do podcastu. >> Cześć Michale, również dziękuję. Dziękuję za zaproszenie. Dzisiaj rozmawiamy o świadomości i myślę, że to jest jeden z tych tematów, gdzie może warto zacząć od definicji, bo ludzie mają często bardzo różne rzeczy na myśli używając tego słowa. Ja w podcaście najczęściej odnoszę się do definicji Tomasa Neigela, która mówi, że świadomość oznacza po prostu, że to jest jakoś być danym organizmem czy systemem,
+
+00:01:21
+ że oprócz samego działania danego systemu czy organizmu towarzyszy jakieś wewnętrzne subiektywne doświadczenie. I powiedz proszę, czy zgadzasz się z tą definicją i czy uważasz, że jest ona wystarczająca, czy powinniśmy może jeszcze coś do niej dodać? >> No to jest ważne pytanie o definicję świadomości, bo to pytanie wskazuje na pewien fundamentalny problem, który dzisiaj mamy no w powstającej nauce o świadomości. Myślę, że nie można jeszcze powiedzieć, że mamy naukę o świadomości. Jesteśmy raczej w takim okresie
+
+00:01:48
+ przednaukowym. Tutaj odwołując się do koncepcji Tomasa Kuna właśnie takiego okresu przednaukowego, naukowego, jak kształtują się różne dyscypliny i ten czas właśnie przednaukowy, on się charakteryzuje tym, że właśnie naukowcy próbują zdefiniować eksplanum, tak? To znaczy to, co chcemy wyjaśnić i tych propozycji, definicji jest kilka. I ta propozycja Tomasa Nagla jest jest oczywiście jedną z z bardziej powszechnych, dyskutowanych, tak? One jest blisko związane z tym, co co też Chalmers nazywa świadomością
+
+00:02:22
+ fenomenalną, czyli te słynne koale. I ogólnie to jest, ja się z tym zgadzam, to znaczy, że to jest można powiedzieć no ten najważniejszy problem świadomości, który chcielibyśmy wyjaśnić, tak? To znaczy dlaczego właśnie nasze doświadczenie ma jakieś jakości, wrażenia, dlaczego w ogóle czegokolwiek doświadczamy, w jaki sposób nasz nasz mózg to wytwarzał. Tak, tylko problem z tą definicją nagla, czyli jak to jest czegoś doświadczać, jak to jest pić kawę, jak to jest czuć zapach pomarańczy, jak to jest być smutnym, jak to jest być
+
+00:02:56
+ wesołym, jak to jest być zmęczonym albo w sile i energii. >> Tak, czyli tych różnych kwaliów doświadczać, >> tak? różne kalia i i mamy tu bardzo duży rozrzut, tak właśnie, jeżeli chodzi o jakości >> doświadczeniowe. Problem jest taki, że jakbym teraz na przykład tobie zadał pytanie: "No dobrze, ale jak to jest być tobą? Jak to jest być Michałem?" Tak. To to co byś mi opisał? Tak. >> Tak. To jedyne co mogę to opisać językiem, który został przyczepiony, można powiedzieć do różnych doświadczeń,
+
+00:03:28
+ tego co się nauczyłem opisywać. Tak. Nie mogę tego inaczej ci przekazać. Więc to jest tak jedna sprawa, że ten ten opis zawsze będzie podany właśnie w jakimś języku, który jest już nasycony różnymi teoriami, jakimiś powszechnymi przekonaniami. Tak? No na przykład naturalnie posługujemy się pojęciami takimi jak przekonanie, tak? Jak emocja, jak motyw. Y to jest tak zwany no repertuar psychologii potocznej. My za pomocą tych pojęć opisujemy swoje wewnętrzne doświadczenie, tak więc to jest naturalnie już jakaś jakaś pierwsza
+
+00:03:58
+ bariera, tak? czy ograniczenie, że no poza ten język trudno jest wyjść i tutaj tak trzeba by opracować metody badawcze, które właśnie by od tego języka potocznego abstrahowały albo w jakiś sposób go korygowały, tak? Czy później na etapie interpretacji danych też to może wystąpić, >> tak? >> Natomiast jeszcze jest jedna trudność w tym w tej odpowiedzi, tak? To znaczy jak to jest być mną? To znaczy, że wydaje się, że ten opis, on się nie ogranicza tylko do do treści, tak, do naszego doświadczenia, czyli czyli do treści na
+
+00:04:29
+ przykład percepcyjnych. Widzę drzewo, które jest zielone, wysokie, oddalone o tyle i tyle. Czuję smak kawy, zapach kwiatów i tak dalej. Nie, czyli treści doświadczenia. Tylko, że oprócz tych treści nasze doświadczenie jest w pewien charakterystyczny sposób ustrukturyzowane. Znaczy te treści są uporządkowane w określony sposób i to, że doświadczamy właśnie w danej chwili świata, to doświadczamy go w taki, a nie inny sposób, dlatego że właśnie doświadczenie ma strukturę na przykład, że jest uporządkowane w
+
+00:05:06
+ czasie. To jest jedna z fundamentalnych własności naszego doświadczenia. Tak, że jest jesteś nasze myśli, nasze percepcje są uporządkowane w czasie, nie? I tutaj można by dodać kilka innych cech takich strukturalnych świadomości, które jak się wydaje no też powinny być wyjaśnione. To znaczy one są w ekspanum, tak? To znaczy nasze doświadczenie też składa się ze struktury, a nie tylko z lokalnych treści, które się pojawiają i znikają. >> Tak, ale tutaj ty już mówisz właściwie o tym, jak opisywać pewnego rodzaju kalia,
+
+00:05:34
+ tak? Bo doświadczanie czasu to też jest wewnętrzne doświadczenie i to jest jakiś kalium. Rozumiem, które właśnie możemy opisywać, czyli to się odnosi już do samego problemu, jak się pojawiają dane doświadczenia, a nie problemu, że w ogóle się pojawiają jakieś doświadczenia. Czyli trochę tutaj zahaczam o ten trudny problem świadomości, >> tak? No tutaj tak należałoby właśnie rozdzielić te te dwa aspekty >> tego tego problemu właśnie świadomości fenomenalnej. Znaczy z jednej strony jest trudny problem, o którym
+
+00:06:02
+ wspomniałeś, trudny problem świadomości, no który jest zdefiniowany właśnie w taki sposób, że tak powiem, fundamentalny. Dlaczego w ogóle doświadczamy? Tak, >> tak, tak, tak, że on jest naprawdę trudny, bo trudno w ogóle wyobrazić sobie wyjaśnienie, które byłoby satysfakcjonujące w tym momencie. Tak się wydaje przynajmniej. >> Zgadza się. A z drugiej strony łatwo sobie wyobrazić system poznawczy, który działa w świecie, zachowuje się tak jakby był świadomy, a nie musi wcale tak doznawać.
+
+00:06:32
+ >> Tak, to takie filozoficzne zombie słynne. Tak, tak, oczywiście. >> Zgadza się. Natomiast no drugim aspektem jest właśnie no w jaki sposób kali opisywać, tak? I w jaki sposób badać subiektywną świadomość, tak? I tutaj no powiedziałeś właśnie czy że że czas, tak? Czy czas to są po prostu inne innego rodzaju kalia, tak? No na ten temat trwa dyskusja, tak? Czy możemy rzeczywiście wszystkie cechy świadomości zredukować do do różnych typów qualiów, czy nie? Czy przeciwnie mamy z jednej
+
+00:06:58
+ strony qualia, czyli treści świadomości, a z drugiej strony jakąś strukturę, w które w którą kalia są włożone. Tak, czyli na przykład inną taką cechą doświadczenia jest to, że jest, mówi się zjednoczone, tak? Czyli że charakteryzuje się pewną jednością. O tak, jednością, tak? Znaczy, że nie doświadczamy różnych treści, które są porozrzucane, tylko mamy jakąś jednolitą, powiedzmy, scenę percepcyjną, tak? Albo mamy świadomość siebie w czasie jako tej samej osoby, która doznaje tego i tamtego, tak, przez
+
+00:07:34
+ jakiś czas i mamy tutaj pewną jedność. I teraz czy jedność to jest po prostu oddzielne koale, czy jedność to jest sposób uporządkowania czy też połączenia różnych qual? Tak, czyli taka trochę meta, metaalie można powiedzieć, taka trochę struktura nadrzędna, w której dopiero się pojawiają kalie. >> Struktura nadrzędna, tak, zgadza się. W której pojawiają się kalie i to jest o tyle ciekawe pytanie, że możemy badać na przykład przypadki różne psychopatologii, w których cechy strukturalne ulegają zniekształceniu,
+
+00:08:01
+ zaburzeniu, tak? No czyli możemy mieć doświadczenie czy z jednej strony no spowodowane no stanami psychopatologii, tak na przykład uszkodzeniami mózgu czy czy chorób psychicznych, w których na przykład zaburzona jest jedność perceptu, tak, tego co jest postrzegane, albo jedność siebie, albo mamy z drugiej strony stany psychodeliczne, tak, w których też ta cecha strukturalna, ale też inne cechy strukturalne mogą ulegać zaburzeniu. >> Tak. No one też często się w ogóle wymykają, można powiedzieć opisowi,
+
+00:08:32
+ prawda, że te takie ekstremalne stany psychodeliczne, ciężko jest w ogóle się komunikować z osobą, która przeżyła takie stany albo doświadcza takich stanów, dlatego że często brakuje języka, żeby w ogóle opisać te stany. To jest też ten problem komunikacji silny w takich przypadkach. >> Zdecydowanie tak, brakuje języka. Albo jeżeli przeprowadzamy badania jakościowe, tak? Czyli przeprowadzamy wywiady z osobami właśnie, które doświadczały stanów psychodelicznych na przykład, no to te opowieści bardzo
+
+00:08:59
+ często są metaforyczne bardzo >> albo wręcz o taki religijny język zahaczają i i to przeszkadza w takim zrozumieniu, co tak naprawdę zaszło w danym doświadczeniu. >> Tak można można opisywać to w kategoriach mistycznych, można no odwać się do analogii, natomiast to wszystko są jakieś półśrodki, tak? No ten język właśnie dopisów, doświadczeń takich no anormalnych, no po prostu nie posiadamy takiego języka, tak? Musimy się odwoływać do jakieś jakichś zewnętrznych środków. >> Rozumiem oczywiście. A powiedz proszę,
+
+00:09:30
+ bo też to rozróżnienie, może chciałbym zapytać o to rozróżnienie świadomość a inteligencja, bo to też wydaje się często, nie wiem czy mylony, ale ze sobą bardzo mocno utożsamiany aspekt, ale w tym wypadku tutaj to by znaczyło coś innego, prawda? i należy raczej rozróżnić ten podział na świadomość i inteligencję. Czy masz tutaj właśnie jakieś swoje opinie w tym temacie? >> Zgadzam się z tym, co powiedziałeś. Tak, to znaczy, że po pierwsze warto jest rozróżnić inteligencję i świadomość, a po drugie, że często właśnie nie są to
+
+00:09:58
+ pojęcia wyraźnie rozróżniane, co może wpływać na no zbyt pochopne takie twierdzenia, jak na przykład no dzisiaj bardzo dyskutowane w takiej sferze publicznej kwestia świadomości AI, >> tak? Tak. sztucznych systemów. >> Tutaj no nie wchodząc jakoś głęboko w temat, no ja myślę tutaj y w ten sposób, to znaczy, że o ile no wydaje się oczywiste, że te systemy są inteligentne, to znaczy potrafią realizować zadania y do których inteligencja jest po prostu potrzebna, posługiwanie się językiem, tak,
+
+00:10:27
+ rozwiązywanie jakichś problemów matematycznych, o tyle nie ma jak na razie żadnych podstaw do tego, [odchrząknięcie] żeby przypisywać im świadomość. No chyba, że ktoś za taką podstawę uzna, że no system sztucznej inteligenwencji sam mówi, że jest świadomy. No to jeżeli mówi, no to jest świadomy, no to wtedy >> No tak, ale to >> możemy możemy przyjąć takie kryterium. Tak, ale wydaje się, że to jest zbyt liberalne. I jeszcze jeszcze jedną rzecz do tego chciałem dopowiedzieć właśnie, bo tutaj coś, co pomaga myślę tak złapać
+
+00:10:54
+ to rozróżnienie pomiędzy inteligencją i świadomością to jest to, że świadomość czasem definiuje się jako po angielsku używa się terminu sentence, >> czyli wrażeniowość, odbiorczość, zdolność do odczuwania. Zdolność do odczuwania. Tak chyba najlepiej by to należało przetłumaczyć. I wtedy wydaje się, że te intuicje stają się bardziej wyraźne, tak jak myślimy właśnie o sztucznych systemach. Także o ile one potrafią z pewnością przetwarzać informacje, rozwiązywać problemy, o tyle czy mają zdolność do odczuwania, tak?
+
+00:11:23
+ Czy rzeczywiście mają ten stan jak to jest być w jakimś stanie, tak? Jak to jest czegoś >> przeszukiwać przestrzeń tych tokenów na przykład albo coś w tym stylu. Tak. Mhm. Tak, oczywiście. I tutaj właśnie no stanowiskiem, tak, które myślę, że ja jakoś z którym się zgadzam, tak, to jest stanowisko naturalizmu biologicznego, tak, czasem jest nazywane też szowinizmem biologicznym, przypisujące tą zdolność właśnie do odczuwania >> biologicznym systemom, tak? To znaczy, że biologia naszego mózgu, biochemia
+
+00:11:55
+ naszego mózgu, to jak jesteśmy zbudowani i też innych istot, tak, które są trochę inaczej zbudowane, istot żywych, ma znaczenie. dla świadomości właśnie dla zdolności do odczuwania, >> czyli że substrat tutaj ma znaczenie, bo się wydaje, że sztuczne systemy są dobrym dowodem na to, że inteligencja nie zależy od substracu. To znaczy niezależnie czy zrobimy to na krzemie, czy zrobimy to na węglu, to pewien sposób przetwarzanie tych informacji daje, można powiedzieć coś, co nazywamy inteligencją. Natomiast ty byś się
+
+00:12:24
+ skłaniał jednak do tego, że do świadomości i że świadomość jednak jest w jakimś sensie zależna od tego substratu i ma znaczenie czy to jest zbudowane z danego materiału czy nie. Ale tutaj mam pytanie, że to jednak jest pewnego rodzaju założenie dlatego, że no trudny problem świadomości i fakt, że nie wiemy co jest tak naprawdę potrzebne, żeby zaszło w ogóle w danym systemie i pojawiło się jakieś wewnętrzne doświadczenie, no sprawia, że to jest pewnego rodzaju założenie właśnie z którego wychodzisz. Czy czy to
+
+00:12:53
+ jest bardziej silne przekonanie, które wynika no właśnie z jakichś teorii, które może sugerują, że ta świadomość jest zależna od substratu? Jak o tym myślisz? Powiedziałbym tak, że po pierwsze to, że umysł możemy przedstawiać w kategoriach przetwarzania informacji czy też reprezentacji, a to jest niezależne od substratu fizycznego. To jest pewne bardzo mocne założenie i pokłosie funkcjonalizmu, który no w drugiej połowie XX wieku święcił triumfy i który rzeczywiście tak opisywał no umysł używając tej używając
+
+00:13:29
+ tej szerokiej kategorii. Tak więc po pierwsze funkcjonalizm i właśnie posługiwanie się taką metaforą, można powiedzieć komputerową, tak? Czyli patrzenia na umysł jako na przetwarzanie informacji, reprezentacji, to jest bardzo daleko idąca abstrakcja od tego, jakimi systemami tak biologicznymi jesteśmy. To znaczy bierze się mózg i z bardzo wielu możliwych opisów działania mózgu na różnych płaszczyznach od poziomu molekularnego przez poziom biochemiczny. jakiś poziom makro aktywności, tak, różnych obszarów
+
+00:14:03
+ mózgu. No wybieramy obszar taki, że neurony w cudzysłowie dokonują obliczeń. Tak mówię w cudzysłowie, bo ja tu zawsze jestem ostrożny, bo to co robią neurony, no to one przesyłają impulsy, a czy one dokonują obliczeń. >> Ale często ten paradygmat przetwarzania informacji jest teraz bardzo obecny i w biologii się wydaje, i w fizyce i właściwie wszędzie, że na gruncie przetwarzania informacji się większość systemów próbuje opisywać, >> tak? No i to jest i to jest jakby z jednej strony okej, tak? To znaczy
+
+00:14:27
+ możemy opisywać tak różne systemy i ten opis przynosi czasem efekt. To znaczy no mamy taki efekt jak właśnie sztuczne systemy, które są są inteligentne i one no głównie przetwarzają informacje. Tak? Inna sprawa, że no te współczesne modele sztucznej inteligencji, no my do końca nie wiemy jak te informacje są przetworzone, że to są trochę czarne skrzynki, tak? Nie jest to taka ładna staroświecka, jak to się mówi, sztuczna inteligencja, w której mamy algorytm, mamy reprezentacji, one są w jakiś sposób krok po kroku przetwarzane, tak?
+
+00:14:55
+ Także jak rośnie złożoność to mamy problemy z opisem i uchwyceniem tak naprawdę co się dzieje w takim złożonym systemie. >> Dokładnie. Więc o ile funkcje poznawcze czyli pamięć, tak? Rozpoznawanie obrazu czy jakieś jakieś zdolności do do właśnie manipulacji reprezentacjami, można w ten sposób opisywać, modelować i to przynosi efekt. Tak, możemy symulować inteligencję w ten sposób. To takie podejście, to samo podejście zastosowane do świadomości nie działa. To jest pierwsza rzecz, którą bym powiedział pod
+
+00:15:23
+ adresem właśnie no zdeklarowanych funkcjonalistów, jeżeli chodzi o świadomość. To znaczy sfunkcjonalizowanie świadomości się nie powiodło. >> Mhm. Tak, ale właśnie chciałem cię zapytać, że nie działa dlatego, że to jest niefalsyfikowalne. Tutaj byś argumentował tak, że nie potrafimy udowodnić w żaden sposób, że danemu rodzajowi przetwarzanie informacji, obliczeń, niezależnie jaki opis byśmy tu zastosowali, towarzyszy jakieś subiektywne doświadczenie. No bo znowu trafiamy na ten problem komunikacji z
+
+00:15:50
+ tym systemem, tak że odpowiedź może nas nie satysfakcjonować. Czy to czy taki system powie, że jestem świadomy albo nie jestem świadomy, że problem jest z falsyfikacją takiego twierdzenia. Problem jest tak z falcyfikacją, no bo rzeczywiście tutaj w jaki sposób określić czy tak dany system jest świadomy, no to mamy tutaj ograniczone metody, ale druga rzecz jest taka, że wszelkie próby symulowania doświadczenia, tak? Bo może mówić tutaj o symulowaniu doświadczenia, tak? O czymś, co się dzisiaj na przykład nazywa
+
+00:16:17
+ obliczeniową fenomenologią, tak? gdzie mamy po prostu modele obliczeniowe, które mają no generować coś, co no przypomina nam, czy przynajmniej odtwarza strukturę czy jakieś cechy charakterystyczne naszego doświadczenia, tak? To wydaje się, że do tego typu zadania też takie czysto obliczeniowe modele w takie w starym stylu nie są wystarczające, że potrzeba czegoś więcej >> i i pod tym kątem też widzę ograniczenie tego paradygmatu. >> A dlaczego się tak wydaje? Jaki jest problem? jakbyś mógł opowiedzieć trochę
+
+00:16:47
+ na czym polega to ograniczenie i z czego wynika no właśnie ten problem, że nie da się tego symulować w jakimś sensie. >> Problem jest jest tego typu, także żeby żeby coś symulować, musimy mieć dobry opis, więc to jest no trochę takie właśnie >> wracamy do opisu, tak rozumiem, że >> tak kręcenie się w kółko, tak? No boże teraz żeby teraz no dajmy na to qualia, tak żeby opisać qualia, no musimy mieć opis qualiów, tak więc no możemy zaproponować opis qualiów w kategoriach przestrzeni qualiów, tak? Czyli że na
+
+00:17:17
+ przykład kolory możemy zmapować sobie na na przestrzeń i w różnych relacjach tutaj były, no powiedzmy, nie wiem, niebieski i granatowy były blisko położone w tej przestrzeni, a zielony i czerwony daleko. Tak, czyli ta przestrzeń reprezentowałaby jakieś jakieś jakąś relację własności, tak, kaliów. I teraz czy to jest dobry opis? Tak. Czy ten opis rzeczywiście oddaje to jak my toświadczamy kolorów, tak? I nawet jeśli uda się już osiągnąć ten sukces, to znaczy w przypadku kolorów mielibyśmy systemy, które by generowały
+
+00:17:46
+ jakąś przestrzeń kaliów, no to dalej pozostaje drugi problem. To znaczy dobrze, ale czy te systemy odczuwają? >> No właśnie, czy jest to tylko symulacja wytwarzana przez >> przez dany mechanizm, tak? Sztuczny mechanizm. No bo teoretycznie na przykład te sztuczne sieci mają jakąś przestrzeń, tylko że to nie są przestrzeń kolorów, tylko to jest przestrzeń jakiś tam wektorów na przykład. Tak więc yyy i ostatecznie przestrzeń kolorów też można zamienić na przestrzenie wektorowe czy tam inne
+
+00:18:14
+ jakieś przestrzenie stanów. Więc tutaj ciągle tak jak powiedziałeś się troszeczkę kręcimy w huko, że bardziej to trudno jest zrobić opis, no bo ten trudny problem nam się ciągle pojawia, jakby wyskakuje za każdym razem. Czy możemy powiedzieć, że danemu opisowi towarzyszy właśnie cokolwiek, jakiś subiektywny aspekt, tak? że ten problem jest faktycznie taki, wydaje się, że ciągle wyskakuje, jak tylko się próbuje w jakikolwiek sposób opisać albo symulować świadomość. >> Tak, trudny problem zawsze się gdzieś
+
+00:18:38
+ tam na końcu pojawi, tak? Przy czym no właśnie tutaj może należałoby poczynić taką uwagę, tak? To nie znaczy, że badanie świadomości jest wobec tego niemożliwe. Takie mamy mamy problem trudny, który gdzieś tam na horyzoncie nam majaczy, no bo to jest trochę takie takie taka postawa no paraliżująca badania. No nie wiemy jak jak ugryźć trudny problem to nie będziemy wobec tego tak badanie świadomości jest niemożliwe. No jest możliwe tylko no po pierwsze potrzebne są do tego nowe metody badawcze. Metody, które by
+
+00:19:06
+ łączyły z jednej strony właśnie pierwszoosobowe podejście, czyli badanie doświadczenia z perspektywy pierwszoosobowej, bo to jest perspektywa ta uprzywilejowana dla naszego doświadczenia, tak? To znaczy nasze doświadczenie, tak? czy twoje czy moje, no jest nam dane fundamentalnie z naszej pierwszoosobowej perspektywy dla innych osób jest niedostępne. >> Tak, >> dostępne są tylko jakieś wyrazy, tak, behawioralne, ekspresje, doświadczeń, ale też nie zawsze. Więc po pierwsze nowe nowe metody, tak, które łączą
+
+00:19:36
+ pierwszoosobową perspektywę z perspektywą trzecioosobową, która to jest perspektywa nauki, tak? Czyli coś, co możemy zmierzyć, coś, co możemy intersubiektywnie ocenić, omówić, zakomunikować. Bez tego typu nowej metodologii wydaje mi się, że nauka o świadomości nie będzie się rozwijała albo pozostanie na etapie takiego no bardzo gwąsko rozumianego eksplanum jako na przykład przytomność, zdawanie sobie sprawy z bodźców. Tak, no możemy człowieka tak wsadzić do laboratorium, zapalać mu światło albo
+
+00:20:11
+ jakieś inne bodźce, prezentować i rejestrować sytuację, kiedy on powie: "Okej, widzę, nie widzę". Patrzymy wtedy, co w jego mózgu się zmienia i możemy szukać korelatów. Tak? No inna sprawa, tak? To też jest inny temat. Czy czy w ogóle korelaty to jest coś, co nam pomaga zrozumieć świadomość? Ale no w ten sposób możemy badać przytomność, tak? Zdawanie sobie sprawę z bodźców. Natomiast nie będzie to wtedy świadomość fenomenalna, tak? No nie będzie to właśnie badanie doświadczenia w całej
+
+00:20:38
+ jego złożoności i w całym jego bogactwie, które, które mamy. >> Tak więc tutaj byś sugerował, że współcześnie zmierza się też w stronę tej pierwszoosobowej perspektywy, że już nie tylko korelaty, ale że ważne, znaczy to też są w jakimś sensie, rozumiem, korelaty, ale że ważne jest to, jak te korelaty łączą się z subiektywnym doświadczeniem. Więc w tym wypadku wymagana jest jakaś umiejętność też introspekcji przez daną osobę. I czy sądzisz, że tutaj są problemy tego typu, że no na przykład medytacja czy
+
+00:21:09
+ mindfulness się pojawiają i przychodzą mi od razu do głowy jako jedno z narzędzi, które pozwala no może trochę lepiej obserwować właśnie wewnętrzne doświadczenia, bo tu się wydaje, że ludzie mają na przykład silną tendencję do utożsamiania się z myślami, które się pojawiają albo z tym wewnętrznym poczuciem ja, które też rozumiem, że ma jakiś korelat. Więc czy tego typu badania wymagają od danego powiedzmy czy to pacjenta, czy tego tej osoby, która jest badana, pewnych umiejętności, które są no introspekcyjne,
+
+00:21:40
+ >> tak? I powiem tak, że to jest generalnie dobry kierunek, tak żeby właśnie z jednej strony mieć podejście pierwszoosobowe czy też introspekcyjne z trzecioosobowym, tak? Tylko no to jeszcze nie jest wystarczające. No bo introspekcja to jest coś, co jest rozpoznane w filozofii, w raczkującej psychologii, tak? Początek 20 wieku to były to były badania introspekcyjne i dosyć szybko, bo już w tamtym czasie tak toczyły się gorące dyskusje na temat tego, no czy to jest w ogóle rzetelne źródło informacji o naszym
+
+00:22:11
+ doświadczeniu, introspekcja. Tak. >> Ustalmy kilka rzeczy takich no na początek. Czyli po pierwsze, no mamy zdolność do introspekcji, to znaczy możemy introspekcyjnie dokonywać wglądu we własne doświadczenia. To jest nasza zdolność. Tutaj zauważmy, że ta introspekcja ma kilka odmian, czy jakiś odcieni można by powiedzieć, tak? Czyli możemy na przykład jak idziemy sobie ulicą, z kimś rozmawiamy, no mieć rozpoznanie takie takie powiedzmy bierne tego, że idziemy, co jest wokół nas, jakie jest, nie wiem,
+
+00:22:43
+ oświetlenie, czy ludzie przechodzą ko nas i tak dalej. Tak więc możemy mówić o takiej pasywnej introspekcji, tak? Z drugiej strony możemy mówić o pewnym aktywnym trybie wglądu introspekcyjnego, kiedy na przykład komuś zadajemy zadanie, żeby no opisał nam w jaki sposób rozwiązał jakieś zadanie, w jaki sposób w jego umyśle przebiegał proces myślowy, proces wnioskowania i tak dalej. No i wtedy ktoś aktywnie zastanawia się nad treściami swojego doświadczenia, w tym przypadku właśnie jakimiś treściami aktów poznawczych. No
+
+00:23:16
+ i opisuje nam to. Możemy też mówić o retrospekcji, tak? Kiedy mówię czy kogoś pytam o jakieś przeszłe doświadczenie, żeby mi opisał i co czuł wtedy, tak? No to wtedy w sposób retrospekcyjny. >> A czy takie opisy są w ogóle właśnie rzetelne z naukowego punktu widzenia? No bo wydaje się jednak, że jeżeli kogoś zapytamy co on czuł wtedy, no to jedyne co może teraz przekazać to pewną myśl i pewną interpretację tego co się wtedy wydarzyło, czyli ma jakieś wspomnienie, ale tak naprawdę reportuje swoje obecne
+
+00:23:46
+ doświadczenie, czyli swoją obecną myśl na temat tego, co się wydarzyło. Więc de facto nie mamy dostępu do tego, jakie było tamto doświadczenie. Mamy dostęp w tym wypadku do pewnej wizji, pewnej myśli można powiedzieć na temat tego co się wydarzyło. I to samo się wydaje, kiedy ktoś tłumaczy na przykład jak rozwiązał zadanie. To znaczy, że rozwiązuje zadanie i w danym momencie rozwiązywania ma pewne doświadczenie, ale ten opis, który później opowiada jak to rozwiązał też jest tak naprawdę tym, co przychodzi mu do głowy w danym
+
+00:24:13
+ momencie. Czy da się w takim razie i czy te opisy, te retrospekcyjne, czy te wyjaśniające są wartościowe z tego punktu widzenia, że one dają faktyczny wgląd? czy dają raczej informacje o tym, jak ktoś obecnie myśli o tym, co się faktycznie wydarzyło. >> I to jest bardzo dobre pytanie, które właśnie no porusza nas do przodu. Idziemy krok dalej w dobrym kierunku. To znaczy teraz w jaki sposób na bazie tej zdolności introspekcyjnej, którą wszyscy mamy, zbudować metodę introspekcyjną, która byłaby metodą naukową, tak? i
+
+00:24:45
+ która produkowałaby dane, które byłyby rzetelne. I tutaj oczywiście to też jest rozpoznane w wielu badaniach powtarzane. Dane, które są no produkowane w raportach introspekcyjnych no są dalekie od rzetelności. Tak. Zdarzają się przypadki konfabulacji i to niekoniecznie, że ktoś ma złą wolę i i po prostu tak >> po prostu w danym momencie tak sobie wyobraża, że to zaszło i opisuje. Tak. Tak. Po drugie, pamięć, to co też jest rozpoznane w badaniach z psychologii poznawczej, tak? Jest raczej konstrukcyjna niż rekonstrukcyjna, tak?
+
+00:25:19
+ Czyli jeżeli właśnie mówimy tutaj o takim dostępie retrospekcyjnym, no to mamy tu raczej właśnie tak jak powiedziałby pewną interpretację, pewne zbudowanie przeszłości na bazie jakieś zapisanych informacji i to też może się zmieniać na przykład w czasie, tak? Czyli będziemy sobie przypominali dane zdarzenie w jakichś odstępach czasu, to możemy sobie to przypominać trochę inaczej >> albo manipulować tym można też >> można manipulować. >> No takie już radykalne przypadki właśnie
+
+00:25:45
+ nierzetelności, że tak powiem, czy może bardziej ograniczeń, ale to też stanowi jakiś ciekawy przypadek do rozwiązania, to znaczy różnych psychopatologii, tak? Kiedy mamy na przykład, nie wiem, anozognozję, gdzie chory no neguje swoje swoje zaburzenie czy swoją chorobę, tak? Na przykład nie rozpoznaje tego, że jest paraliżowany, tak? Albo twierdzi, że ma rękę, mimo że nie ma ręki, tak? albo twierdzi, że widzi, mimo że tak stwierdzone, że że nie może widzieć. Tak. I wtedy no pojawia się pytanie właśnie o rzetelność tych dan. No
+
+00:26:11
+ oczywiście są to dane nierzetelne, więc teraz jak zbudować metodę, która byłaby rzetelna. No w jaki sposób musimy kontrolować te dane? Tak, kontrolować dane i kontrolować metodę opisu. I tutaj kilka jest możliwości, tak? Od takich no najbardziej podstawowych zabiegów, które ogólnie w badaniach jakościowych, tak? czyli badaniach opartych na wywiadach stosowanych. To znaczy stosujemy jakąś dużą grupę badanych i wtedy możemy zobaczyć czy w danych opisach powtarza się pewna pewne motywy. Czyli jak weźmiemy sobie właśnie te na przykład
+
+00:26:42
+ badania sposobów rozwiązywania jakichś problemów poznawczych, tak, zadań poznawczych, no to jeżeli 10, 20, 30 osoby ten proces z grza powtarzają się jakieś motywy, no to możemy mieć jakieś przypuszczenie, że rzeczywiście coś jest na rzecz. Także to nie jest tak, że 30 osób nam konfabuluje w podobny sposób, tylko że rzeczywiście jest jakiś proces, który był powtarzał się w podobny sposób czy był realizowany w podobny sposób u tych u tych 30, >> czyli że całkiem dobrze jest opisywane to doświadczenie w tym sensie,
+
+00:27:14
+ >> tak? A druga rzecz i druga, drugi kierunek i w tym kierunku zmierza no takie metody właśnie zbudowane czy inspirowane filozofią fenomenologiczną, to jest neurofenomenologia i mikrofenomenologia. I to są metody, które stawiają na to, że po prostu wtedy do opisu doświadczenia musimy dodać drugą osobę. Dlatego to są metody, można by powiedzieć, drugo osobowe. Dodajemy drugą osobę, która jest przeszkolona, która wie jak prowadzić wywiad i w taki sposób przekierowuje uwagę badanego, w taki sposób prowadzi wywiad, żeby ten
+
+00:27:47
+ opis właśnie był w jak najmniej sposób no zniekształcony przez różne artefakty typu przyjęte wcześniej teorie. jakieś sugestie i tak dalej i tak dalej, nie? >> Tak, tak, rozumiem. >> I tutaj na tym etapie kontrolujemy tylko to już nie jest metoda pierwszoosobowa, tylko drugo osobowa, tak? Czyli mamy jakąś właśnie parę badacz i badany, tak? To oni wspólnie można powiedzieć produkują dane, tak? No i wtedy też powtarzamy, oczywiście to jest jakaś grupa, tak? Ileś ileś osób, tak? i wtedy
+
+00:28:15
+ możemy porównywać te wywiady, tak dane i szukać też jakichś podobieństw strukturalnych. >> Ale tutaj to się opiera właśnie na celowym kierowaniu uwagi takiej osoby, którą próbujemy badać na konkretne aspekty swojego doświadczenia, >> tak? I tutaj właśnie wracając o mindfulness, tak? No to to też jest właśnie takie podejście, które nie jest no naiwnym opisem tego, co się nam w duszy dzieje, że tak powiem, tylko też jest to pewna metoda właśnie uważności, tak? metoda uważności na to, jak nasze
+
+00:28:45
+ doświadczenie się w czasie przebiega, jak nasze ciało się w w tej uważności też pojawia, które często jest właśnie gdzieś zepchnięte na na jakieś tło. I mówiąc krótko i podsumowując, tak, introspekcja jako taka podstawowa zdolność nie jest wystarczająca. Potrzebna jest zawsze jakaś metoda no kontrolowania, tak? Czy metoda posługiwania się tą zdolnością, żeby dane pierwszoosobowe były rzetelne. >> Rozumiem. A chciałem cię jeszcze zapytać może o takie podejścia typu redukcjonizm i emergencja do świadomości, bo to też
+
+00:29:17
+ się wydaje, że są jedne z takich bardziej popularniejszych, ale tak samo się wydaje, że one w pewnym sensie nie dają dobrych odpowiedzi, że jeszcze nie udało się wytłumaczyć świadomości tymi podejściami. i powiedz, masz jakieś swoje zdanie na temat właśnie redukcjonizmu albo emergencji i czy któreś z tych podejść może faktycznie przynieść takie rezultaty w wytłumaczeniu, dlaczego w ogóle pojawia się to doświadczenie? Właśnie redukcjonizm, jakby go tak najprościej przedstawić, można sprowadzić do takiego
+
+00:29:49
+ sloganu: "Nic więcej niż w przypadku no redukcjonizmu w świadomości, tak? Nauce o świadomości, no to właśnie to nic więcej niż to byłaby aktywność mózgu". Tak? Czyli mąc krótko redukcjonista powie: "Świadomość to nic więcej niż aktywność mózgu." Wystarczy, że opiszemy mózg. Tutaj pojawia się wielkie pytanie, na jakim poziomie ten opis musi się pojawić? Tak. Właśnie >> wystarczy opis neuronów i tego, jak się łączą, tworzą koalicję i przesyłają impulsy. A może potrzebny jest jakiś
+
+00:30:21
+ mikropoziom molekuł, tak? A może jak niektórzy sugerują na przykład poziom kwantowych procesów, które gdzieś tam zechodzą. Więc tutaj mamy właśnie opis mózgu jako no wystarczający do wyjaśnienia świadomości, tak? To i to są dosyć no z dzisiejszej perspektywy stare poglądy, tak? To znaczy jak weźmiemy sobie nie wiem lata 50, 60 i właśnie takie przekonanie, że jeżeli nauka o mózgu będzie się rozwijała wystarczająco szybko, no to dojdziemy do takiego właśnie wyjaśnienia redukcyjnego umysłu i świadomości. Później to się dołącza
+
+00:30:58
+ po prostu opisując mózg, tak? I badając mózg. No >> tak, >> jak się okazało, nie jest to takie proste, tak? To znaczy nasza wiedza mózgu no bardzo się posunęła, tak? Mamy ocean danych z różnych metod obrazowania pracy mózgu. Mamy bardzo posuwające się badania nad różnymi procesami biochemicznymi, które zachodzą w naszym mózgu. Natomiast to wszystko no nie przekłada się jeszcze na w pełni rozwiniętą teorię świadomości, tak? Nie mówiąc już o jakieś redukcyjnej teorii świadomości, tak? No wobec tego pojawiła
+
+00:31:30
+ się pewna alternatywa, tak? Która nazywa się pod właśnie tym tym hasłem zbiorczym emergencja. która w skrócie mówi tyle. No świadomość jest pewną własnością emergentną. Tak. Co to znaczy własność emergentna? To jest własność, która pojawia się na wyższym poziomie jakiegoś systemu. Tak? Czyli na niższym poziomie mamy mamy jakieś podstawowe komponenty, które są w jakiś sposób no zorganizowane, ułożone i w jaki sposób się zachowują, ale z tego podstawowego zorganizowania systemu mamy jakąś własność wyższego rzędu, która się
+
+00:32:04
+ pojawia i która i tutaj mówimy o takiej no mocnej mocnej wersji emergencji, tak? Bo tych wersji to pojęcie jest dosyć zróżnicowane, tak? Ale w mocnej wersji ta własno wyższego rzędu jest no nieprzewidywalna i nieredukowalna do własności niższego poziomu, czyli właśnie tych własności komponentów, tak? >> A mamy w ogóle przykład takiej emergencji, bo tutaj sugerujesz tą silną emergencję, prawda? Ale z tego co się też orientuje to są problemy z udowodnieniem, że istnieje w ogóle silna emergencja, że jednak zawsze wracając
+
+00:32:38
+ powiedzmy do tego niższego poziomu i zmieniając coś na tym niższym poziomie, czyli modyfikując ten układ, nawet jeżeli on jest emergentny, no to zaburzamy ten poziom wyższy. on się faktycznie zmieni. Więc strzałka przyczynowości, powiedzmy, zawsze w jakimś sensie idzie od dołu do góry, a te nowe właściwości, które się pojawiają, mogą oczywiście operować na jakiś swoich regułach i dawać kolejne różne poziomy opisu, ale gdzieś fundamentalnie zmieniając powiedzmy to, co się dzieje na tym niższym poziomie,
+
+00:33:06
+ zmieniamy też ten wyższy poziom. Czy spotkałeś się właśnie z czymś, co miałoby, no sugerowałoby tą emergencję silną, tak zwaną? Przykładów emergencji mamy trochę w w różnych systemach też w systemach biologicznych. Tak. I teraz można weźmy sobie za przykład rój ptaków. Tak. >> Tak. Te bojidy to się czasamo nazywało chyba to jakoś tak też. Y >> tak. Symulacja >> określenie też się używa taka murmuracja. >> A murmuracja, tak. Mhm. >> Czyli czyli właśnie szpaki w ten sposób
+
+00:33:38
+ się zachowują. Tak. Czyli mamy rój ptaków, który lata w pewien charakterystyczny sposób. razem tworząc jakby coś dodatkowego, tak? I zachowuje się w pewien określony sposób. No i teraz możemy powiedzieć tak na na pewnym podstawowym poziomie to są pojedyncze ptaki, które kierują się prawdopodobnie jakimiś bardzo prostymi zasadami bliskości do swojego do innego ptaka w okolicy, tak? Czy jakieś inne proste zasady. No i z tych prostych zasad wyłania się jakieś zachowanie kolektywne, zbiorcze właśnie zachowanie
+
+00:34:09
+ roju. Tak. >> Tak. No i teraz słaba emergencja. Jeżeli to jest zjawisko słabe w sensie tak emergencji, no to możemy zachowanie rojów wyjaśnić całkowicie poprzez zachowanie pojedynczoch ptaków. Tak? Jeśli to to zjawisko jest silnie emergentne, no to wtedy musimy dodać dodatkowy poziom, że zachowanie całego rojuwa też z góry na dół na zachowanie poszczególnych pojedynczych. Tak. Tak. W przypadku świadomości no rzecz się bardziej komplikuje. No po pierwsze, że nie wiemy czym są te podstawowe komponenty na
+
+00:34:40
+ dole, >> czyli reguły. Nie znamy reguł, tak? Czy to są pojedyncze neurony, czy to są koalicje neuronów, czy to jest jeszcze jakiś poziom może moleku. Tak. Musimy gdzieś tak znaleźć ten poziom owych podstawowych elementów. Może tych elementów jest tak świadomość. No w przypadku szpagów mamy dwa poziomy, tak? Pojęcia ptaki i mamy rój, tak? No w przypadku świadomości i mózgu prawdopodobnie mamy tych poziomów więcej, tak? To znaczy mamy molekuły, mamy neurony, mamy koalicję neuronów, mamy obszary, mamy świadomość, która też
+
+00:35:12
+ się składa z różnych aspektów i wymiarów. Tak? W przypadku świadomości jest jeszcze jeden element, który może sugerować mocną emergencję. Ja nie mówię, że ta mocna emergencja jest tak stanowisko, które jest no w jakiś sposób no pewne i i słuszne, tak mówię natomiast, że jest tutaj pewna pewna możliwość zastosowania pojęcia silnej emergencji, a są to doświadczenia takie, w której no dokonujemy czegoś spontanicznie, podejmujemy decyzję. Tak, czyli mówiąc inaczej wolna wola. Wolna Wola jest często właśnie przywoływana w dyskusjach
+
+00:35:47
+ na temat świadomości czy umysłu jako przykład właśnie takiej przyczynowości odgórnej, kiedy właśnie ta własność wyższego rzędu, nasza świadomość, nasze ja oddziałowuje na elementy niższego poziomu. Tak? Czyli w momencie jak decyduję sobie teraz, żeby wyobrazić sobie teraz czerwoną różę, no to moje neurony, tak, reprezentacje neuronalne aktywują się, tak odpowiedzialne za reprezentację czerwonej róży zostają aktywowane. >> No ja akurat w podcaście argumentuję, że ta koncepcja nie ma trochę sensu, więc
+
+00:36:20
+ >> dosyć silnie, że że właśnie nie obserwujemy, żeby w wytłumaczeniu jakiegokolwiek zjawiska potrzebowalibyśmy użyć tej koncepcji wolnej woli. To znaczy, jeżeli próbujemy, zaczynamy tłumaczyć, dlaczego coś się wydarzyło, to wydaje się, że zawsze zaczynamy się odwoływać do no takich bardziej opisów neuronów, powiedzmy historii danej osoby, genetyki, ale też środowiska oczywiście i nie potrzeba w tym wyjaśnieniu wstawienia tego konceptu wolnej woli, żeby wytłumaczyć zachowanie danej osoby. >> Okej, tylko tutaj musi pan wtedy no też
+
+00:36:51
+ przyjąć konsekwencje takiego stanowiska, tak? Czyli po pierwsze przyjąć, że nasze zachowanie jest w pełni zdeterminowane przez geny, przeszłość, tak i tak dalej. Tak, czyli że nie ma żadnej żadnej dozy na spontaniczność, jakby to filozofowie powiedzieli, tak? Na zachowanie wolne. A po drugie, no jeżeli nie jesteśmy wolni, no to przyjmijmy takie konsekwencje, że nie powinno się oceniać nas za nasze czyny. Jeżeli to geny decydują o tym jak się zachowuje, jeżeli to ukształtowanie mojego układu nerwowego, które w taki a
+
+00:37:23
+ nie inny sposób przebiegło przez środowisko tak zdeterminowane, no to dlaczego miałbym w ogóle podlegać jakimś ocenom moralnym, skoro to nie ja podejmuję decyzję. >> Tak. No tutaj argument jest zwykle taki funkcjonalny. To znaczy, że jeżeli ktoś coś zrobi w społeczeństwie, co jest krzywdzące dla innych i nie mamy sposobu na sprawienie, żeby ktoś więcej tego nie zrobił albo żeby zrozumieć dlaczego się to wydarzyło i powstrzymać to w przyszłości, no to na przykład musimy taką osobę odizolować. No bo fakt, że to
+
+00:37:54
+ było zdeterminowane nie zmienia faktu, że czyn został dokonany jakiegoś rodzaju. Jako społeczeństwo musimy podjąć decyzję wtedy, co z tym zrobić. Więc wydaje mi się, że tutaj to nie jest aż taki duży problem z odpowiedzialnością, bo no jak ktoś po prostu ma jakąś chorobę mózgu albo jest jakiś problem z nim, no to wtedy możemy podjąć decyzję, że taką osobę usuwamy ze społeczeństwa, niezależnie czy to jest deterministyczne czy nie. >> Zgadzam się. Jest to dosyć okrutne. [śmiech] Byłoby to dosyć okrutne, tak? Bo wtedy
+
+00:38:23
+ no już zapominamy całkowicie o jakiejś nadziei na to, że jednostka może się poprawić. Tak. No znaczy może dlatego, że wszystko podlega ciągłemu procesowi. To znaczy, że jeżeli odkryjemy dlaczego doszło do jakby znajdziemy przyczyny w tym oceanie przyczyni skutków, no to znalezienie tej przyczyny może pozwolić nam wyleczyć taką osobę, >> uwarunkować wtedy >> tak uwarunkować odpowiednio, czy to środowiskowo, czy no zakładając, że tam środowiskiem nie jest jego mózg, ale w tym wypadku zmienić po prostu ten
+
+00:38:51
+ proces, który doprowadził do czegoś. No a z drugiej strony to sugeruje właśnie duże współczucie wobec danej osoby. No bo zaczynamy widzieć ludzi nie jako powiedzmy agentów, którzy specjalnie coś robią i działają w wyniku tej wolnej woli, a widzimy ich jako procesy, które po prostu pokierowane takim a nie innym wydarzeniami, strukturą wewnętrzną, no doprowadza do jakiegoś wydarzenia. Więc dużo łatwiej jest wtedy jakby wzbudzić w sobie pewnego rodzaju współczucie do takiej osoby ze względu na to, że
+
+00:39:21
+ widzimy to jako no właśnie proces, który nigdy w żadnym momencie nie mógł być inny, można powiedzieć. Więc nie mam pewności, czy moralnie tutaj jest problem. Wydaje mi się, że właśnie moralnie może być mniejszy problem niż kiedy wsadzamy wolną wolę w to wszystko. >> Tak. No ja ja powiem tak, no musimy odizolować to sobie ze względu na dobro społeczeństwo, więc jednak ta hierarchia tutaj jest taka, że dobro jednostki jest niżej. dobre społeczeństwa jest wyżej. A po drugie, jeśli są to, jeżeli nasze
+
+00:39:50
+ zachowania są po prostu procesami deterministycznymi, no to nic nie stoi na przeszkodzie, żeby przewidzieć, że ktoś na przykład dokona zbrodni. Tak? No są to procesy deterministyczne. Procesy deterministyczne możemy przewidywać. Jeżeli tak, no to możemy zawczasu takie osoby usunąć ze yyy społeczeństwa, no i poddać ich właśnie no takiemu warunkowaniu, które by y zmieniło tą trajektorię ich życia. >> Tak. Tak. No ale to w sytuacji takiej trochę science fiction, bo teraz wiemy, że większość, nawet jeżeli świat by się
+
+00:40:22
+ okazał deterministyczny, no bo tutaj nie ma pewności, czy tam nie ma komponentu losowego, no to nie jesteśmy w stanie przewidzieć, ponieważ złożoność tych systemów takich jak ludzki, jeszcze złożoność systemów społecznych, no nie pozwala nam po prostu przewidzieć co się wydarzy, więc i tak mamy problem z przewidywaniem czy ktoś coś zrobi czy nie. Wiadomo, że czasami się to udaje, ale tak naprawdę rzadko, bo >> no złożoność tego organizmu jest po prostu zbyt duża, >> tak? No i tutaj właśnie się pojawia, czy
+
+00:40:48
+ wracamy do tematu emergencji, mianowicie, to znaczy jeżeli czegoś nie potrafimy przewidzieć, tak, czyli jakiejś własności, jakiegoś zachowania, które się ma wyłonić na wyższym poziomie, no to zwolennicy emergencji by powiedział, że to jest to własność emergentna, tak? To znaczy ona jest w jakimś sensie zaskakująca, jeżeli jest niemożliwa do do przewidzenia. Tak, no bo tutaj też mamy problem, czasami się wydaje opisu. To znaczy, że kiedy system zaczyna być bardzo złożony, to po prostu wymuszane jest na nas, żeby zmienić
+
+00:41:19
+ opis. I tutaj się pojawia pytanie, czy to jest tak, że my jako ludzie, którzy też mamy ograniczone po prostu zdolności poznawcze, nie zaczynamy postrzegać pewnych zjawisk w nowy sposób właśnie, że to wynika z tej złożoności, że tutaj ten komponent tego też kto obserwuje i opisuje dane zjawisko ma duże znaczenie jak opisuje to zjawisko. Więc ta emergencja takim trochę wytrychem się tutaj też zdaje czasami, że kiedy system się robi bardzo złożony, nie widzimy już co się dzieje, kiedy stosujemy te
+
+00:41:48
+ reguły. na przykład jak wśród tych ptaków, no to jedyny sposób, żebyśmy mogli uchwycić cały system, no to jest właśnie znalezienie nowego opisu na tym, że tak powiem, właśnie wyższym poziomie, >> nowego opisu i nowego słowa, które by nam nazwało to to zjawisko, tak? Emergencja, tak? No i tak rzeczywiście się dzieje. Dlatego właśnie no emergencja jest pewną pewną koncepcją, która jest na pewno dyskusyjna i czy to jest koncepcja, która by nam coś wyjaśniała? No nie. Tak, bo tutaj to się wszystko o to rozbija też czego
+
+00:42:22
+ potrzebujemy, żeby w sposób naukowy wyjaśnić jakieś zjawisko. Tak w to w tym przypadku świadomość. Tak. >> Na pewno pojęcie emergencji nie jest nie jest wyjaśniające. A powiedz, czy któraś jeszcze z obecnych teorii świadomości, bo wiem, że jest dużo tych teorii. Mamy tą teorię zintegrowanej informacji, przestrzeni roboczej. teraz popularna jest ta przetwarzania predykcyjnego. Nie wiem czy już zdążymy omówić te teorię, bo trochę czas nam się zaczyna kończyć, ale czy któraś w ogóle twoim zdaniem
+
+00:42:49
+ jest obiecującym kandydatem, żeby faktycznie mieć znaczenie i wpłynąć na to, że lepiej zrozumiemy, nawet jeżeli nie trudny problem świadomości, już abstrahując od trudnego problemu świadomości, to jakie są korelaty i co wywołuje dane doświadczenie, dlaczego w ogóle pojawiają się pewne rodzaje doświadczeń. Jak o tym sądzisz? >> Tutaj ty kilka rzeczy poruszyłeś, tak? Jasne, że nie możemy tych teorii wszystkich omówić, bo to by nam zajęło dużo czasu. >> Kolejny kilka podcastów. Dokładnie
+
+00:43:17
+ >> tak jest. Tak na początku teorii jest bardzo dużo. Tak. I to też tak jak mówię na początku o tym takim przednaukowym okresie nauki o świadomości, tak ten okres też charakteryzuje się po prostu wielością koncepcji i dlatego też jesteśmy właśnie w tym stanie w tym na tym etapie rozwoju nauki o świadomości. Mamy multum multum teorii, pojęć. To wszystko jest jest bardzo pomieszane, wymieszane. Czasem te pojęcia się nakładają na siebie, czasem są rozłączne. Wśród tej wielości mamy kilka teorii, które no można powiedzieć są
+
+00:43:49
+ najbardziej dyskutowane, powszechne, wiodące może, ale na tej zasadzie, że po prostu są często podnoszone w dyskursie naukowym. Też są prowadzone badania empiryczne, które miałyby te teorie testować. I tutaj z tych, które wymieniłeś, tak? No to właśnie taka czasem się mówi o takiej wielkiej czwórcy tak, o globalnej przestrzeni roboczej. W nowszym wydaniu to będzie globalna neuronalna przestrzeń robocza. Mamy teorię myśli wyższego rzędu. Tak naprawdę to jest pewna rodzina teorii, bo tam są różne wersje, warianty, które
+
+00:44:22
+ nie do końca są ze sobą ujne. Mamy teorię zintegrowanej informacji, która z jednej strony jest teorią bardzo no ciekawą, z [parsknięcie] dużymi ambicjami. No z drugiej strony ostatnio podnoszone są głosy, że jest to teoria nienaukowa, to znaczy no nietestowalna co do zasady w warunkach empirycznych. Tak. Co więcej, ma ona konsekwencje metafizyczne. To znaczy, każda teoria ma jakieś konsekwencje metafizyczne, ale konsekwencją tej teorii jest pan psychizm. To znaczy, że wszystko, wszystko co integruje informacje jest do
+
+00:45:00
+ pewnego stopnia świadome. >> No a tutaj też jest problem potem wiem, że kombinacji w pansychizmie, więc sama idea już rodzi kolejne problemy wtedy z daną teorią. Tak. >> Pan psychizm. Tak. No niezależnie czy to, bo to też się gryzie z naszymi takimi potocznymi intuicjami, tak? No dlaczego jakieś proste yy Tak >> termostat miałby być świadomy, tak? Tak. Ten słynny przykład. Tak. >> To mamy jeszcze teorię właśnie kodowania predykcyjnego i jak już pytasz o moje tutaj jakieś
+
+00:45:29
+ sympatie, tak? No to ja właśnie skłaniam się bardziej ku tej ostatniej teorii kodowania predykcyjnego, ale dlaczego tak robię? No nie dlatego, że ta teoria jest jakoś tak szczególnie przekonująca, ale dlatego, że ona traktuje właśnie to, co mówiłem na początku. Opis świadomości dosyć czy bierze dosyć bogaty opis eksplanum świadomości. Znaczy świadomość to nie jest to, co na przykład w teorii globalnej przestrzeni roboczej przyjmuje się jako przytomność, zdawanie sobie sprawy z jakiejś treści, świadomości, bo
+
+00:46:00
+ tak naprawdę w tej teorii globalnej przestrzeni roboczej to właśnie taka jest definicja świadomości. Zresztą jeden tutaj z głównych proponentów tej teorii Stanis Daen pisze wprost, że pojęcie świadomości fenomenalnej jest dosyć zwodnicze, niejasne i w nauce raczej nie powinno mieć miejsca. Powinniśmy się skupić na po prostu takiej przytomności percepcyjnej. Widzę światło, jestem świadomy tego bodźca i zbadajmy tak, poszukajmy korelatów. Natomiast kodowanie predykcyjne, no podchodzi do tego dosyć
+
+00:46:30
+ dosyć no bardziej, że tak powiem na poważnie, tak? To znaczy traktuje świadomość eksponandum jako coś złożonego i składającego się z takich cech jak właśnie kalia, tak? Czy dostęp do jakichś treści recepcyjnych na przykład, ale też nasze doświadczenie jest temporalne, nasze doświadczenie jest cielesne, tak? To znaczy mamy ten aspekt taki z jednej strony intoreceptywny, propreceptywny, tak? związany z z tym, że nasze ciało się porusza, że mamy jakieś doznania trzewne, że mamy afektywne emocjonalne stany i wreszcie,
+
+00:47:07
+ że że mamy też jakieś poczucie siebie, tak? To znaczy poczucie ja, które no jakby tu je definiować, taki jakie by miał wymiary, to nad tym można dyskutować, tak? Ale że jest coś takiego jak poczucie ja w doświadczeniu świadomym, no to wydaje się intuicja dosyć mocna, tak? I większość ludzi by raczej na to przystała. Więc kodowanie predykne podchodzi po prostu na poważnie do do tematu, moim zdaniem. Pytałeś jeszcze o neuronalne korelaty? Tak. >> Tak. A mogłem jeszcze dopytać o to kodowanie predykcyjne, bo tutaj to
+
+00:47:35
+ jeżeli dobrze rozumiem, to cała ta idea właśnie łączy z tym, że ona trochę odwraca logikę i jakby sposób, w jaki jest tworzone to doświadczenie, bo często się o tym mówi, że to jest ta kontrolowana halucynacja, prawda? że to co wspomniałeś o tym, że musi wystąpić jakieś doświadczenie z ciała, to też wynika z tego, że kiedy system się oddziela, można powiedzieć, od środowiska i zaczyna, próbuje przewidzieć jak to środowisko na niego wpłynie, to tworzy wewnętrzną reprezentację tego, czyli właśnie tą
+
+00:48:03
+ kontrolowaną halucynację i ona się tylko zmienia wraz z tym, jakie informacje dochodzą do danego systemu, ale że tutaj fundamentalnie jest to oddzielenie od środowiska i próba utrzymania jakieś struktury. Czy ja to dobrze rozumiem właśnie podstawy tego kodowania predykcyjnego? Ty, >> z grubsza tak to wygląda. Tylko tutaj trzeba by jedną rzecz wyjaśnić i położyć nacisk na to słowo kontrolowana halucynacja. Tak? No bo można to też rozumieć w taki sposób, no że właśnie no nasze doświadczenie to jest po prostu
+
+00:48:30
+ halucynacja, to jest wytwór naszego umysłu, jakiegoś modelu wewnętrznego. Tak? Kodowanie predykcyjne rzeczywiście przyjmuje takie założenie, że to co robi nasz mózg, to on dokonuje pewnych wnioskowań. albo mówiąc bardziej potocznie po prostu zgaduje jakie są przyczyny bodźców, które do nas docierają. A dokonuje tego zgadywania czy też no przewidywania na podstawie wewnętrznego modelu, który zbudował w trakcie doświadczenia. Może też miał jakieś tam rzeczy takie no wrodzone, że tak powiem, jakieś
+
+00:49:06
+ [parsknięcie] jakieś takie mocne, >> ale że ewolucyjnie wytworzył się po prostu jakiś organizm, który zaczyna to dokonywać, tak? Czegoś takiego, że że to dalej jakiś proces temu towarzyszył utworzenia takiego systemu, który dokonuje i tworzy ten wewnętrzny model, można powiedzieć. >> Tak. No i teraz na bazie tego wewnętrznego modelu my doświadczamy świata i tak naprawdę doświadczamy pewnych predykcji, tak? Czyli tego, co z tego modelu nam wynika. nie doświadczamy świata w taki sposób bezpośredni, tak?
+
+00:49:31
+ Czyli że no widzę drzewo, no to właśnie widzę to drzewo, które jest przede mną, tylko raczej doświadczam pewnej predykcji wynikającej z mojego modelu wewnętrznego, że informacje, które do mnie docierają z zewnątrz, to są informacje, które no najbardziej uprawdopodobniają hipotezę, że to drzewo jest naprzeciwko mnie. że ja jako konkretny system tak widzę ten fragment rzeczywistości, >> że drzewo tak nie wygląda jak wygląda, tylko ja jako człowiek milionami lat ewolucji i tworzenia tych predykcji
+
+00:50:03
+ powiedzmy jestem w stanie tak reprezentować dla samego siebie ten fragment rzeczywistości, można powiedzieć, tak? ewolucji też, ale z drugiej strony też mojego osobniczego rozwoju, tak, i mojej historii indywidualnej, bo tutaj model wewnętrzny, on też jest bardzo silnie ukształtowany po prostu przez nasze doświadczenie, naszą historię, >> że ty będziesz inaczej prawdopodobnie widział drzewo niż ja, nawet jeżeli mamy podobne mózgi. W tym sensie też, że twój model będzie troszeczkę inny, pomimo że
+
+00:50:28
+ będą jakieś wspólne cechy tego modelu na przykład. >> Ten modele mogą tak, mogą się różnić, tak? No tu możemy mieć, nie wiem, wziąć taki przykład, także ktoś może być osobą, która no raczej jest osobą nieufną i uważa, że świat jest w jakiś sposób zagrażający, tak? A z drugiej strony możemy mieć osobę, która raczej jest właśnie osobą ufną, optymistyczną, podchodzącą do ludzi w taki sposób, także no nie zagrażają, tak? >> Czyli ten psychiczny model już będzie zupełnie inny wtedy, można powiedzieć.
+
+00:50:54
+ Tak. Mhm. >> Tylko no nie zgodziłbym się co do tego, że ta koncepcja w jakiś sposób oddziela nas od środowiska, tak? I tutaj pojawia się to pojęcie kontrolowanej halucynacji, tak? To znaczy modele wewnętrzne są, że tak powiem, updjowane. One są aktualizowane. Aktualizowane są dlatego, że informacje, które do nas docierają z zewnątrz wymuszają tą aktualizację. To znaczy, jeżeli miałbym predykcję i to to by było w przypadku takiej zwykłej halucynacji, tak? Czyli mam tak halucynację, że coś jest na
+
+00:51:25
+ zewnątrz i zachowuje się tak jakby to było naprawdę, a tego nie ma. No to może się to skończyć źle dla mnie. >> No tak. Także tego typu złe halucynacje doprowadzą do wymarcia danego gatunku po prostu, bo będzie ewolucyjnie. Tak. Tak. >> Ewolucje. Tak by się to skończyło. Tak. A patrząc indywidualnie, osobniczo, no to też mógłbym się wpakować w problemy, jakbym tak uważał, że właśnie, że na ulicy stoi, nie wiem, słoń albo tygrys mnie goni. Tak, no zachowywałbym się na pewno w jakiś sposób dzipy.
+
+00:51:56
+ >> No można byłoby argumentować, że wiele osób też wpada w te problemy, jeżeli model ten psychiczny jest no właśnie jakiś błędny, fundamentalnie błędny, >> tak? No i wtedy mówimy o jakichś dysfunkcjach modelu wewnętrznego, tak? >> Tak. >> Kiedy właśnie predykcja jest w jakiś sposób zaburzona, tak? czy no na różne sposoby, tak tutaj można o tym mówić, tak? Natomiast ta kontrolowana halucynacja właśnie na tym polega, że ten model, żeby się zgadzał z tym, to znaczy żeby nasze działanie było
+
+00:52:20
+ efektywne, żebyśmy realizowali swoje cele od takich podstawowych jak to, żeby znaleźć pożywienie, tak tutaj z tej perspektywy ewolucyjnej patrząc, no to nasze produkcje muszą z grubsza odpowiadać na to, co w środowisku występuje. >> Czyli nie mogą być oderwane całkowicie od tego środowiska. Oczywiście >> mogą być oderwane. Zgadza się. >> Rozumiem. No to właśnie to może jeszcze zapytam o te korelaty, bo to też jest ciekawa sprawa, że one właśnie nie tłumaczą trudnego problemu świadomości,
+
+00:52:46
+ ale dają nam coraz więcej informacji jak pewne rozumiem stany mózgowe i jak te informacje, które możemy wyczytać z danego stanu mózgowego przekładają się na dane doświadczenia. >> Problem z neuronalnymi korelatami świadomości jest taki, że je wrócimy tutaj sobie chwilę do teorii świadomości tych dominujących kilku, tak? Nie, nie do wszystkich. No to teorie wskazują różne korelaty. To to jest pierwszy problem. Tak? Czyli na przykład globalna neuronalna przestrzeń robocza, ta teoria wskazywałaby korę przedczołową. Także
+
+00:53:17
+ informacja jakaś lokalna treść na przykład percepcyjna musi zostać rozpowszechniona, rozesłana po korze przedczołowej i wtedy ta treść wchodzi do świadomości. Teoria zintegrowanej informacji nic takiego nie zakłada. mówi, ważne jest tylko, żeby powstał pewien kompleks neuronalny, który będzie integrował informacje w najwyższym. >> Jakaś topologia sieci po prostu i połączeń informacji. >> Mhm. >> Tak. I to i to tutaj lokalizacja nie jest nie jest jakoś szczególnie istotna. Tak więc tutaj to mamy pierwszy problem.
+
+00:53:47
+ Także różne teorie dają nam różne predykcje, jeżeli chodzi o korelaty. Druga rzecz jest taka, także ustalanie korelatów mówi nam coś o świadomości, ale nie mówi nam za dużo. To znaczy nie jest to relacja wyjaśniająca. Znowu tak wracamy do tematu, co wyjaśniłoby świadomość, tak? Dlatego, no że korelacja to jest po prostu zbieżność w czasie. A jest korelowane z B, bo współwystępuje z B. >> Tak, ktoś mówi, że widzi kolor czerwony i widzimy konkretną aktywację na przykład w korze wzrokowej i to tyle
+
+00:54:13
+ wiemy. Tak. I z tego nie możemy w ten sposób wywnioskować, że to a powoduje b, >> tak? Mhm. >> Ani też, że b powoduje a. To znaczy, że to mogą być te dwie sytuacje, dwie strony. >> Albo może być, że jest jakieś C, które powoduje i A, i B. Tak. I to to będzie ta relacja przyczynowa i relacja przyczynowa byłaby wyjaśniająca. Tak. Wtedy byśmy znali przyczynę jakiegoś procesu. Tak. No w przypadku korelatów nie znamy. Trzeci problem z korelatami jest taki, no że znaleziono korelaty,
+
+00:54:41
+ które byłyby no koniecznymi warunkami zaistnienia jakiejś stanu świadomości, czyli na przykład aktywację jakieś jakiegoś obszaru mózgu. Tak, żeby spostrzegać takie cechy jak kolory, no to w korze wzrokowej pewien obszar zazwyczaj jest aktywowany. Natomiast takich warunków koniecznych jest dużo więcej, tak? To znaczy począwszy od tego, że no w naszym mózgu musi płynąć krew, tak? To też jest warunek konieczny zaistnienia świadomości. Nie znaleziono warunków wystarczających, czyli takiej aktywacji w takim obszarze czy czy
+
+00:55:15
+ jakiegoś inny inny charakter jeszcze korelatu. który byłby wystarczającym minimalnym warunkiem do zaistnienia danego stanu świadomości. >> Mhm. >> I no na razie no nie wydaje się, że żeby żeby udało się znaleźć, tak? Dlatego no też w filozofii nauki dyskutuje się w ogóle czy czy pomysł na neuronalne korelaty świadomości, ten projekt badawczy w ogóle ma sens, tak? Czyli nie powinniśmy jakoś inaczej tak szukać wyjaśnienia świadomości, tak? Nie na zasadzie właśnie szukania [odchrząknięcie] korelatów, które No,
+
+00:55:46
+ >> no, bo tutaj jest problem właśnie z definicją tego, no ale to znowu poka do drzwi, że tak powiem, trudny problem świadomości, prawda, że jaki korelat jest tym warunkiem minimalnym, a gdybyśmy znaleźli taki minimalny, no to w jakimś sensie byśmy próbowali rozwiązać trudny problem świadomości. Tak tylko że wtedy właśnie ja bym powiedział, że nie, jeżeli jeszcze nawet jeżeli znaleźlibyśmy tak minimalny korelat świadomości, dajmy na to postrzeganie jakiegoś przedmiotu, tak jesteśmy świadomi, tak widzę kot.
+
+00:56:15
+ Jakbyśmy znaleźli korelat, który jest wystarczającym warunkiem do tego, żeby zobaczyć kota, tak to wtedy i tak nie odpowiedzieliśmy, nie odpowiedzielibyśmy sobie na pytanie, dlaczego w ogóle doświadczamy tych wrażeń związanych z tym, że postrzegamy kota. Dlaczego takie konkretne ustawienie tej informacji, tych neuronów, krwi przepływu, czegokolwiek, co byśmy tam nie wsadzili, czy topologii samej sieci. Dlaczego towarzyszę temu subiektywny aspekt? Tak że >> ten subiektywny aspekt i wrażenia
+
+00:56:44
+ właśnie takie jak jak kolor sierści, jak dotykamy kota, no to jest prawda miękki, tak jak niby w dotyku, dlaczego mruczy. Tak. I to wszystko są właśnie doznania wrażeniowe, które y no nawet z tego jak sobie zidentyfikujemy ten wystarczający korelat, no jeszcze nam nie mówią, dlaczego w ogóle to mamy. Tak, >> tak, tak, rozumiem. Oczywiście, że tak. No to może na sam koniec zadałbym ci jeszcze pytanie, takie trochę bardziej filozoficzne i dotyczące nawet moralności ze względu na to, że wydaje
+
+00:57:13
+ się w takim razie, że w zależności od tego jaki model świadomości przyjmiemy i które systemy są świadome albo nie, no wynika też w dużym stopniu nasz progres taki moralny, bo słynnym przypadkiem jest to, że kiedyś na przykład psy się nie uznawało za świadome i robiło się nawet takie rzeczy jak v sekcje. To znaczy, że brało się zwierzęta i żywcem rozkrajało je, żeby badać różne rzeczy. No dzisiaj uznajemy to za bestialstwo i chyba nikt by nie powiedział, że pies jest nieświadomy w tym sensie, że nie
+
+00:57:44
+ może na przykład odczuwać bólu. Możemy powiedzieć, że nie ma pewnych kaliów, no bo tego nie wiemy, czy ma czy ma jakąś reprezentację ja, czy pojawiają się tam pewnego rodzaju myśli, czy nie. Ale raczej wiemy, że pewne podstawowe rzeczy doświadcza taki pies i to oczywiście zmienia nasz postęp moralny i traktujemy te zwierzęta zupełnie inaczej. No i wydaje się, że teraz w zależności od tego, które systemy uznamy za świadome, a które nie, no mamy zmienione zachowanie. Zaczynamy szukać innych zachowań i zaczynamy zastanawiać się nad
+
+00:58:15
+ naszym podejściem do tych systemów i do zachowania wobec tych systemów. Czy sądzisz, że tutaj jest jakaś wyraźna trajektoria, w której zmierza właśnie nauka i w której zmierza też powiedzmy podejście ludzi zajmujących się świadomością do tego, które systemy zaczniemy nazywać świadomymi, bo wydaje się, że i tak to spektrum się coraz bardziej rozszerza. Jak o tym sądzisz? >> W tym kontekście zazwyczaj świadomość czy ten aspekt świadomości, które tutaj, który miałby znaczenie, to byłaby zdolność do odczuwania, w szczególności
+
+00:58:45
+ zdolność do odczuwania cierpienia. >> Tak. No właśnie. Tak. Bo wtedy rzeczywiście pojawiały się wątpliwości natury moralnej. No czy możemy tak zadawać cierpienie istotom yyy czującym, kiedy takie przypadki byłyby uzasadnione, na przykład badania medyczne, a kiedy byłyby nieuzasadnione i wtedy zasług zasługiwałyby na piętnowanie, tak? Czy na jakąś penalizację. Wydaje mi się, że ta trajektoria jest jednoznaczna. To znaczy jak spojrzymy na postęp badań nad świadomością i umysłami zwierząt, to jednoznacznie ten zbiór istot
+
+00:59:21
+ czujących, doznających cierpienie się powiększa. Świadomość ludzi też tutaj rośnie, jeżeli chodzi właśnie o o to, kto co może odczuwać, tak? jakie systemy biologiczne odczuwają i wobec tego jak powinno się regulować dobrostan tych istot. Tak. >> Tak. >> I to się ewidentnie zmienia. Tak. No tutaj takim przykładem mówiłeś o psach, tak? Ale takim przykładem jest są głowonogi, tak? W szczególności ośmiornice, które istoty zbudowane no diametralnie inaczej niż niż saki, tak? o innych układach nerwowych, tak inaczej
+
+00:59:55
+ trochę zbudowanych, ale poprzez właśnie badania zachowania ośmiornic, wiemy dzisiaj, że to są niesłychanie inteligentne i czujące istoty, co przełożyło się właśnie na ograniczenia w prowadzeniu badania badań na głową. Więc tutaj wydaje mi się ta trajektoria jednoznaczna i kwestia właśnie praw zwierząt, tak i w ogóle tak, no istot, isto świadomych, czujących, to jest kwestia, no która ma coraz większe znaczenie. No i tutaj jeżeli tak wracając do tego tematu sztucznej inteligencji, tak? No to pojawia się
+
+01:00:30
+ takie pytanie, które gdzieś tam na horyzoncie. Jeśli tak, to znaczy w zależności od tego, jak sobie odpowiemy na to pytanie, czy sztuczne systemy mogą doznawać, w tym doznawać cierpienia, to czy wobec tego powinno się zmieniać zmienić też nasze nastawienie do nich w tym i jak prawodawstwo. No to jest też kwestia tego, że wydaje się, że jeżeli chodzi o te sztuczne systemy, to tak czy siak będzie tendencja do tego, żeby przypisywać im świadomość, szczególnie jakby weszły roboty, bo wydaje się, że
+
+01:00:56
+ ludzie mają naturalną tendencję do no jeżeli to będzie inteligentny system, który będzie odpowiadał w taki sposób, powiedzmy, zbliżony do człowieka, a dodatkowo jego wygląd będzie przypominał w jakiś sposób człowieka, to jest duża szansa, że tak czy siak będą ludzie zakładać, że taki system jest świadomy, nawet jeżeli nie będziemy mieli dowodu na to, że jest świadomy. Także tutaj też te nasze tendencje mogą grać jakąś rolę. >> Zgadzam się całkowicie. To znaczy, że mamy taką naturalną właśnie y skłność do
+
+01:01:25
+ antropomorfizacji, żeby przypisywać różne stany wewnętrzne, tak bliskie nam, ludziom, systemom, tak innym, tak, w tym systemom sztucznym. Więc to przypisywanie świadomości no będzie na pewno taki rodzaj właśnie iluzji, tak? No bo ja ja tutaj tak no stoję na stanowisku, że przynajmniej na tym etapie, tak? I tymi modelami sztucznej inteligencji, które z którymi mamy do czynienia, te systemy nie są świadome i nie są czujące, ale będzie ta iluzja tak występowała i ludzie będą przypisywać im świadomość.
+
+01:01:58
+ Tak. Natomiast pytanie jest takie, co z tym możemy zrobić, tak jakby jaki, jak powinniśmy się zachować teraz, tak odnośnie do tego, tak? I i tutaj takim ciekawym stanowiskiem jest jest taka propozycja, że ponieważ nie wiemy czy systemy sztuczne mogą odczuwać, tak, wychodzimy od takiego agnostycznego stanowiska, to i tak powinniśmy zwolnić w rozwoju tych systemów, tak? To znaczy najpierw sobie odpowiedzieć na to pytanie, czy one mogą być świadome, a potem je dalej rozwijać, bo jeżeli by się okazało, że mogą być świadome, no to
+
+01:02:30
+ wtedy możemy zbudować te system zanim rozpoznamy ten stan rzeczy, zanim zbudujemy jakiś system prawny, tak chroniący właśnie sztuczne systemy, które są odczuwające, to możemy już je zbudować i one wtedy mogą tak doznawać różnych cierpień, tak na nasze różne sposób. Gdyby tak było, to może być problem potem dla nas. różnego rodzaju no wątpliwości się pojawiają, jaki to będzie miało wpływ na dalszy rozwój i ten cały proces powstawania tych systemów, prawda, że tu jest ten też >> mogą się zemścić. [śmiech]
+
+01:03:00
+ >> Miejmy nadzieję, że nie, że jednak pisanie głupich promptów to nie jest rodzaj cierpienia dla tych systemów, ale ciągle wraca ten trudny problem świadomości, czyli nie wiemy i potrzebne są po prostu dalsze badania, próby formułowania różnych teorii, modeli i sprawdzania i weryfikacji, czy No bo musimy to ocenić po behawiorze danych systemów, prawda? czy ostatecznie dowód będzie leżał zawsze po tym, czy dane zachowanie interpretujemy jako świadome, czy nie. Więc tutaj jest ten też problem,
+
+01:03:27
+ >> tak? No tutaj wchodzimy na problem testów, tak? To jest to jest powiedzmy oddzielny problem, na którym też można by porozmawiać. To znaczy jakim jakim możemy dysponować testem na to, że dany system jest świadomy, tak? Czy to system biologiczny, czy sztuczny, tak? Bo to mogą być testy, które dotyczą no zarówno tak ludzi, zwierząt, tak, czy właśnie sztucznych systemów, tak? I te testy nie jesteśmy tylko skazani na behavior, tak? No bo z jednej strony, tak, no możemy no obserwować zachowania, które tak, no
+
+01:04:00
+ wskazywałyby na istniejsze dobrość, >> tak? Ale to musiały być podobne do naszych, żebyśmy w ogóle tak interpretowali. >> No właśnie. W przypadku zwierząt to już jest pierwsze ograniczenie, tak? No że zwierzęta wyglądają no bardzo inaczej od nas. zachowują się bardzo inaczej, to tak wcale nie musi oznaczyć, że nie nie są świadome. >> Tak. Tak. >> Wobec tego no pojawiają się jakieś jakieś inne, tak? Czyli na przykład kreatywność, tak? Sposób rozwiązywania problemów, tak? No właśnie badania nad różnymi
+
+01:04:29
+ zwierzętami. Tutaj szczególnie na przykład można poczytać sobie badania nad inteligencją kruków albo właśnie ośmiornic, tak? I sposób w jaki wskazuje zachowanie tych zwierząt pokazuje, że to są bardzo inteligentne istoty. Tak. No ale tutaj właśnie znowu no widzimy inteligencję. >> Wracamy do początku. Nie możemy mylić świadomości z inteligencją. >> Dokładnie. Tak więc świadomość byłaby czymś innym. Należałoby tutaj opracować test, który który no wskazywałby właśnie na to, że dany system jest świadomy,
+
+01:04:58
+ czujący i tak dalej. Tak, ale można podejść do tego problemu inaczej, to znaczy od innej strony, tak? Jeżeli by się okazało, tak i nauka o świadomości by się rozwinęła w tym kierunku, że do świadomości potrzebne są pewne warunki, na przykład warunki takie jak pewna określona architektura mózgu. Tak. Jedna z teorii postuluje, że muszą być połączenia rekurencyjne, tak? To znaczy, że przepływ informacji w jakimś, tak, sieci neuronowej musi być dwustronna, tak? Musi w obie strony przebywać. No to można by chociaż by to wykorzystać tą
+
+01:05:37
+ wiedzę do tego, że właśnie jeżeli w jakimś systemie ten typ architektury występuje, no to to może być silny wskaźnik do tego, że taki system może być świadomy. >> No to IT próbowało coś takiego zrobić, tak? I i ta to właśnie coś w tym stylu. Tam tylko było ten współczynnik fita, topologia bardziej, >> więc to jest jedna z tych prób właśnie, o które powiedzmy, że są. >> Tak. No i wtedy właśnie staramy się właśnie nie od strony behawioru, ale od strony jakiejś wewnętrznej architektury
+
+01:06:03
+ systemu ocenić, czy dany system może być świadomy. >> Rozumiem. Czyli po prostu różne sposoby opisu, które by sugerowały, że system jest świadomy. Ale no właśnie ten problem weryfikacji się pojawia duży, prawda? jak stwierdzić, czy danej architekturze towarzyszy dane doświadczenie. Szczególnie w tej kwestii moralnej to cierpienie, ale cóż abstrahując od cierpienia to w ogóle jakiekolwiek doświadczenie. Bardzo ci dziękuję Marku za dzisiejszą rozmowę. To są niesamowicie ciekawe tematy, więc
+
+01:06:28
+ bardzo się cieszę, że mieliśmy okazję porozmawiać i mogłem posłuchać też twoich opinii na wiele z tych tematów. Dziękuję ci pięknie. >> Również dziękuję za za rozmowę. Dzięki. >> Dziękuję za wysłuchanie odcinka. [muzyka] Jeżeli podcast ci się spodobał, zapraszam do subskrybowania. Dziękuję także patronom za wsparcie projektu. Do usłyszenia.
+
